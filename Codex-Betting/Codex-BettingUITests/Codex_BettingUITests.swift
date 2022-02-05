@@ -2,7 +2,7 @@
 //  Codex_BettingUITests.swift
 //  Codex-BettingUITests
 //
-//  Created by Casai User on 04/02/22.
+//  Created by Carlos Hernández on 04/02/22.
 //
 
 import XCTest

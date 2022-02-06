@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
+		57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1327AF84060082ECF6 /* Launch Screen.storyboard */; };
+		57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */; };
+		57268B1B27AF8A4A0082ECF6 /* Grotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */; };
+		57268B1C27AF8A4D0082ECF6 /* Grotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1827AF87AB0082ECF6 /* Grotesk-Bold.ttf */; };
+		57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B1E27AF8C370082ECF6 /* HKGrotesk.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
 		57DE16D627AE485C006C44DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D527AE485C006C44DB /* ContentView.swift */; };
 		57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16D727AE485C006C44DB /* Assets.xcassets */; };
@@ -34,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		57268B1327AF84060082ECF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Regular.ttf"; sourceTree = "<group>"; };
+		57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Light.ttf"; sourceTree = "<group>"; };
+		57268B1827AF87AB0082ECF6 /* Grotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Bold.ttf"; sourceTree = "<group>"; };
+		57268B1927AF87E90082ECF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		57268B1E27AF8C370082ECF6 /* HKGrotesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKGrotesk.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingApp.swift; sourceTree = "<group>"; };
 		57DE16D527AE485C006C44DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +84,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57268B0E27AF80B70082ECF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57268B1127AF80D40082ECF6 /* Design system */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		57268B1127AF80D40082ECF6 /* Design system */ = {
+			isa = PBXGroup;
+			children = (
+				57268B1527AF87830082ECF6 /* Fonts */,
+				57268B1227AF82940082ECF6 /* Colors */,
+			);
+			path = "Design system";
+			sourceTree = "<group>";
+		};
+		57268B1227AF82940082ECF6 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				57268B0F27AF80CB0082ECF6 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		57268B1527AF87830082ECF6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */,
+				57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */,
+				57268B1827AF87AB0082ECF6 /* Grotesk-Bold.ttf */,
+				57268B1E27AF8C370082ECF6 /* HKGrotesk.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		57DE16C727AE485C006C44DB = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +143,13 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				57268B1927AF87E90082ECF6 /* Info.plist */,
+				57268B0E27AF80B70082ECF6 /* Resources */,
 				57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */,
 				57DE16D527AE485C006C44DB /* ContentView.swift */,
 				57DE16D727AE485C006C44DB /* Assets.xcassets */,
 				57DE16D927AE485C006C44DB /* Preview Content */,
+				57268B1327AF84060082ECF6 /* Launch Screen.storyboard */,
 			);
 			path = "Codex-Betting";
 			sourceTree = "<group>";
@@ -231,6 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */,
+				57268B1C27AF8A4D0082ECF6 /* Grotesk-Bold.ttf in Resources */,
+				57268B1B27AF8A4A0082ECF6 /* Grotesk-Regular.ttf in Resources */,
+				57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */,
 				57DE16DB27AE485C006C44DB /* Preview Assets.xcassets in Resources */,
 				57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */,
 			);
@@ -257,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -422,9 +480,12 @@
 				DEVELOPMENT_TEAM = BJYRRMLA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Codex-Betting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,9 +512,12 @@
 				DEVELOPMENT_TEAM = BJYRRMLA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Codex-Betting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

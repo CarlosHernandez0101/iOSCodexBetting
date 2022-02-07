@@ -19,6 +19,17 @@
 		57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2827AF971A0082ECF6 /* InformationCards.swift */; };
 		572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B127B0D69E00A3CF06 /* ToolsView.swift */; };
 		572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B327B0D85B00A3CF06 /* ToolsCards.swift */; };
+		572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* LessonCardView.swift */; };
+		572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B727B0DBC300A3CF06 /* LessonsView.swift */; };
+		572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */; };
+		572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BE27B0DE7300A3CF06 /* LessonCards.swift */; };
+		572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C027B0DF4100A3CF06 /* RecommendationView.swift */; };
+		572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C227B0E07400A3CF06 /* LeadingTitle.swift */; };
+		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
+		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
+		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
+		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
 		57DE16D627AE485C006C44DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D527AE485C006C44DB /* ContentView.swift */; };
 		57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16D727AE485C006C44DB /* Assets.xcassets */; };
@@ -59,6 +70,17 @@
 		57268B2827AF971A0082ECF6 /* InformationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCards.swift; sourceTree = "<group>"; };
 		572746B127B0D69E00A3CF06 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		572746B327B0D85B00A3CF06 /* ToolsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCards.swift; sourceTree = "<group>"; };
+		572746B527B0D9A600A3CF06 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		572746B727B0DBC300A3CF06 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithNumber.swift; sourceTree = "<group>"; };
+		572746BE27B0DE7300A3CF06 /* LessonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCards.swift; sourceTree = "<group>"; };
+		572746C027B0DF4100A3CF06 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
+		572746C227B0E07400A3CF06 /* LeadingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingTitle.swift; sourceTree = "<group>"; };
+		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
+		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
+		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingApp.swift; sourceTree = "<group>"; };
 		57DE16D527AE485C006C44DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +159,9 @@
 			children = (
 				57268B2127AF8FCC0082ECF6 /* MainView.swift */,
 				572746B127B0D69E00A3CF06 /* ToolsView.swift */,
+				572746B727B0DBC300A3CF06 /* LessonsView.swift */,
+				572746C027B0DF4100A3CF06 /* RecommendationView.swift */,
+				572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -144,12 +169,44 @@
 		57268B2327AF8FDE0082ECF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
-				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
-				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
-				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
+				572746C627B0E44300A3CF06 /* Lists */,
+				572746BA27B0DC2600A3CF06 /* Shared */,
+				572746B927B0DC1800A3CF06 /* Cards */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		572746B927B0DC1800A3CF06 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
+				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
+				572746B527B0D9A600A3CF06 /* LessonCardView.swift */,
+				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
+				572746BE27B0DE7300A3CF06 /* LessonCards.swift */,
+				5796577927B0E82A0084ADDA /* LockFeatureView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		572746BA27B0DC2600A3CF06 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
+				572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */,
+				572746C227B0E07400A3CF06 /* LeadingTitle.swift */,
+				572746C427B0E31600A3CF06 /* LeadingText.swift */,
+				5796577727B0E6020084ADDA /* CloseButton.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		572746C627B0E44300A3CF06 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				572746C727B0E46300A3CF06 /* RecommendationList.swift */,
+			);
+			path = Lists;
 			sourceTree = "<group>";
 		};
 		57DE16C727AE485C006C44DB = {
@@ -349,13 +406,24 @@
 			files = (
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
+				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
+				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
+				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
+				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
+				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
+				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
+				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
+				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
+				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

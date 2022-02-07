@@ -2,7 +2,7 @@
 //  CustomDivider.swift
 //  Codex-Betting
 //
-//  Created by Hernández on 05/02/22.
+//  Created by Carlos Hernández on 05/02/22.
 //
 
 import SwiftUI

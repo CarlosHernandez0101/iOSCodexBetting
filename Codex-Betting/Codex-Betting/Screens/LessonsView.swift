@@ -1,5 +1,5 @@
 //
-//  ToolsView.swift
+//  LessonsView.swift
 //  Codex-Betting
 //
 //  Created by Carlos Hernández on 06/02/22.
@@ -7,27 +7,25 @@
 
 import SwiftUI
 
-struct ToolsView: View {
+struct LessonsView: View {
     var body: some View {
         ZStack {
+            
             Color.codexBlack
                 .edgesIgnoringSafeArea(.all)
             
-            
             ScrollView {
                 
-                LeadingTitle(title: "Herramientas")
+                LeadingTitle(title: "Lecciones")
                 
-                ToolsCards()
-            }
-            .padding(.top, 32)
-            .padding(.horizontal, 16)
+                LessonCards()
+            }            
         }
     }
 }
 
-struct ToolsView_Previews: PreviewProvider {
+struct LessonsView_Previews: PreviewProvider {
     static var previews: some View {
-        ToolsView()
+        LessonsView()
     }
 }

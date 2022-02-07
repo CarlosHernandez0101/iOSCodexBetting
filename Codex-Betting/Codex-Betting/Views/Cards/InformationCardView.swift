@@ -12,6 +12,7 @@ struct InformationCardView: View {
     private let cardTitle: String
     private let cardImage: String
     private let cardDescription: String
+    @State var isLocked: Bool = false
     
     init(cardTitle: String, cardImage: String, cardDescription: String) {
         self.cardTitle = cardTitle
@@ -46,9 +47,21 @@ struct InformationCardView: View {
             CustomDivider(dividerColor: .codexGolden)
                 .opacity(0.8)
             
-            Text(cardDescription)
-                .foregroundColor(.white)
-                .padding(.vertical, 32)
+            
+            if isLocked {
+                LockFeatureView()
+                    .padding(.vertical, 32)
+            } else {
+                Text(cardDescription)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .foregroundColor(.white)
+                    .padding(.vertical, 32)
+            }
+        }
+        .onTapGesture {
+            withAnimation {
+                isLocked.toggle()
+            }
         }
         .padding(.horizontal, 16)
         .background(Color.codexGray)
@@ -62,7 +75,7 @@ struct InformationCardView_Previews: PreviewProvider {
         InformationCardView(
             cardTitle: "Lecciones", 
             cardImage: "book",
-            cardDescription: "Aquí encontrarás todas las lecciones del curso "
+            cardDescription: "Aquí encontrarás todas las lecciones del curso y mucho más"
         )
             .previewLayout(.sizeThatFits)
     }

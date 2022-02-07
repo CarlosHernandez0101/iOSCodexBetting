@@ -17,6 +17,8 @@
 		57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2427AF90CE0082ECF6 /* InformationCardView.swift */; };
 		57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2627AF91A90082ECF6 /* CustomDivider.swift */; };
 		57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2827AF971A0082ECF6 /* InformationCards.swift */; };
+		572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B127B0D69E00A3CF06 /* ToolsView.swift */; };
+		572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B327B0D85B00A3CF06 /* ToolsCards.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
 		57DE16D627AE485C006C44DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D527AE485C006C44DB /* ContentView.swift */; };
 		57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16D727AE485C006C44DB /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		57268B2427AF90CE0082ECF6 /* InformationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardView.swift; sourceTree = "<group>"; };
 		57268B2627AF91A90082ECF6 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		57268B2827AF971A0082ECF6 /* InformationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCards.swift; sourceTree = "<group>"; };
+		572746B127B0D69E00A3CF06 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		572746B327B0D85B00A3CF06 /* ToolsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCards.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingApp.swift; sourceTree = "<group>"; };
 		57DE16D527AE485C006C44DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				57268B2127AF8FCC0082ECF6 /* MainView.swift */,
+				572746B127B0D69E00A3CF06 /* ToolsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
 				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
 				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
+				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,9 +350,11 @@
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
+				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
 			);

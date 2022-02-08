@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */; };
+		5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* OptionView.swift */; };
+		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
 		57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1327AF84060082ECF6 /* Launch Screen.storyboard */; };
 		57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */; };
@@ -37,6 +40,9 @@
 		57DE16E527AE485C006C44DB /* Codex_BettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16E427AE485C006C44DB /* Codex_BettingTests.swift */; };
 		57DE16EF27AE485C006C44DB /* Codex_BettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */; };
 		57DE16F127AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */; };
+		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
+		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
+		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOptionSelectorView.swift; sourceTree = "<group>"; };
+		5709983027B16BEE00D8FCFB /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		57268B1327AF84060082ECF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Regular.ttf"; sourceTree = "<group>"; };
@@ -91,6 +100,9 @@
 		57DE16EA27AE485C006C44DB /* Codex-BettingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Codex-BettingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITests.swift; sourceTree = "<group>"; };
 		57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
+		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
+		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,7 @@
 				572746B727B0DBC300A3CF06 /* LessonsView.swift */,
 				572746C027B0DF4100A3CF06 /* RecommendationView.swift */,
 				572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */,
+				57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -197,6 +210,11 @@
 				572746C227B0E07400A3CF06 /* LeadingTitle.swift */,
 				572746C427B0E31600A3CF06 /* LeadingText.swift */,
 				5796577727B0E6020084ADDA /* CloseButton.swift */,
+				5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */,
+				5709983027B16BEE00D8FCFB /* OptionView.swift */,
+				5709983227B16D0A00D8FCFB /* OptionCircle.swift */,
+				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
+				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -404,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
@@ -413,10 +432,14 @@
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
+				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
+				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
+				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
+				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
 				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
@@ -425,6 +448,7 @@
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
 				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
+				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,9 @@ struct RecommendationView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .padding(.horizontal, 16)
-        .background(Color.codexBlack)
+        .background(
+            Color.codexBlack.edgesIgnoringSafeArea(.all)
+        )
     }
 }
 

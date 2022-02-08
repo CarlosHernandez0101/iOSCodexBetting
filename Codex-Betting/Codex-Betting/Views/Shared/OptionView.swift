@@ -26,7 +26,7 @@ struct OptionView: View {
             Text(optionText)
                 .font(
                     Font.custom(HKGrotesk.regular.rawValue,
-                                size: 25
+                                size: 20
                                )
                 )
                 .foregroundColor(isSelected ? .codexGolden : .white)

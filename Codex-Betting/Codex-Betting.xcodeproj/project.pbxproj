@@ -43,6 +43,8 @@
 		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
 		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
 		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
+		57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */; };
+		57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2227B227360083DD83 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
 		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
 		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionsView.swift; sourceTree = "<group>"; };
+		57EC9C2227B227360083DD83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 				572746C027B0DF4100A3CF06 /* RecommendationView.swift */,
 				572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */,
 				57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */,
+				57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				5709983227B16D0A00D8FCFB /* OptionCircle.swift */,
 				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
 				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
+				57EC9C2227B227360083DD83 /* CustomTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
+				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
@@ -434,6 +441,7 @@
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
 				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
+				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,

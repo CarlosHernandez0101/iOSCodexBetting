@@ -10,36 +10,29 @@ import SwiftUI
 struct MultiOptionSelectorView: View {
     var body: some View {
         
-        ZStack {
+        VStack {
             
-            Color.codexBlack.edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                LeadingTitle(title: "Verificar")
-                
-                HStack {
-                    VStack(alignment: .leading) {
-                        //TODO: MAKE A SUBVIEW FOR THIS
-                        OptionView(
-                            isSelected: false,
-                            optionText: "Apuesta requisito"
-                        )
-                        OptionView(
-                            isSelected: true,
-                            optionText: "Apuesta gratis"
-                        )
-                        OptionView(
-                            isSelected: false,
-                            optionText: "Código"
-                        )
-                    }
-                    Spacer()
+            HStack {
+                VStack(alignment: .leading) {
+                    //TODO: MAKE A SUBVIEW FOR THIS
+                    OptionView(
+                        isSelected: false,
+                        optionText: "Apuesta requisito"
+                    )
+                    OptionView(
+                        isSelected: true,
+                        optionText: "Apuesta gratis"
+                    )
+                    OptionView(
+                        isSelected: false,
+                        optionText: "Código"
+                    )
                 }
                 Spacer()
             }
-            .padding(.horizontal, 16)
-            .padding(.top, 32)
         }
+        .background(Color.codexBlack)
+        
     }
 }
 

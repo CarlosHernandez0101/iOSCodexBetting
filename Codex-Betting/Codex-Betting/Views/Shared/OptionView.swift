@@ -31,7 +31,7 @@ struct OptionView: View {
                 )
                 .foregroundColor(isSelected ? .codexGolden : .white)
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, 8)
         .background(Color.codexBlack)
     }
 }

@@ -31,6 +31,7 @@
 		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
 		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
 		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		576F42B127B235F50041E597 /* LayBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F42B027B235F50041E597 /* LayBetView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
@@ -45,6 +46,8 @@
 		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
 		57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */; };
 		57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2227B227360083DD83 /* CustomTextField.swift */; };
+		57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */; };
+		57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2627B2339A0083DD83 /* BackBetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
 		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
 		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		576F42B027B235F50041E597 /* LayBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayBetView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,8 @@
 		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionsView.swift; sourceTree = "<group>"; };
 		57EC9C2227B227360083DD83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingCalculatorView.swift; sourceTree = "<group>"; };
+		57EC9C2627B2339A0083DD83 /* BackBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 				572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */,
 				57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */,
 				57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */,
+				57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -221,6 +228,8 @@
 				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
 				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
 				57EC9C2227B227360083DD83 /* CustomTextField.swift */,
+				57EC9C2627B2339A0083DD83 /* BackBetView.swift */,
+				576F42B027B235F50041E597 /* LayBetView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -435,6 +444,7 @@
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
@@ -443,6 +453,8 @@
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
+				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
+				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,

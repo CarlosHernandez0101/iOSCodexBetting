@@ -48,6 +48,8 @@
 		57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2227B227360083DD83 /* CustomTextField.swift */; };
 		57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */; };
 		57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2627B2339A0083DD83 /* BackBetView.swift */; };
+		57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F132A027B3825200146A63 /* OddsConverterView.swift */; };
+		57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F132A227B385F300146A63 /* AmericanOddPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		57EC9C2227B227360083DD83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingCalculatorView.swift; sourceTree = "<group>"; };
 		57EC9C2627B2339A0083DD83 /* BackBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBetView.swift; sourceTree = "<group>"; };
+		57F132A027B3825200146A63 /* OddsConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsConverterView.swift; sourceTree = "<group>"; };
+		57F132A227B385F300146A63 /* AmericanOddPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanOddPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 				57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */,
 				57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */,
 				57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */,
+				57F132A027B3825200146A63 /* OddsConverterView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				57EC9C2227B227360083DD83 /* CustomTextField.swift */,
 				57EC9C2627B2339A0083DD83 /* BackBetView.swift */,
 				576F42B027B235F50041E597 /* LayBetView.swift */,
+				57F132A227B385F300146A63 /* AmericanOddPicker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -459,12 +465,14 @@
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
+				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,
 				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
 				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
 				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,

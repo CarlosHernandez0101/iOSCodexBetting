@@ -29,6 +29,7 @@ struct LessonCardView: View {
                 
                 Text(lessonTitle)
                     .foregroundColor(.white)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer()
             }

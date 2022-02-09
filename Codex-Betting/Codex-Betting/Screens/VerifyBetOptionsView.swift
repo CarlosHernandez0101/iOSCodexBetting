@@ -21,8 +21,6 @@ struct VerifyBetOptionsView: View {
                 
                 Spacer()
             }
-            
-            
         }
     }
 }

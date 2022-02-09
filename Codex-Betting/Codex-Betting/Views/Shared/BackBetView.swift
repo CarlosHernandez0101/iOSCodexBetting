@@ -13,7 +13,7 @@ struct BackBetView: View {
         VStack(spacing: 16) {
             
             HStack {
-                Text("Apuesta a favor (Sportbook)")
+                Text("Importe de apuesta (Sportbook)")
                     .font(
                         Font.custom(
                             HKGrotesk.bold.rawValue,
@@ -49,7 +49,7 @@ struct BackBetView: View {
             .padding(.bottom, 16)
         }
         .padding(16)
-        .background(Color.codexGray)        
+        .background(Color.codexGolden)        
         .cornerRadius(15)
     }
 }

@@ -12,12 +12,21 @@ struct InformationCardView: View {
     private let cardTitle: String
     private let cardImage: String
     private let cardDescription: String
+    private let feedback = UINotificationFeedbackGenerator()
     @State var isLocked: Bool = false
     
-    init(cardTitle: String, cardImage: String, cardDescription: String) {
+    @StateObject private var viewModel: InformationCardViewModel
+    
+    init(
+        cardTitle: String,
+        cardImage: String,
+        cardDescription: String,
+        viewModel: InformationCardViewModel
+    ) {
         self.cardTitle = cardTitle
         self.cardImage = cardImage
         self.cardDescription = cardDescription
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -33,8 +42,8 @@ struct InformationCardView: View {
                         )
                     )
                     .padding(.top, 32)
-                
-                
+                    .fixedSize(horizontal: false, vertical: true)
+                                
                 Spacer()
                 
                 Image(systemName: cardImage)
@@ -48,8 +57,8 @@ struct InformationCardView: View {
                 .opacity(0.8)
             
             
-            if isLocked {
-                LockFeatureView()
+            if viewModel.showLockedFeature {
+                LockFeatureView(action: viewModel.openURLToBuyCourse)
                     .padding(.vertical, 32)
             } else {
                 Text(cardDescription)
@@ -60,7 +69,10 @@ struct InformationCardView: View {
         }
         .onTapGesture {
             withAnimation {
-                isLocked.toggle()
+                viewModel.didTapInformativeCard()
+                if viewModel.showLockedFeature {
+                    feedback.notificationOccurred(.error)
+                }
             }
         }
         .padding(.horizontal, 16)
@@ -71,11 +83,23 @@ struct InformationCardView: View {
 }
 
 struct InformationCardView_Previews: PreviewProvider {
+    
+    static func testPreview() { }
+    
     static var previews: some View {
         InformationCardView(
             cardTitle: "Lecciones", 
             cardImage: "book",
-            cardDescription: "Aquí encontrarás todas las lecciones del curso y mucho más"
+            cardDescription: "Aquí encontrarás todas las lecciones del curso y mucho más",
+            viewModel: InformationCardViewModel(
+                informationCard: InformationCardModel(
+                    title: "Lecciones",
+                    image: "book",
+                    description: "",
+                    isEnabledByDefault: false,
+                    cardType: .lessons
+                )                
+            )
         )
             .previewLayout(.sizeThatFits)
     }

@@ -8,27 +8,43 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @StateObject private var viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
-        ZStack {
-            
-            Color.codexBlack
-                .edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
+        
+        
+        NavigationView {
+            ZStack {
                 
-                Image("codex-logo")
-                    .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
+                Color.codexBlack
+                    .edgesIgnoringSafeArea(.all)
                 
-                InformationCards()
+                ScrollView(showsIndicators: false) {
+                    
+                    Image(ImageConstants.codexLogo)
+                        .resizable()
+                        .frame(width: 250, height: 250, alignment: .center)
+                    
+                    InformationCards(
+                        viewModel: InformationCardsViewModel()
+                    )
+                }
+                .padding(.vertical, 32)
+                .edgesIgnoringSafeArea(.top)
             }
-            .padding(.vertical, 32)
         }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MainViewModel())
     }
 }

@@ -8,30 +8,45 @@
 import SwiftUI
 
 struct LockFeatureView: View {
+    
+    private let action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+    
     var body: some View {
         VStack(spacing: 16) {
             Image(systemName: "lock.fill")
                 .foregroundColor(.white)
                 .font(.system(size: 32))
             
-            Text("Necesitas ser miembro de Codex Betting para acceder a esta funcionalidad")
+            Text(TextConstants.InformativeCards.LockFeature.description)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .fixedSize(horizontal: false, vertical: true)
             
-            Text("Comprar")
-                .foregroundColor(.white)
-                .bold()
-                .underline()
+            
+            Button(action: {
+                action()
+            }) {
+                Text(TextConstants.InformativeCards.LockFeature.begin)
+                    .foregroundColor(.white)
+                    .bold()
+                    .underline()
+            }
         }
     }
 }
 
 struct LockFeatureView_Previews: PreviewProvider {
+    
+    static func testPreview() {}
+    
     static var previews: some View {
         ZStack {
             Color.codexGray
-            LockFeatureView()
+            LockFeatureView(action: testPreview)
         }
         .previewLayout(.sizeThatFits)
     }

@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct InformationCards: View {
+        
+    @StateObject private var viewModel: InformationCardsViewModel
+    
+    init(viewModel: InformationCardsViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        
+    }
+    
     var body: some View {
         VStack(spacing: 45) {
-            
-            InformationCardView(
-                cardTitle: "Lecciones",
-                cardImage: "book",
-                cardDescription: "Aquí encontrarás todas las lecciones del curso"
-            )
-            
-            InformationCardView(
-                cardTitle: "Herramientas",
-                cardImage: "hammer",
-                cardDescription: "Aquí encontrarás todas las herramientas del curso"
-            )
-            
-            InformationCardView(
-                cardTitle: "Solicitar partido",
-                cardImage: "sportscourt",
-                cardDescription: "Solicita un partido a nuestro equipo"
-            )
+            ForEach(viewModel.informationCards, id: \.id) { informationCard in
+                
+                InformationCardView(
+                    cardTitle: informationCard.title,
+                    cardImage: informationCard.image,
+                    cardDescription: informationCard.description,
+                    viewModel: InformationCardViewModel(
+                        informationCard: informationCard
+                    )
+                )
+                
+            }
         }
         .padding(.horizontal)
     }
@@ -35,6 +37,8 @@ struct InformationCards: View {
 
 struct InformationCards_Previews: PreviewProvider {
     static var previews: some View {
-        InformationCards()
+        InformationCards(
+             viewModel: InformationCardsViewModel()
+        )
     }
 }

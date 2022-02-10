@@ -36,6 +36,14 @@
 		5773654027B477FC00567244 /* BreakdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653F27B477FC00567244 /* BreakdownRow.swift */; };
 		5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654127B47AE600567244 /* BreakdownResultRow.swift */; };
 		5773654427B47DE600567244 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654327B47DE600567244 /* ResultView.swift */; };
+		5773654727B4CA3200567244 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654627B4CA3200567244 /* ImageConstants.swift */; };
+		5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654927B4CA8300567244 /* MainViewModel.swift */; };
+		5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */; };
+		5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */; };
+		5773655127B4D23C00567244 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655027B4D23C00567244 /* DataService.swift */; };
+		5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655327B4D25E00567244 /* InformationCardModel.swift */; };
+		5773655627B4D3F700567244 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655527B4D3F700567244 /* TextConstants.swift */; };
+		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
@@ -107,6 +115,14 @@
 		5773653F27B477FC00567244 /* BreakdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownRow.swift; sourceTree = "<group>"; };
 		5773654127B47AE600567244 /* BreakdownResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownResultRow.swift; sourceTree = "<group>"; };
 		5773654327B47DE600567244 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		5773654627B4CA3200567244 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		5773654927B4CA8300567244 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardsViewModel.swift; sourceTree = "<group>"; };
+		5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardViewModel.swift; sourceTree = "<group>"; };
+		5773655027B4D23C00567244 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		5773655327B4D25E00567244 /* InformationCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardModel.swift; sourceTree = "<group>"; };
+		5773655527B4D3F700567244 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
+		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
@@ -269,6 +285,42 @@
 			path = Lists;
 			sourceTree = "<group>";
 		};
+		5773654527B4CA1B00567244 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5773654627B4CA3200567244 /* ImageConstants.swift */,
+				5773655527B4D3F700567244 /* TextConstants.swift */,
+				5773655727B4DA8A00567244 /* URLConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5773654827B4CA7100567244 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5773654927B4CA8300567244 /* MainViewModel.swift */,
+				5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */,
+				5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5773654F27B4D22000567244 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				5773655027B4D23C00567244 /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		5773655227B4D24E00567244 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5773655327B4D25E00567244 /* InformationCardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		57DE16C727AE485C006C44DB = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +344,10 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				5773655227B4D24E00567244 /* Models */,
+				5773654F27B4D22000567244 /* DataService */,
+				5773654827B4CA7100567244 /* ViewModels */,
+				5773654527B4CA1B00567244 /* Utils */,
 				57268B2327AF8FDE0082ECF6 /* Views */,
 				57268B2027AF8E4E0082ECF6 /* Screens */,
 				57268B1927AF87E90082ECF6 /* Info.plist */,
@@ -469,13 +525,18 @@
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
+				5773655127B4D23C00567244 /* DataService.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
+				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
+				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
+				5773655627B4D3F700567244 /* TextConstants.swift in Sources */,
 				5773653E27B4756D00567244 /* BreakdownView.swift in Sources */,
 				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
@@ -487,7 +548,10 @@
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
+				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
+				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
+				5773655827B4DA8A00567244 /* URLConstants.swift in Sources */,
 				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,
 				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,

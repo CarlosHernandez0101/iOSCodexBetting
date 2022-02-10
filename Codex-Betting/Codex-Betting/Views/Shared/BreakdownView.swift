@@ -1,32 +1,20 @@
 //
-//  BackBetView.swift
+//  BreakdownView.swift
 //  Codex-Betting
 //
-//  Created by Carlos Hernández on 07/02/22.
+//  Created by Carlos Hernández on 09/02/22.
 //
 
 import SwiftUI
 
-struct BackBetView: View {
+struct BreakdownView: View {
     var body: some View {
-        
         VStack(spacing: 16) {
             
-            HStack {
-                Text("Importe de apuesta (Bookie)")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
-                        )
-                    )
-                .foregroundColor(.white)
-                
-                Spacer()
-            }
             
             HStack {
-                Text("Cuota a favor")
+
+                Text("Bookie")
                     .font(
                         Font.custom(
                             HKGrotesk.bold.rawValue,
@@ -37,7 +25,7 @@ struct BackBetView: View {
                 
                 Spacer()
                 
-                Text("Comisión %")
+                Text("Exchange")
                     .font(
                         Font.custom(
                             HKGrotesk.bold.rawValue,
@@ -45,18 +33,43 @@ struct BackBetView: View {
                         )
                     )
                 .foregroundColor(.white)
+                
+                Spacer()
+                
+                Text("Total")
+                    .font(
+                        Font.custom(
+                            HKGrotesk.bold.rawValue,
+                            size: 20
+                        )
+                    )
+                .foregroundColor(.white)
+                
             }
-            .padding(.bottom, 16)
+            .padding(.horizontal, 8)
+            .frame(width: UIScreen.main.bounds.width)
+            
+            
+            BreakdownRow(text: "Si el sportbook gana", color: .codexGolden)
+                .cornerRadius(15)
+                
+            BreakdownResultRow()
+            
+            BreakdownRow(
+                text: "Si el Exchange gana",
+                color: .codexGray
+            )
+                .cornerRadius(15)
+            
+            BreakdownResultRow()
+            
         }
-        .padding(16)
-        .background(Color.codexGolden)        
-        .cornerRadius(15)
+        .background(Color.codexBlack)
     }
 }
 
-struct BackBetView_Previews: PreviewProvider {
+struct BreakdownView_Previews: PreviewProvider {
     static var previews: some View {
-        BackBetView()
-            .previewLayout(.sizeThatFits)
+        BreakdownView()
     }
 }

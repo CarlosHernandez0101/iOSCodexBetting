@@ -32,8 +32,15 @@ struct MatchedBettingCalculatorView: View {
                 LiabilityView(liability: 500)
                     .padding(.top, 8)
                 
+                BreakdownView()
+                    .padding(.top, 32)
+                
+                ResultView()
+                    .padding(.top, 32)
+                
             }
             .padding(.horizontal, 16)
+            .padding(.bottom, 50)
             
         }
     }

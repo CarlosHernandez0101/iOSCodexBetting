@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Codex")
-            .font(Font.custom(HKGrotesk.light.rawValue, size: 34))
+        MatchedBettingGameForm()
+            .preferredColorScheme(.dark)
                         
     }
 }

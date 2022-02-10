@@ -7,12 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */; };
+		5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* OptionView.swift */; };
+		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
 		57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1327AF84060082ECF6 /* Launch Screen.storyboard */; };
 		57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */; };
 		57268B1B27AF8A4A0082ECF6 /* Grotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */; };
 		57268B1C27AF8A4D0082ECF6 /* Grotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1827AF87AB0082ECF6 /* Grotesk-Bold.ttf */; };
 		57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B1E27AF8C370082ECF6 /* HKGrotesk.swift */; };
+		57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2127AF8FCC0082ECF6 /* MainView.swift */; };
+		57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2427AF90CE0082ECF6 /* InformationCardView.swift */; };
+		57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2627AF91A90082ECF6 /* CustomDivider.swift */; };
+		57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2827AF971A0082ECF6 /* InformationCards.swift */; };
+		572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B127B0D69E00A3CF06 /* ToolsView.swift */; };
+		572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B327B0D85B00A3CF06 /* ToolsCards.swift */; };
+		572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* LessonCardView.swift */; };
+		572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B727B0DBC300A3CF06 /* LessonsView.swift */; };
+		572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */; };
+		572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BE27B0DE7300A3CF06 /* LessonCards.swift */; };
+		572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C027B0DF4100A3CF06 /* RecommendationView.swift */; };
+		572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C227B0E07400A3CF06 /* LeadingTitle.swift */; };
+		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
+		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
+		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		576F42B127B235F50041E597 /* LayBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F42B027B235F50041E597 /* LayBetView.swift */; };
+		5773653E27B4756D00567244 /* BreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653D27B4756D00567244 /* BreakdownView.swift */; };
+		5773654027B477FC00567244 /* BreakdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653F27B477FC00567244 /* BreakdownRow.swift */; };
+		5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654127B47AE600567244 /* BreakdownResultRow.swift */; };
+		5773654427B47DE600567244 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773654327B47DE600567244 /* ResultView.swift */; };
+		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
+		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
+		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
+		57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
 		57DE16D627AE485C006C44DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D527AE485C006C44DB /* ContentView.swift */; };
 		57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16D727AE485C006C44DB /* Assets.xcassets */; };
@@ -20,6 +47,16 @@
 		57DE16E527AE485C006C44DB /* Codex_BettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16E427AE485C006C44DB /* Codex_BettingTests.swift */; };
 		57DE16EF27AE485C006C44DB /* Codex_BettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */; };
 		57DE16F127AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */; };
+		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
+		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
+		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
+		57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */; };
+		57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2227B227360083DD83 /* CustomTextField.swift */; };
+		57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */; };
+		57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C2627B2339A0083DD83 /* BackBetView.swift */; };
+		57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F132A027B3825200146A63 /* OddsConverterView.swift */; };
+		57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F132A227B385F300146A63 /* AmericanOddPicker.swift */; };
+		57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F132A427B3890300146A63 /* LayStakeRequiredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOptionSelectorView.swift; sourceTree = "<group>"; };
+		5709983027B16BEE00D8FCFB /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		57268B1327AF84060082ECF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Regular.ttf"; sourceTree = "<group>"; };
@@ -47,6 +87,30 @@
 		57268B1827AF87AB0082ECF6 /* Grotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Bold.ttf"; sourceTree = "<group>"; };
 		57268B1927AF87E90082ECF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		57268B1E27AF8C370082ECF6 /* HKGrotesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKGrotesk.swift; sourceTree = "<group>"; };
+		57268B2127AF8FCC0082ECF6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		57268B2427AF90CE0082ECF6 /* InformationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardView.swift; sourceTree = "<group>"; };
+		57268B2627AF91A90082ECF6 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		57268B2827AF971A0082ECF6 /* InformationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCards.swift; sourceTree = "<group>"; };
+		572746B127B0D69E00A3CF06 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		572746B327B0D85B00A3CF06 /* ToolsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCards.swift; sourceTree = "<group>"; };
+		572746B527B0D9A600A3CF06 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		572746B727B0DBC300A3CF06 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithNumber.swift; sourceTree = "<group>"; };
+		572746BE27B0DE7300A3CF06 /* LessonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCards.swift; sourceTree = "<group>"; };
+		572746C027B0DF4100A3CF06 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
+		572746C227B0E07400A3CF06 /* LeadingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingTitle.swift; sourceTree = "<group>"; };
+		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
+		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
+		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		576F42B027B235F50041E597 /* LayBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayBetView.swift; sourceTree = "<group>"; };
+		5773653D27B4756D00567244 /* BreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownView.swift; sourceTree = "<group>"; };
+		5773653F27B477FC00567244 /* BreakdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownRow.swift; sourceTree = "<group>"; };
+		5773654127B47AE600567244 /* BreakdownResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownResultRow.swift; sourceTree = "<group>"; };
+		5773654327B47DE600567244 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
+		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
+		57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardButton.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingApp.swift; sourceTree = "<group>"; };
 		57DE16D527AE485C006C44DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +121,16 @@
 		57DE16EA27AE485C006C44DB /* Codex-BettingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Codex-BettingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITests.swift; sourceTree = "<group>"; };
 		57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
+		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
+		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionsView.swift; sourceTree = "<group>"; };
+		57EC9C2227B227360083DD83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingCalculatorView.swift; sourceTree = "<group>"; };
+		57EC9C2627B2339A0083DD83 /* BackBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBetView.swift; sourceTree = "<group>"; };
+		57F132A027B3825200146A63 /* OddsConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsConverterView.swift; sourceTree = "<group>"; };
+		57F132A227B385F300146A63 /* AmericanOddPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanOddPicker.swift; sourceTree = "<group>"; };
+		57F132A427B3890300146A63 /* LayStakeRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayStakeRequiredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +194,81 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		57268B2027AF8E4E0082ECF6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				57268B2127AF8FCC0082ECF6 /* MainView.swift */,
+				572746B127B0D69E00A3CF06 /* ToolsView.swift */,
+				572746B727B0DBC300A3CF06 /* LessonsView.swift */,
+				572746C027B0DF4100A3CF06 /* RecommendationView.swift */,
+				572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */,
+				57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */,
+				57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */,
+				57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */,
+				57F132A027B3825200146A63 /* OddsConverterView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		57268B2327AF8FDE0082ECF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				572746C627B0E44300A3CF06 /* Lists */,
+				572746BA27B0DC2600A3CF06 /* Shared */,
+				572746B927B0DC1800A3CF06 /* Cards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		572746B927B0DC1800A3CF06 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
+				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
+				572746B527B0D9A600A3CF06 /* LessonCardView.swift */,
+				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
+				572746BE27B0DE7300A3CF06 /* LessonCards.swift */,
+				5796577927B0E82A0084ADDA /* LockFeatureView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		572746BA27B0DC2600A3CF06 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
+				572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */,
+				572746C227B0E07400A3CF06 /* LeadingTitle.swift */,
+				572746C427B0E31600A3CF06 /* LeadingText.swift */,
+				5796577727B0E6020084ADDA /* CloseButton.swift */,
+				5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */,
+				5709983027B16BEE00D8FCFB /* OptionView.swift */,
+				5709983227B16D0A00D8FCFB /* OptionCircle.swift */,
+				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
+				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
+				57EC9C2227B227360083DD83 /* CustomTextField.swift */,
+				57EC9C2627B2339A0083DD83 /* BackBetView.swift */,
+				576F42B027B235F50041E597 /* LayBetView.swift */,
+				57F132A227B385F300146A63 /* AmericanOddPicker.swift */,
+				57F132A427B3890300146A63 /* LayStakeRequiredView.swift */,
+				57D2FB6727B423DF0023B359 /* LiabilityView.swift */,
+				57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */,
+				5773653D27B4756D00567244 /* BreakdownView.swift */,
+				5773653F27B477FC00567244 /* BreakdownRow.swift */,
+				5773654127B47AE600567244 /* BreakdownResultRow.swift */,
+				5773654327B47DE600567244 /* ResultView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		572746C627B0E44300A3CF06 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				572746C727B0E46300A3CF06 /* RecommendationList.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
 		57DE16C727AE485C006C44DB = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +292,8 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				57268B2327AF8FDE0082ECF6 /* Views */,
+				57268B2027AF8E4E0082ECF6 /* Screens */,
 				57268B1927AF87E90082ECF6 /* Info.plist */,
 				57268B0E27AF80B70082ECF6 /* Resources */,
 				57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */,
@@ -313,10 +464,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
+				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
+				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
+				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
+				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
+				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
+				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
+				5773653E27B4756D00567244 /* BreakdownView.swift in Sources */,
+				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
+				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
+				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
+				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
+				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
+				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
+				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
+				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
+				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
+				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
+				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
+				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,
+				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
+				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
+				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
+				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
+				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */,
+				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
+				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
+				57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */,
+				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
+				5773654427B47DE600567244 /* ResultView.swift in Sources */,
+				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
+				5773654027B477FC00567244 /* BreakdownRow.swift in Sources */,
+				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
+				57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

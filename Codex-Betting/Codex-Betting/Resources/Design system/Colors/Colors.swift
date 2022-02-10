@@ -17,6 +17,10 @@ extension Color {
         Color("codex-green")
     }
     
+    static var codexGray: Color {
+        Color("codex-gray")
+    }
+    
     static var codexGolden: Color {
         Color("codex-golden")
     }

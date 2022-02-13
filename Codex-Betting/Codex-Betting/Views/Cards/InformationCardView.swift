@@ -36,7 +36,15 @@ struct InformationCardView: View {
                             .navigationBarHidden(true),
                            tag: InformationCardViewModel.Router.lessons,
                            selection: $viewModel.route,
-                           label: { EmptyView() })
+                           label: { EmptyView() }
+            )
+            
+            NavigationLink(destination: ToolsView()
+                            .navigationBarHidden(true),
+                           tag: InformationCardViewModel.Router.tools,
+                           selection: $viewModel.route,
+                           label: { EmptyView() }
+            )
             
             HStack {
                 

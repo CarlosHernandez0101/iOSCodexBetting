@@ -56,6 +56,7 @@
 		57DE16EF27AE485C006C44DB /* Codex_BettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */; };
 		57DE16F127AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */; };
 		57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */; };
+		57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */; };
 		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
 		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
 		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
@@ -139,6 +140,7 @@
 		57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITests.swift; sourceTree = "<group>"; };
 		57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexToolBar.swift; sourceTree = "<group>"; };
+		57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCardsViewModel.swift; sourceTree = "<group>"; };
 		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
 		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
 		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				5773654927B4CA8300567244 /* MainViewModel.swift */,
 				5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */,
 				5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */,
+				57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */,
 				5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */,
 				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,

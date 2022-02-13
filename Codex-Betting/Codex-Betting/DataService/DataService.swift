@@ -41,8 +41,36 @@ final class DataService {
         )
     ]
     
+    private let toolsCards: [InformationCardModel] = [
+        InformationCardModel(
+            title: TextConstants.InformativeCards.Calculator.title,
+            image: TextConstants.InformativeCards.Calculator.image,
+            description: TextConstants.InformativeCards.Calculator.description,
+            isEnabledByDefault: false,
+            cardType: .calculator
+        ),
+        InformationCardModel(
+            title: TextConstants.InformativeCards.VerifyBet.title,
+            image: TextConstants.InformativeCards.VerifyBet.image,
+            description: TextConstants.InformativeCards.VerifyBet.description,
+            isEnabledByDefault: false,
+            cardType: .verifyBet
+        ),
+        InformationCardModel(
+            title: TextConstants.InformativeCards.OddsConverter.title,
+            image: TextConstants.InformativeCards.OddsConverter.image,
+            description: TextConstants.InformativeCards.OddsConverter.description,
+            isEnabledByDefault: false,
+            cardType: .oddConverter
+        )
+    ]
+    
     func getInformationCards() -> [InformationCardModel] {
         return infomativeCards
+    }
+    
+    func getToolCards() -> [InformationCardModel] {
+        return toolsCards
     }
     
 }

@@ -8,31 +8,33 @@
 import SwiftUI
 
 struct ToolsCards: View {
+    
+    @StateObject private var viewModel: ToolCardsViewModel
+    
+    init(viewModel: ToolCardsViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         VStack(spacing: 45) {
-//            InformationCardView(
-//                cardTitle: "Calculadora F - C",
-//                cardImage: "plus.forwardslash.minus",
-//                cardDescription: "Calculadora Favor - Contra"
-//            )
-//            
-//            InformationCardView(
-//                cardTitle: "Verificar apuesta",
-//                cardImage: "checkmark",
-//                cardDescription: "Verifica que tu apuesta sea segura"
-//            )
-//            
-//            InformationCardView(
-//                cardTitle: "Conversor de cuotas",
-//                cardImage: "arrow.left.arrow.right",
-//                cardDescription: "Convierte cuotas"
-//            )
+            ForEach(viewModel.toolsCards, id: \.id) { toolCard in
+                InformationCardView(
+                    cardTitle: toolCard.title,
+                    cardImage: toolCard.image,
+                    cardDescription: toolCard.description,
+                    viewModel: InformationCardViewModel(
+                        informationCard: toolCard
+                    )
+                )
+            }
         }        
     }
 }
 
 struct ToolsCards_Previews: PreviewProvider {
     static var previews: some View {
-        ToolsCards()
+        ToolsCards(
+            viewModel: ToolCardsViewModel()
+        )
     }
 }

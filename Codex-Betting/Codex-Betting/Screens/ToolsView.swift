@@ -14,11 +14,14 @@ struct ToolsView: View {
                 .edgesIgnoringSafeArea(.all)
             
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
-                LeadingTitle(title: "Herramientas")
+                CodexToolBar()
                 
-                ToolsCards()
+                LeadingTitle(title: TextConstants.Tools.title)
+                
+                ToolsCards(viewModel: ToolCardsViewModel())
+                    .padding(.top, 32)
             }
             .padding(.top, 32)
             .padding(.horizontal, 16)

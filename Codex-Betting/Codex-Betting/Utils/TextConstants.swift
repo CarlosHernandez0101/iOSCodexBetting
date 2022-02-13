@@ -40,4 +40,8 @@ struct TextConstants {
         }
     }
     
+    enum Lessons {
+        static let title = "Lecciones"
+    }
+    
 }

@@ -37,6 +37,7 @@ struct LessonCardView: View {
             Text(lessonDescription)
                 .foregroundColor(.codexGray)
                 .padding(.top, 8)
+                .fixedSize(horizontal: false, vertical: true)
             
             CustomDivider(dividerColor: .codexGray)
                 .padding(.top, 16)

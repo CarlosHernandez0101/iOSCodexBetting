@@ -31,6 +31,13 @@ struct InformationCardView: View {
     
     var body: some View {
         VStack {
+            
+            NavigationLink(destination: LessonsView()
+                            .navigationBarHidden(true),
+                           tag: InformationCardViewModel.Router.lessons,
+                           selection: $viewModel.route,
+                           label: { EmptyView() })
+            
             HStack {
                 
                 Text(cardTitle)

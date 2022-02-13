@@ -11,17 +11,22 @@ struct LessonsView: View {
     var body: some View {
         ZStack {
             
-            Color.codexBlack
-                .edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
-                LeadingTitle(title: "Lecciones")
+                CodexToolBar()
+                
+                LeadingTitle(title: TextConstants.Lessons.title)
                 
                 LessonCards()
-            }            
+            }
         }
+        .padding(.horizontal, 16)
+        .padding(.bottom, 32)
+        .background(
+            Color.codexBlack.edgesIgnoringSafeArea(.all)
+        )
     }
+    
 }
 
 struct LessonsView_Previews: PreviewProvider {

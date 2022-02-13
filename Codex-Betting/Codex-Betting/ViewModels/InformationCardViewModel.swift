@@ -12,17 +12,18 @@ final class InformationCardViewModel: ObservableObject {
     
     @Published var isEnabled: Bool = false
     @Published var showLockedFeature: Bool = false
-    @Published var isCodexBettingMember: Bool = false
+    @Published var isCodexBettingMember: Bool = true
     @Published var route: Router?
+    @Published var cardType: InformationCardModel.InformationCardType
     
     init(informationCard: InformationCardModel) {
         self.isEnabled = informationCard.isEnabledByDefault
-        
+        self.cardType = informationCard.cardType
     }
     
     public func didTapInformativeCard() {
         if isEnabled || isCodexBettingMember {
-            
+            didTapOnInformationCard(with: cardType)
         } else {
             showLockedFeature.toggle()
         }

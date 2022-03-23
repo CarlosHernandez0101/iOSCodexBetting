@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("showRecommendations") var showRecommendations = true
+    
     var body: some View {
         
         MainView(viewModel: MainViewModel())

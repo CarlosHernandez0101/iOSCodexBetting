@@ -13,15 +13,20 @@ struct VerifyBetOptionsView: View {
             
             Color.codexBlack.edgesIgnoringSafeArea(.all)
             
+            CodexToolBar()
+            
             VStack {
                                 
-                LeadingTitle(title: "Verificar")
+                LeadingTitle(title: TextConstants.VerifyBet.title)
                 
-                MultiOptionSelectorView()
+                //Change this
+//                MultiOptionSelectorView()
                 
                 Spacer()
             }
+            .padding(.top, 64)
         }
+        .padding(.horizontal, 16)
     }
 }
 

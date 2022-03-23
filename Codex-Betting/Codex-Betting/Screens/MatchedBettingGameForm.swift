@@ -9,79 +9,114 @@ import SwiftUI
 
 struct MatchedBettingGameForm: View {
     
-    @State var showingSheet: Bool = false
-    @State var textFieldText: String = ""
+    @StateObject private var viewModel: MatchedBettingGameFormViewModel
+    
+    init(viewModel: MatchedBettingGameFormViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
+    private func test() {}
     
     var body: some View {
-        ZStack {
-            Color.codexBlack
-                .edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
+//        Background {
+            ZStack {
+                Color.codexBlack
+                    .edgesIgnoringSafeArea(.all)
                 
-                VStack {
-                    LeadingTitle(title: "Solicitar partido")
+                ScrollView(showsIndicators: false) {
                     
-                    CustomDivider(dividerColor: .codexGray)
+                    CodexToolBar()
                     
-                    LeadingText(text: "Solicitar")
+                    MatchedBettingGameFormHeader()
+                    
+                    VStack {
+                        
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.askText)
+                            .padding(.top, 32)
+                        
+                        MultiOptionSelectorView(currentSelection: $viewModel.currentMatchedBettingGameSelection)
+                        
+                        if viewModel.showMatchedBettingTextField {
+                            CodexTextField(
+                                text: $viewModel.matchedBettingGameText,
+                                placeholder: viewModel.matchedBettingGamePlaceholder,
+                                keyboardType: .default,
+                                disableAutocorrection: false
+                            )
+                        }
+                        
+                        CustomDivider(dividerColor: .codexGray)
+                    }
+                    
+                    
+                    if !viewModel.showOnlyRequestButton {
+                        VStack {
+                            
+                            LeadingText(text: TextConstants.MatchedBettingGameForm.oddsText)
+                                .padding(.top, 32)
+                                .padding(.bottom, 16)
+                            
+                            OddsInput(
+                                minimumOdd: $viewModel.minimumOdd,
+                                maximumOdd: $viewModel.maximumOdd
+                            )
+                            
+                            CustomDivider(dividerColor: .codexGray)
+                        }
+                        
+                        
+                        VStack {
+                            LeadingText(text: TextConstants.MatchedBettingGameForm.datesText)
+                                .padding(.top, 32)
+                            
+                            DatesInput(startDate: $viewModel.gameStartDate, endDate: $viewModel.gameEndDate)
+                        }
+                        
+                        VStack {
+                            CustomDivider(dividerColor: .codexGray)
+                                .padding(.vertical, 32)
+                            
+                            LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
+                            
+                            CodexTextField(
+                                text: $viewModel.spoortbookSelected,
+                                placeholder: viewModel.spoortbookPlaceholder,
+                                keyboardType: .default,
+                                disableAutocorrection: false
+                            )
+                            
+                        }
+                    }
+                                        
+                    ContinueButton(
+                        buttonText: TextConstants.MatchedBettingGameForm.Button.sendRequest,
+                        action: test,
+                        isDisabled: $viewModel.disableRequestButton
+                    )
+                        .padding(.bottom, 150)
                         .padding(.top, 32)
-                }
-                
-                
-                MultiOptionSelectorView()
-                
-                //TODO: Add text field here
-                
-                CustomDivider(dividerColor: .codexGray)
-                
-                LeadingText(text: "Cuotas")
-                    .padding(.top, 32)
-                
-                CustomDivider(dividerColor: .codexGray)
-                
-                LeadingText(text: "Fechas")
-                    .padding(.top, 32)
-                
-                VStack(spacing: 8) {
-                    DatePicker(
-                        "Desde",
-                        selection: .constant(Date()),
-                        displayedComponents: [.date, .hourAndMinute]
-                    )
-                        .background(Color.codexGolden)
-                        .foregroundColor(.black)
-                        .accentColor(.codexGolden)
-                        .cornerRadius(15)
                     
-                    DatePicker(
-                        "Hasta",
-                        selection: .constant(Date()),
-                        displayedComponents: [.date, .hourAndMinute]
-                    )
-                        .background(Color.codexGolden)
-                        .foregroundColor(.black)
-                        .accentColor(.codexGolden)
-                        .cornerRadius(15)
                 }
-                
-                CustomDivider(dividerColor: .codexGray)
-                    .padding(.vertical, 32)
-                
-                LeadingText(text: "Casa de apuestas")
-                
+                .padding(.horizontal, 16)
+                .padding(.bottom, 32)
             }
-            .padding(.horizontal, 16)
-            
-        }
-        .sheet(isPresented: $showingSheet) {
-            RecommendationView(isPresented: $showingSheet)
-        }
+            .sheet(isPresented: $viewModel.isPresentedRecommendations) {
+                if viewModel.isPresentedRecommendations {
+                    RecommendationView(
+                        viewModel: RecommendationViewModel(),
+                        isPresented: $viewModel.isPresentedRecommendations
+                    )
+                }
+            }
+//        }
+//        .onTapGesture {
+//            UIApplication.shared.endEditing()
+//        }
     }
 }
 
 struct MatchedBettingGameForm_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedBettingGameForm()
+        MatchedBettingGameForm(viewModel: MatchedBettingGameFormViewModel())
     }
 }

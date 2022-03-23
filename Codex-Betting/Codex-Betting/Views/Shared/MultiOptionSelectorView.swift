@@ -8,25 +8,40 @@
 import SwiftUI
 
 struct MultiOptionSelectorView: View {
+    
+    @Binding var currentSelection: MatchSelection
+    
+    init(currentSelection: Binding<MatchSelection>) {
+        self._currentSelection = currentSelection
+    }
+    
     var body: some View {
-        
         VStack {
             
             HStack {
                 VStack(alignment: .leading) {
-                    //TODO: MAKE A SUBVIEW FOR THIS
-                    OptionView(
-                        isSelected: false,
-                        optionText: "Apuesta requisito"
+                    
+                    MatchBettingGameOption(
+                        optionText: "Cualquier evento",
+                        index: .anyEvent,
+                        currentSelection: $currentSelection
                     )
-                    OptionView(
-                        isSelected: true,
-                        optionText: "Apuesta gratis"
+                    MatchBettingGameOption(
+                        optionText: "Partido",
+                        index: .match,
+                        currentSelection: $currentSelection
                     )
-                    OptionView(
-                        isSelected: false,
-                        optionText: "Código"
+                    MatchBettingGameOption(
+                        optionText: "Liga/Competición",
+                        index: .league,
+                        currentSelection: $currentSelection
                     )
+                    MatchBettingGameOption(
+                        optionText: "Bienvenida Betfair",
+                        index: .welcome,
+                        currentSelection: $currentSelection
+                    )
+                    
                 }
                 Spacer()
             }
@@ -38,6 +53,6 @@ struct MultiOptionSelectorView: View {
 
 struct MultiOptionSelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        MultiOptionSelectorView()
+        MultiOptionSelectorView(currentSelection: .constant(.match))
     }
 }

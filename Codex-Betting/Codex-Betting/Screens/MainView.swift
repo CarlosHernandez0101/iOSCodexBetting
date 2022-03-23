@@ -32,7 +32,7 @@ struct MainView: View {
                     
                     InformationCards(
                         viewModel: InformationCardsViewModel()
-                    )
+                    )                                        
                 }
                 .padding(.vertical, 32)
                 .edgesIgnoringSafeArea(.top)

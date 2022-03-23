@@ -15,16 +15,12 @@ struct OddsConverterView: View {
         ZStack {
             Color.codexBlack.edgesIgnoringSafeArea(.all)
             
+            CodexToolBar()
+                .padding(.leading, 16)
+            
             VStack {
                 
-                Text("Cuota americana")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
-                    )
-                    .foregroundColor(.white)
+                NormalText(text: TextConstants.OddsConverter.americanOdd)
              
                 HStack {
 
@@ -33,24 +29,10 @@ struct OddsConverterView: View {
                     Spacer()
                 }
                 
-                Text("Cuota decimal")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
-                    )
-                    .foregroundColor(.white)
+                NormalText(text: TextConstants.OddsConverter.decimalOdd)
                     .padding(.top, 32)
                 
-                Text("1.7")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
-                    )
-                    .foregroundColor(.white)
+                NormalText(text: "1.7")
                     .padding(.top, 16)
                 
             }

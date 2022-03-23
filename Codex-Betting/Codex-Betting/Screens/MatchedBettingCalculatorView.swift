@@ -13,12 +13,18 @@ struct MatchedBettingCalculatorView: View {
             
             Color.codexBlack.edgesIgnoringSafeArea(.all)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
+                
+                CodexToolBar()
+                    .padding(.leading, 16)
                 
                 LeadingText(text: "Tipo de apuesta")
-                
-                MultiOptionSelectorView()
-                    .padding(.top, 32)
+                    .padding(.leading, 16)
+  
+                //Change this
+//                MultiOptionSelectorView()
+//                    .padding(.top, 32)
+//                    .padding(.leading, 16)
                 
                 BackBetView()
                     .padding(.top, 32)
@@ -37,11 +43,10 @@ struct MatchedBettingCalculatorView: View {
                 
                 ResultView()
                     .padding(.top, 32)
+                    .padding(.bottom, 50)
                 
             }
-            .padding(.horizontal, 16)
-            .padding(.bottom, 50)
-            
+            .padding(.horizontal, 16)            
         }
     }
 }

@@ -12,7 +12,10 @@ struct VerifyBetView: View {
         ZStack {
             Color.codexBlack.edgesIgnoringSafeArea(.all)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
+                
+                CodexToolBar()
+                
                 RequirementWithCheckboxView(
                     requirementText: "Los partidos coinciden"
                 )

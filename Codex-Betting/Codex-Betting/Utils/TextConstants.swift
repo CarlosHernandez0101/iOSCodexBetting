@@ -65,4 +65,45 @@ struct TextConstants {
     enum Tools {
         static let title = "Herramientas"
     }
+    
+    enum MatchedBettingGameForm {
+        static let title = "Solicitar partido"
+        static let askText = "Solicitar"
+        static let oddsText = "Cuotas"
+        static let datesText = "Fechas"
+        static let fromDateText = "Desde"
+        static let toDateText = "Hasta"
+        static let spoortBookText = "Casa de apuestas"
+        
+        enum Recommendations {
+            static let title = "Recomendaciones"
+        }
+        
+        enum PlaceholderText {
+            static let match = "Escriba el nombre del partido"
+            static let league = "Escriba el nombre de liga/competición"
+        }
+        
+        enum OddsInput {
+            static let minimum = "Cuota miníma"
+            static let maximum = "Cuota máxima"
+        }
+        
+        enum Spoortbook {
+            static let selection = "Escriba la casa de apuesta"
+        }
+        
+        enum Button {
+            static let sendRequest = "Solicitar partido"
+        }
+    }
+    
+    enum VerifyBet {
+        static let title = "Verificar"
+    }
+    
+    enum OddsConverter {
+        static let americanOdd = "Cuota americana"
+        static let decimalOdd = "Cuota decimal"
+    }
 }

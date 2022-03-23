@@ -32,19 +32,52 @@ struct InformationCardView: View {
     var body: some View {
         VStack {
             
-            NavigationLink(destination: LessonsView()
-                            .navigationBarHidden(true),
-                           tag: InformationCardViewModel.Router.lessons,
-                           selection: $viewModel.route,
-                           label: { EmptyView() }
-            )
-            
-            NavigationLink(destination: ToolsView()
-                            .navigationBarHidden(true),
-                           tag: InformationCardViewModel.Router.tools,
-                           selection: $viewModel.route,
-                           label: { EmptyView() }
-            )
+            Group {
+                NavigationLink(destination: LessonsView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.lessons,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
+                NavigationLink(destination: ToolsView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.tools,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
+                NavigationLink(destination: MatchedBettingGameForm(
+                    viewModel: MatchedBettingGameFormViewModel()
+                )
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.match,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
+                NavigationLink(destination: MatchedBettingCalculatorView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.calculator,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
+                NavigationLink(destination: VerifyBetOptionsView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.verifyBet,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
+                NavigationLink(destination: OddsConverterView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.oddsConverter,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+            }
+
             
             HStack {
                 

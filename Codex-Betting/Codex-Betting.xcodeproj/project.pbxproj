@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561227C0A205005E3CCB /* CodexTextField.swift */; };
+		5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */; };
+		5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561A27C0A971005E3CCB /* OddsInput.swift */; };
+		5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561C27C0ADDB005E3CCB /* DatesInput.swift */; };
+		5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */; };
+		5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704562127C0B233005E3CCB /* MatchSelectionController.swift */; };
 		5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */; };
-		5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* OptionView.swift */; };
+		5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */; };
 		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
+		570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */; };
+		571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F997827C2018800F271C3 /* BackgroundContent.swift */; };
+		571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F99A127C34D0100F271C3 /* ContinueButton.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
 		57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1327AF84060082ECF6 /* Launch Screen.storyboard */; };
 		57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */; };
@@ -44,8 +53,12 @@
 		5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655327B4D25E00567244 /* InformationCardModel.swift */; };
 		5773655627B4D3F700567244 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655527B4D3F700567244 /* TextConstants.swift */; };
 		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
+		5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
+		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
+		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
+		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
 		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
 		57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
@@ -57,6 +70,7 @@
 		57DE16F127AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */; };
 		57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */; };
 		57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */; };
+		57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */; };
 		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
 		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
 		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
@@ -87,9 +101,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5704561227C0A205005E3CCB /* CodexTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexTextField.swift; sourceTree = "<group>"; };
+		5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ext.swift"; sourceTree = "<group>"; };
+		5704561A27C0A971005E3CCB /* OddsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsInput.swift; sourceTree = "<group>"; };
+		5704561C27C0ADDB005E3CCB /* DatesInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesInput.swift; sourceTree = "<group>"; };
+		5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormHeader.swift; sourceTree = "<group>"; };
+		5704562127C0B233005E3CCB /* MatchSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionController.swift; sourceTree = "<group>"; };
 		5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOptionSelectorView.swift; sourceTree = "<group>"; };
-		5709983027B16BEE00D8FCFB /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBettingGameOption.swift; sourceTree = "<group>"; };
 		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
+		570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		571F997827C2018800F271C3 /* BackgroundContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContent.swift; sourceTree = "<group>"; };
+		571F99A127C34D0100F271C3 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		57268B1327AF84060082ECF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Regular.ttf"; sourceTree = "<group>"; };
@@ -125,8 +148,12 @@
 		5773655327B4D25E00567244 /* InformationCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardModel.swift; sourceTree = "<group>"; };
 		5773655527B4D3F700567244 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceManager.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
+		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
+		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
+		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
 		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
 		57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardButton.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +168,7 @@
 		57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexToolBar.swift; sourceTree = "<group>"; };
 		57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCardsViewModel.swift; sourceTree = "<group>"; };
+		57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalText.swift; sourceTree = "<group>"; };
 		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
 		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
 		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -178,6 +206,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5704562027C0B1E4005E3CCB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5704562127C0B233005E3CCB /* MatchSelectionController.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		57268B0E27AF80B70082ECF6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +272,7 @@
 				572746C627B0E44300A3CF06 /* Lists */,
 				572746BA27B0DC2600A3CF06 /* Shared */,
 				572746B927B0DC1800A3CF06 /* Cards */,
+				571F99A127C34D0100F271C3 /* ContinueButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,7 +299,7 @@
 				572746C427B0E31600A3CF06 /* LeadingText.swift */,
 				5796577727B0E6020084ADDA /* CloseButton.swift */,
 				5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */,
-				5709983027B16BEE00D8FCFB /* OptionView.swift */,
+				5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */,
 				5709983227B16D0A00D8FCFB /* OptionCircle.swift */,
 				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
 				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
@@ -278,6 +315,13 @@
 				5773654127B47AE600567244 /* BreakdownResultRow.swift */,
 				5773654327B47DE600567244 /* ResultView.swift */,
 				57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */,
+				57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */,
+				5704561227C0A205005E3CCB /* CodexTextField.swift */,
+				5704561A27C0A971005E3CCB /* OddsInput.swift */,
+				5704561C27C0ADDB005E3CCB /* DatesInput.swift */,
+				5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */,
+				571F997827C2018800F271C3 /* BackgroundContent.swift */,
+				570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -296,6 +340,7 @@
 				5773654627B4CA3200567244 /* ImageConstants.swift */,
 				5773655527B4D3F700567244 /* TextConstants.swift */,
 				5773655727B4DA8A00567244 /* URLConstants.swift */,
+				5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -307,6 +352,9 @@
 				5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */,
 				5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */,
 				57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */,
+				57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */,
+				57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */,
+				57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -323,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				5773655327B4D25E00567244 /* InformationCardModel.swift */,
+				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +399,7 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				5704562027C0B1E4005E3CCB /* Enums */,
 				5773655227B4D24E00567244 /* Models */,
 				5773654F27B4D22000567244 /* DataService */,
 				5773654827B4CA7100567244 /* ViewModels */,
@@ -527,10 +577,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
+				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
+				5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
+				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
 				5773655127B4D23C00567244 /* DataService.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
@@ -538,25 +591,36 @@
 				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
+				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
+				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
+				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
+				5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */,
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
 				5773655627B4D3F700567244 /* TextConstants.swift in Sources */,
 				57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */,
+				5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */,
 				5773653E27B4756D00567244 /* BreakdownView.swift in Sources */,
-				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
+				5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */,
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
+				57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
 				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
+				571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
+				570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
+				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
+				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
+				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
 				5773655827B4DA8A00567244 /* URLConstants.swift in Sources */,
 				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,

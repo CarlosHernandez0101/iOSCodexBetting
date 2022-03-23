@@ -65,12 +65,24 @@ final class DataService {
         )
     ]
     
+    private let gameFormRecommendations: [String] = [
+        "1. Esta herramienta solo acepta partidos de fútbol, cualquier otro deporte no será tomado en cuenta",
+        "2. Solicita el partido con anticipación",
+        "3. Verifica que las fechas en las que solicitas un partido sean correctas",
+        "4. Solicita solamente los partidos que necesites, el exceso de peticiones o mal uso de la herramienta puede resultar en la inhabilitación de la misma",
+        "5. Si no recibes respuesta en un lapso de 3 horas por parte de nuestro equipo manda un mensaje de nuevo"
+    ]
+    
     func getInformationCards() -> [InformationCardModel] {
         return infomativeCards
     }
     
     func getToolCards() -> [InformationCardModel] {
         return toolsCards
+    }
+    
+    func getGameFormRecommendations() -> [String] {
+        return gameFormRecommendations
     }
     
 }

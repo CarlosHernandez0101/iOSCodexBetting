@@ -10,36 +10,32 @@ import SwiftUI
 struct LessonCards: View {
     var body: some View {
         VStack {
-            LessonCardView(
-                lessonNumber: "1",
+            CourseVideoCardView(
                 lessonTitle: "Apuestas",
                 lessonDescription: "Aprende que es una apuesta"
             )
             
-            LessonCardView(
-                lessonNumber: "1",
+            CourseVideoCardView(
                 lessonTitle: "Apuestas",
                 lessonDescription: "Aprende que es una apuesta"
             )
             
-            LessonCardView(
-                lessonNumber: "1",
+            CourseVideoCardView(
                 lessonTitle: "Apuestas",
                 lessonDescription: "Aprende que es una apuesta"
             )
             
-            LessonCardView(
-                lessonNumber: "1",
+            CourseVideoCardView(
                 lessonTitle: "Apuestas",
                 lessonDescription: "Aprende que es una apuesta"
             )
             
-            LessonCardView(
-                lessonNumber: "1",
+            CourseVideoCardView(
                 lessonTitle: "Apuestas",
                 lessonDescription: "Aprende que es una apuesta"
             )
         }
+        .background(Color.codexBlack)
     }
 }
 

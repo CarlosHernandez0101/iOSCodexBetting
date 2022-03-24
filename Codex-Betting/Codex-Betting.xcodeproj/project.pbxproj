@@ -31,7 +31,7 @@
 		57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2827AF971A0082ECF6 /* InformationCards.swift */; };
 		572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B127B0D69E00A3CF06 /* ToolsView.swift */; };
 		572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B327B0D85B00A3CF06 /* ToolsCards.swift */; };
-		572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* LessonCardView.swift */; };
+		572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */; };
 		572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B727B0DBC300A3CF06 /* LessonsView.swift */; };
 		572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */; };
 		572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BE27B0DE7300A3CF06 /* LessonCards.swift */; };
@@ -126,7 +126,7 @@
 		57268B2827AF971A0082ECF6 /* InformationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCards.swift; sourceTree = "<group>"; };
 		572746B127B0D69E00A3CF06 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		572746B327B0D85B00A3CF06 /* ToolsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCards.swift; sourceTree = "<group>"; };
-		572746B527B0D9A600A3CF06 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoCardView.swift; sourceTree = "<group>"; };
 		572746B727B0DBC300A3CF06 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithNumber.swift; sourceTree = "<group>"; };
 		572746BE27B0DE7300A3CF06 /* LessonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCards.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 			children = (
 				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
 				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
-				572746B527B0D9A600A3CF06 /* LessonCardView.swift */,
+				572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */,
 				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
 				572746BE27B0DE7300A3CF06 /* LessonCards.swift */,
 				5796577927B0E82A0084ADDA /* LockFeatureView.swift */,
@@ -627,7 +627,7 @@
 				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
-				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
+				572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
 				57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */,

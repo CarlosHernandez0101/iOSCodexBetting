@@ -12,6 +12,7 @@ struct CourseVideoCardView: View {
     private let lessonTitle: String
     private let lessonDescription: String
     private let lessonURL: URL?
+    @State private var showVideo = false
     
     init(lessonTitle: String, lessonDescription: String, lessonURL: String) {
         self.lessonTitle = lessonTitle
@@ -22,6 +23,17 @@ struct CourseVideoCardView: View {
     
     var body: some View {
         VStack {
+            
+            NavigationLink(
+                isActive: $showVideo) {
+                    VideoDetailView(
+                        lessonTitle: lessonTitle,
+                        lessonDescription: lessonDescription,
+                        lessonURL: lessonURL)
+                } label: {
+                    EmptyView()
+                }
+
             
             HStack {
                 
@@ -53,6 +65,9 @@ struct CourseVideoCardView: View {
         .padding(.bottom, 16)
         .padding(.horizontal, 16)
         .background(Color.codexBlack)
+        .onTapGesture {
+            showVideo = true
+        }
         
     }
 }

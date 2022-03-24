@@ -43,6 +43,8 @@
 		5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */; };
 		5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */; };
 		5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56727EC99E0000A53DB /* CourseVideoModel.swift */; };
+		5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */; };
+		5742F56D27EC9EC0000A53DB /* CourseVideos.json in Resources */ = {isa = PBXBuildFile; fileRef = 5742F56C27EC9EC0000A53DB /* CourseVideos.json */; };
 		576F42B127B235F50041E597 /* LayBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F42B027B235F50041E597 /* LayBetView.swift */; };
 		5773653E27B4756D00567244 /* BreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653D27B4756D00567244 /* BreakdownView.swift */; };
 		5773654027B477FC00567244 /* BreakdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653F27B477FC00567244 /* BreakdownRow.swift */; };
@@ -141,6 +143,8 @@
 		5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardsViewModel.swift; sourceTree = "<group>"; };
 		5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseViewModel.swift; sourceTree = "<group>"; };
 		5742F56727EC99E0000A53DB /* CourseVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoModel.swift; sourceTree = "<group>"; };
+		5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseRepository.swift; sourceTree = "<group>"; };
+		5742F56C27EC9EC0000A53DB /* CourseVideos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CourseVideos.json; sourceTree = "<group>"; };
 		576F42B027B235F50041E597 /* LayBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayBetView.swift; sourceTree = "<group>"; };
 		5773653D27B4756D00567244 /* BreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownView.swift; sourceTree = "<group>"; };
 		5773653F27B477FC00567244 /* BreakdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownRow.swift; sourceTree = "<group>"; };
@@ -343,6 +347,7 @@
 		5742F56927EC9A38000A53DB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				5773655027B4D23C00567244 /* DataService.swift */,
+				5742F56C27EC9EC0000A53DB /* CourseVideos.json */,
 			);
 			path = DataService;
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 				57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */,
 				57DE16DB27AE485C006C44DB /* Preview Assets.xcassets in Resources */,
 				57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */,
+				5742F56D27EC9EC0000A53DB /* CourseVideos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */,
 				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
 				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,

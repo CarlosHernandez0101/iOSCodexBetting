@@ -40,6 +40,9 @@
 		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
 		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
 		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */; };
+		5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */; };
+		5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56727EC99E0000A53DB /* CourseVideoModel.swift */; };
 		576F42B127B235F50041E597 /* LayBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F42B027B235F50041E597 /* LayBetView.swift */; };
 		5773653E27B4756D00567244 /* BreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653D27B4756D00567244 /* BreakdownView.swift */; };
 		5773654027B477FC00567244 /* BreakdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653F27B477FC00567244 /* BreakdownRow.swift */; };
@@ -135,6 +138,9 @@
 		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
 		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
 		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardsViewModel.swift; sourceTree = "<group>"; };
+		5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseViewModel.swift; sourceTree = "<group>"; };
+		5742F56727EC99E0000A53DB /* CourseVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoModel.swift; sourceTree = "<group>"; };
 		576F42B027B235F50041E597 /* LayBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayBetView.swift; sourceTree = "<group>"; };
 		5773653D27B4756D00567244 /* BreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownView.swift; sourceTree = "<group>"; };
 		5773653F27B477FC00567244 /* BreakdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownRow.swift; sourceTree = "<group>"; };
@@ -334,6 +340,13 @@
 			path = Lists;
 			sourceTree = "<group>";
 		};
+		5742F56927EC9A38000A53DB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		5773654527B4CA1B00567244 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +368,8 @@
 				57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */,
 				57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */,
 				57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */,
+				5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */,
+				5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -372,6 +387,7 @@
 			children = (
 				5773655327B4D25E00567244 /* InformationCardModel.swift */,
 				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
+				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +415,7 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				5742F56927EC9A38000A53DB /* Repository */,
 				5704562027C0B1E4005E3CCB /* Enums */,
 				5773655227B4D24E00567244 /* Models */,
 				5773654F27B4D22000567244 /* DataService */,
@@ -580,6 +597,8 @@
 				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */,
+				5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */,
+				5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
@@ -588,6 +607,7 @@
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */,
 				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,

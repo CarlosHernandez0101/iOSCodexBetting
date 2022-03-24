@@ -17,7 +17,7 @@ struct LessonCards: View {
             
             CourseVideoCardView(
                 lessonTitle: "Apuestas",
-                lessonDescription: "Aprende que es una apuesta"
+                lessonDescription: "Aprende que es una apuestax"
             )
             
             CourseVideoCardView(

@@ -100,6 +100,9 @@ struct TextConstants {
     
     enum VerifyBet {
         static let title = "Verificar"
+        static let continueText = "Continuar"
+        static let betAlertText = "Es seguro hacer su apuesta"
+        static let depositAlertText = "Es seguro hacer su depósito"
     }
     
     enum OddsConverter {

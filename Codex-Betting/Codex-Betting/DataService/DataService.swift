@@ -65,6 +65,28 @@ final class DataService {
         )
     ]
     
+    private let verifyBetRequirements: [ String] = [
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden"
+    ]
+    
+    private let verifyDepositRequirements: [ String] = [
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden",
+        "Los partidos coninciden"
+    ]
+    
     private let gameFormRecommendations: [String] = [
         "1. Esta herramienta solo acepta partidos de fútbol, cualquier otro deporte no será tomado en cuenta",
         "2. Solicita el partido con anticipación",
@@ -85,4 +107,11 @@ final class DataService {
         return gameFormRecommendations
     }
     
+    func getVerifyBetRequirements() -> [String] {
+        return verifyBetRequirements
+    }
+    
+    func getVerifyDepositRequirements() -> [String] {
+        return verifyDepositRequirements
+    }    
 }

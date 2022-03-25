@@ -40,6 +40,14 @@
 		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
 		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
 		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */; };
+		572B278E27EDFC5E00F8E66C /* VerifySelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */; };
+		572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */; };
+		572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */; };
+		572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279327EE031400F8E66C /* VerifyBetViewModel.swift */; };
+		572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279527EE03CF00F8E66C /* RequirementViewModel.swift */; };
+		572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279727EE1A5B00F8E66C /* RequirementsView.swift */; };
+		572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279927EE21D800F8E66C /* SuccessAlertView.swift */; };
 		5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */; };
 		5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */; };
 		5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56727EC99E0000A53DB /* CourseVideoModel.swift */; };
@@ -144,6 +152,14 @@
 		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
 		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
 		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetSelectorView.swift; sourceTree = "<group>"; };
+		572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySelectionController.swift; sourceTree = "<group>"; };
+		572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionView.swift; sourceTree = "<group>"; };
+		572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionsViewModel.swift; sourceTree = "<group>"; };
+		572B279327EE031400F8E66C /* VerifyBetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetViewModel.swift; sourceTree = "<group>"; };
+		572B279527EE03CF00F8E66C /* RequirementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementViewModel.swift; sourceTree = "<group>"; };
+		572B279727EE1A5B00F8E66C /* RequirementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsView.swift; sourceTree = "<group>"; };
+		572B279927EE21D800F8E66C /* SuccessAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAlertView.swift; sourceTree = "<group>"; };
 		5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardsViewModel.swift; sourceTree = "<group>"; };
 		5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseViewModel.swift; sourceTree = "<group>"; };
 		5742F56727EC99E0000A53DB /* CourseVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoModel.swift; sourceTree = "<group>"; };
@@ -228,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				5704562127C0B233005E3CCB /* MatchSelectionController.swift */,
+				572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -344,6 +361,10 @@
 				570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */,
 				578B104927ED36560093DA26 /* BackButtonView.swift */,
 				578B104B27ED377E0093DA26 /* FootnoteView.swift */,
+				572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */,
+				572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */,
+				572B279727EE1A5B00F8E66C /* RequirementsView.swift */,
+				572B279927EE21D800F8E66C /* SuccessAlertView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -387,6 +408,9 @@
 				57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */,
 				5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */,
 				5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */,
+				572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */,
+				572B279327EE031400F8E66C /* VerifyBetViewModel.swift */,
+				572B279527EE03CF00F8E66C /* RequirementViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -612,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */,
 				5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */,
 				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
 				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
@@ -624,14 +649,17 @@
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
 				5773655127B4D23C00567244 /* DataService.swift in Sources */,
+				572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
 				5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */,
 				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
+				572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
+				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
 				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
 				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
@@ -645,6 +673,7 @@
 				5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */,
 				5773653E27B4756D00567244 /* BreakdownView.swift in Sources */,
 				5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */,
+				572B278E27EDFC5E00F8E66C /* VerifySelectionController.swift in Sources */,
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
@@ -653,13 +682,16 @@
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
 				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
+				572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
 				571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */,
+				572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
 				570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
 				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
+				572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
 				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,

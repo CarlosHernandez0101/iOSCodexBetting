@@ -10,6 +10,7 @@ import SwiftUI
 struct Checkbox: View {
     
     @Binding private var isSelected: Bool
+    private let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     init(isSelected: Binding<Bool>) {
         self._isSelected = isSelected
@@ -31,6 +32,10 @@ struct Checkbox: View {
             
         }
         .background(Color.codexBlack)
+        .onTapGesture {
+            isSelected.toggle()
+            impactFeedbackGenerator.impactOccurred()
+        }
     }
 }
 

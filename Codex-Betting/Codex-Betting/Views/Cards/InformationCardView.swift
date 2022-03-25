@@ -63,7 +63,10 @@ struct InformationCardView: View {
                                label: { EmptyView() }
                 )
                 
-                NavigationLink(destination: VerifyBetOptionsView()
+                NavigationLink(
+                    destination: VerifyBetOptionsView(
+                        viewModel: VerifyBetOptionsViewModel()
+                    )
                                 .navigationBarHidden(true),
                                tag: InformationCardViewModel.Router.verifyBet,
                                selection: $viewModel.route,

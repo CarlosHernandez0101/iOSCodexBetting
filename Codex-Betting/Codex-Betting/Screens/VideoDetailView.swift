@@ -53,8 +53,6 @@ struct VideoDetailView: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 32)
                 
-//                FootnoteView()
-                
             }
             .background(Color.codexBlack)
         }

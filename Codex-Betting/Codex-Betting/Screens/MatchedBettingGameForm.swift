@@ -18,101 +18,98 @@ struct MatchedBettingGameForm: View {
     private func test() {}
     
     var body: some View {
-//        Background {
-            ZStack {
-                Color.codexBlack
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            
+            ScrollView(showsIndicators: false) {
                 
-                ScrollView(showsIndicators: false) {
+                CodexToolBar()
+                
+                MatchedBettingGameFormHeader()
+                
+                VStack {
                     
-                    CodexToolBar()
+                    LeadingText(text: TextConstants.MatchedBettingGameForm.askText)
+                        .padding(.top, 32)
                     
-                    MatchedBettingGameFormHeader()
+                    MultiOptionSelectorView(currentSelection: $viewModel.currentMatchedBettingGameSelection)
                     
+                    if viewModel.showMatchedBettingTextField {
+                        CodexTextField(
+                            text: $viewModel.matchedBettingGameText,
+                            placeholder: viewModel.matchedBettingGamePlaceholder,
+                            keyboardType: .default,
+                            disableAutocorrection: false
+                        )
+                    }
+                    
+                    CustomDivider(dividerColor: .codexGray)
+                }
+                
+                
+                if !viewModel.showOnlyRequestButton {
                     VStack {
                         
-                        LeadingText(text: TextConstants.MatchedBettingGameForm.askText)
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.oddsText)
                             .padding(.top, 32)
+                            .padding(.bottom, 16)
                         
-                        MultiOptionSelectorView(currentSelection: $viewModel.currentMatchedBettingGameSelection)
-                        
-                        if viewModel.showMatchedBettingTextField {
-                            CodexTextField(
-                                text: $viewModel.matchedBettingGameText,
-                                placeholder: viewModel.matchedBettingGamePlaceholder,
-                                keyboardType: .default,
-                                disableAutocorrection: false
-                            )
-                        }
+                        OddsInput(
+                            minimumOdd: $viewModel.minimumOdd,
+                            maximumOdd: $viewModel.maximumOdd
+                        )
                         
                         CustomDivider(dividerColor: .codexGray)
                     }
                     
                     
-                    if !viewModel.showOnlyRequestButton {
-                        VStack {
-                            
-                            LeadingText(text: TextConstants.MatchedBettingGameForm.oddsText)
-                                .padding(.top, 32)
-                                .padding(.bottom, 16)
-                            
-                            OddsInput(
-                                minimumOdd: $viewModel.minimumOdd,
-                                maximumOdd: $viewModel.maximumOdd
-                            )
-                            
-                            CustomDivider(dividerColor: .codexGray)
-                        }
+                    VStack {
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.datesText)
+                            .padding(.top, 32)
                         
-                        
-                        VStack {
-                            LeadingText(text: TextConstants.MatchedBettingGameForm.datesText)
-                                .padding(.top, 32)
-                            
-                            DatesInput(startDate: $viewModel.gameStartDate, endDate: $viewModel.gameEndDate)
-                        }
-                        
-                        VStack {
-                            CustomDivider(dividerColor: .codexGray)
-                                .padding(.vertical, 32)
-                            
-                            LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
-                            
-                            CodexTextField(
-                                text: $viewModel.spoortbookSelected,
-                                placeholder: viewModel.spoortbookPlaceholder,
-                                keyboardType: .default,
-                                disableAutocorrection: false
-                            )
-                            
-                        }
+                        DatesInput(startDate: $viewModel.gameStartDate, endDate: $viewModel.gameEndDate)
                     }
-                                        
-                    ContinueButton(
-                        buttonText: TextConstants.MatchedBettingGameForm.Button.sendRequest,
-                        action: test,
-                        isDisabled: $viewModel.disableRequestButton
-                    )
-                        .padding(.bottom, 150)
-                        .padding(.top, 32)
                     
+                    VStack {
+                        CustomDivider(dividerColor: .codexGray)
+                            .padding(.vertical, 32)
+                        
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
+                        
+                        CodexTextField(
+                            text: $viewModel.spoortbookSelected,
+                            placeholder: viewModel.spoortbookPlaceholder,
+                            keyboardType: .default,
+                            disableAutocorrection: false
+                        )
+                        
+                    }
                 }
-                .padding(.top, 1)
-                .padding(.horizontal, 16)
-                .padding(.bottom, 32)
+                
+                ContinueButton(
+                    buttonText: TextConstants.MatchedBettingGameForm.Button.sendRequest,
+                    action: test,
+                    isDisabled: $viewModel.disableRequestButton
+                )
+                    .padding(.bottom, 150)
+                    .padding(.top, 32)
+                
             }
-            .sheet(isPresented: $viewModel.isPresentedRecommendations) {
-                if viewModel.isPresentedRecommendations {
-                    RecommendationView(
-                        viewModel: RecommendationViewModel(),
-                        isPresented: $viewModel.isPresentedRecommendations
-                    )
-                }
+            .padding(.top, 1)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 32)
+        }
+        .sheet(isPresented: $viewModel.isPresentedRecommendations) {
+            if viewModel.isPresentedRecommendations {
+                RecommendationView(
+                    viewModel: RecommendationViewModel(),
+                    isPresented: $viewModel.isPresentedRecommendations
+                )
             }
-//        }
-//        .onTapGesture {
-//            UIApplication.shared.endEditing()
-//        }
+        }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
+        .background(Color.codexBlack.edgesIgnoringSafeArea(.all))
     }
 }
 

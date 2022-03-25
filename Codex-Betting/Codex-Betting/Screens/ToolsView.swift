@@ -23,7 +23,8 @@ struct ToolsView: View {
                 ToolsCards(viewModel: ToolCardsViewModel())
                     .padding(.top, 32)
             }
-            .padding(.top, 32)
+            .padding(.top, 1)
+            .padding(.bottom, 32)
             .padding(.horizontal, 16)
         }
     }

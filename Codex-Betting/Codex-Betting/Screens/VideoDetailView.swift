@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct VideoDetailView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     private let lessonTitle: String
     private let lessonDescription: String
     private let lessonURL: URL?
@@ -31,7 +34,7 @@ struct VideoDetailView: View {
                         HStack {
                             Text(lessonTitle)
                                 .foregroundColor(.white)
-                            .fixedSize(horizontal: false, vertical: true)
+                                .fixedSize(horizontal: false, vertical: true)
                             
                             Spacer()
                         }
@@ -41,7 +44,7 @@ struct VideoDetailView: View {
                             Text(lessonDescription)
                                 .foregroundColor(.codexGray)
                                 .padding(.top, 8)
-                            .lineLimit(3)
+                                .lineLimit(3)
                             
                             Spacer()
                         }
@@ -49,9 +52,21 @@ struct VideoDetailView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 32)
+                
+//                FootnoteView()
+                
             }
-            .background(Color.codexBlack)            
+            .background(Color.codexBlack)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+            leading:
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    BackButtonView()
+                }
+        )
     }
 }
 

@@ -61,6 +61,8 @@
 		5773655627B4D3F700567244 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655527B4D3F700567244 /* TextConstants.swift */; };
 		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
 		5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */; };
+		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
+		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
@@ -163,6 +165,8 @@
 		5773655527B4D3F700567244 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceManager.swift; sourceTree = "<group>"; };
+		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */,
 				571F997827C2018800F271C3 /* BackgroundContent.swift */,
 				570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */,
+				578B104927ED36560093DA26 /* BackButtonView.swift */,
+				578B104B27ED377E0093DA26 /* FootnoteView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -653,6 +659,7 @@
 				570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
+				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
 				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,
@@ -668,6 +675,7 @@
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
 				57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */,
 				5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */,
+				578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */,
 				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
 				57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */,

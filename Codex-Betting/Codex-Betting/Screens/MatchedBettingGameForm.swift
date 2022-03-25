@@ -97,6 +97,7 @@ struct MatchedBettingGameForm: View {
                         .padding(.top, 32)
                     
                 }
+                .padding(.top, 1)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 32)
             }

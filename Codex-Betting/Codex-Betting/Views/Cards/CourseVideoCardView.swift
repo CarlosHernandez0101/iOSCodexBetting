@@ -29,7 +29,9 @@ struct CourseVideoCardView: View {
                     VideoDetailView(
                         lessonTitle: lessonTitle,
                         lessonDescription: lessonDescription,
-                        lessonURL: lessonURL)
+                        lessonURL: lessonURL
+                    )                        
+                        
                 } label: {
                     EmptyView()
                 }

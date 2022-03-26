@@ -69,9 +69,9 @@ final class DataService {
         "El partido elegido está disponible para la promoción",
         "La cuota de la apuesta es mayor a la cuota miníma",
         "Le partido está dentro de las fechas de vigencia",
-        "El monto por apostar está dentro del rango permitido",
         "Los partidos coinciden en fecha y en hora",
         "El resultado a favor y en contra es el mismo en ambas casas de apuestas",
+        "El monto por apostar está dentro del rango permitido",
         "Las ganancias y riesgo coinciden con los de la calculadora",
         "En caso de existir, la apuesta no excede el límite de ganancia"
     ]

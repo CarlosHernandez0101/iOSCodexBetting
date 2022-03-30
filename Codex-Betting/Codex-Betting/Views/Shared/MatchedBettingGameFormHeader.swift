@@ -2,7 +2,7 @@
 //  MatchedBettingGameFormHeader.swift
 //  Codex-Betting
 //
-//  Created by Casai User on 18/02/22.
+//  Created by Carlos Hernández on 18/02/22.
 //
 
 import SwiftUI

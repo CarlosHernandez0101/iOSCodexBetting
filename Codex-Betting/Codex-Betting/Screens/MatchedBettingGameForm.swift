@@ -15,8 +15,6 @@ struct MatchedBettingGameForm: View {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
-    private func test() {}
-    
     var body: some View {
         ZStack {
             
@@ -76,7 +74,7 @@ struct MatchedBettingGameForm: View {
                         LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
                         
                         CodexTextField(
-                            text: $viewModel.spoortbookSelected,
+                            text: $viewModel.sportbookSelected,
                             placeholder: viewModel.spoortbookPlaceholder,
                             keyboardType: .default,
                             disableAutocorrection: false
@@ -87,7 +85,7 @@ struct MatchedBettingGameForm: View {
                 
                 ContinueButton(
                     buttonText: TextConstants.MatchedBettingGameForm.Button.sendRequest,
-                    action: test,
+                    action: viewModel.sendMessageToCodexTeam,
                     isDisabled: $viewModel.disableRequestButton
                 )
                     .padding(.bottom, 150)
@@ -115,6 +113,6 @@ struct MatchedBettingGameForm: View {
 
 struct MatchedBettingGameForm_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedBettingGameForm(viewModel: MatchedBettingGameFormViewModel())
+        MatchedBettingGameForm(viewModel: MatchedBettingGameFormViewModel(requestsManager: MatchRequestsManager()))
     }
 }

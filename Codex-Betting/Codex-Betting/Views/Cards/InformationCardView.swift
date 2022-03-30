@@ -48,7 +48,7 @@ struct InformationCardView: View {
                 )
                 
                 NavigationLink(destination: MatchedBettingGameForm(
-                    viewModel: MatchedBettingGameFormViewModel()
+                    viewModel: MatchedBettingGameFormViewModel(requestsManager: MatchRequestsManager())
                 )
                                 .navigationBarHidden(true),
                                tag: InformationCardViewModel.Router.match,

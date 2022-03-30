@@ -16,7 +16,8 @@
 		5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */; };
 		5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */; };
 		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
-		570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */; };
+		570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */; };
+		570F704027F415F00016EDB9 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703F27F415F00016EDB9 /* Date+ext.swift */; };
 		571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F997827C2018800F271C3 /* BackgroundContent.swift */; };
 		571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F99A127C34D0100F271C3 /* ContinueButton.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
@@ -76,6 +77,7 @@
 		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
 		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
 		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
+		57BF88FD27F170B200745719 /* MatchRequestsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF88FC27F170B200745719 /* MatchRequestsManager.swift */; };
 		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
 		57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
@@ -127,7 +129,8 @@
 		5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOptionSelectorView.swift; sourceTree = "<group>"; };
 		5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBettingGameOption.swift; sourceTree = "<group>"; };
 		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
-		570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappUtils.swift; sourceTree = "<group>"; };
+		570F703F27F415F00016EDB9 /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
 		571F997827C2018800F271C3 /* BackgroundContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContent.swift; sourceTree = "<group>"; };
 		571F99A127C34D0100F271C3 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
 		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
+		57BF88FC27F170B200745719 /* MatchRequestsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRequestsManager.swift; sourceTree = "<group>"; };
 		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
 		57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardButton.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,7 +362,6 @@
 				5704561C27C0ADDB005E3CCB /* DatesInput.swift */,
 				5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */,
 				571F997827C2018800F271C3 /* BackgroundContent.swift */,
-				570C8DBB27E4D5B700B09A68 /* SwiftUIView.swift */,
 				578B104927ED36560093DA26 /* BackButtonView.swift */,
 				578B104B27ED377E0093DA26 /* FootnoteView.swift */,
 				572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */,
@@ -392,6 +395,8 @@
 				5773655527B4D3F700567244 /* TextConstants.swift */,
 				5773655727B4DA8A00567244 /* URLConstants.swift */,
 				5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */,
+				570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */,
+				570F703F27F415F00016EDB9 /* Date+ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				5773655327B4D25E00567244 /* InformationCardModel.swift */,
 				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
 				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
+				57BF88FC27F170B200745719 /* MatchRequestsManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -660,8 +666,10 @@
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
 				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
+				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
 				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
 				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
+				570F704027F415F00016EDB9 /* Date+ext.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
@@ -687,7 +695,6 @@
 				571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */,
 				572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
-				570C8DBC27E4D5B700B09A68 /* SwiftUIView.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
 				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
@@ -705,6 +712,7 @@
 				572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				57BF88FD27F170B200745719 /* MatchRequestsManager.swift in Sources */,
 				57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */,
 				5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */,
 				578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */,

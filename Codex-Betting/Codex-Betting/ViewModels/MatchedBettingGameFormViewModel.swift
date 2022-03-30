@@ -20,19 +20,46 @@ final class MatchedBettingGameFormViewModel: ObservableObject {
         }
     }
     @Published var showMatchedBettingTextField: Bool = false
-    @Published var matchedBettingGameText: String = ""
+    @Published var matchedBettingGameText: String = "" {
+        didSet {
+            updateButton()
+        }
+    }
     @Published var matchedBettingGamePlaceholder: String = ""
-    @Published var minimumOdd: String = ""
-    @Published var maximumOdd: String = ""
-    @Published var gameStartDate: Date = Date()
-    @Published var gameEndDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-    @Published var spoortbookSelected: String = ""
+    @Published var minimumOdd: String = "" {
+        didSet {
+            updateButton()
+        }
+    }
+    @Published var maximumOdd: String = "" {
+        didSet {
+            updateButton()
+        }
+    }
+    @Published var gameStartDate: Date = Date() {
+        didSet {
+            updateButton()
+        }
+    }
+    @Published var gameEndDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date())! {
+        didSet {
+            updateButton()
+        }
+    }
+    @Published var sportbookSelected: String = "" {
+        didSet {
+            updateButton()
+        }
+    }
     @Published var disableRequestButton: Bool = true
     @Published var showOnlyRequestButton = false
     
     private (set) var spoortbookPlaceholder: String = TextConstants.MatchedBettingGameForm.Spoortbook.selection
     
-    init() {
+    private var requestsManager: MatchRequestsManagerProtocol
+    
+    init(requestsManager: MatchRequestsManagerProtocol) {
+        self.requestsManager = requestsManager
         self.setIsPresentedRecommendations()
     }
     
@@ -71,15 +98,27 @@ final class MatchedBettingGameFormViewModel: ObservableObject {
     
     private func updateButtonAfterSelectionUpdate(with currentSelection: MatchSelection) {
         self.disableRequestButton = true
-        switch currentSelection {
-        case .match:
-            break
-        case .league:
-            break
-        case .anyEvent:
-            break
-        case .welcome:
-            self.disableRequestButton = false
+        if currentSelection == .welcome { self.disableRequestButton = false }
+    }
+    
+    private func updateButton() {
+        
+        if currentMatchedBettingGameSelection != .welcome {
+            
+            guard !minimumOdd.isEmpty && !maximumOdd.isEmpty && !sportbookSelected.isEmpty else {
+                return
+            }
+            
+            if currentMatchedBettingGameSelection == .anyEvent {
+                self.disableRequestButton = false
+                return
+            } else {
+                guard !matchedBettingGameText.isEmpty else {
+                    return
+                }
+                
+                self.disableRequestButton = false
+            }
         }
     }
     
@@ -104,7 +143,48 @@ final class MatchedBettingGameFormViewModel: ObservableObject {
     
     public func sendMessageToCodexTeam() {
         if !disableRequestButton {
-            
+            switch currentMatchedBettingGameSelection {
+            case .match:
+                requestsManager.requestMatch(
+                    for: currentMatchedBettingGameSelection,
+                       request: matchedBettingGameText,
+                       minOdd: minimumOdd,
+                       maxOdd: maximumOdd,
+                       startDate: gameStartDate,
+                       endDate: gameEndDate,
+                       sportbook: sportbookSelected
+                )
+            case .league:
+                requestsManager.requestMatch(
+                    for: currentMatchedBettingGameSelection,
+                       request: matchedBettingGameText,
+                       minOdd: minimumOdd,
+                       maxOdd: maximumOdd,
+                       startDate: gameStartDate,
+                       endDate: gameEndDate,
+                       sportbook: sportbookSelected
+                )
+            case .anyEvent:
+                requestsManager.requestMatch(
+                    for: currentMatchedBettingGameSelection,
+                       request: nil,
+                       minOdd: minimumOdd,
+                       maxOdd: maximumOdd,
+                       startDate: gameStartDate,
+                       endDate: gameEndDate,
+                       sportbook: sportbookSelected
+                )
+            case .welcome:
+                requestsManager.requestMatch(
+                    for: currentMatchedBettingGameSelection,
+                       request: nil,
+                       minOdd: minimumOdd,
+                       maxOdd: maximumOdd,
+                       startDate: gameStartDate,
+                       endDate: gameEndDate,
+                       sportbook: sportbookSelected
+                )
+            }
         }
     }
     

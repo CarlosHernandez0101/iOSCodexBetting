@@ -12,6 +12,8 @@ struct DatesInput: View {
     @Binding private var startDate: Date
     @Binding private var endDate: Date
     
+    private let DATE_LIMIT: Date = Calendar.current.date(byAdding: .month, value: 2, to: Date())!
+    
     
     init(startDate: Binding<Date>, endDate: Binding<Date>) {
         self._startDate = startDate
@@ -23,8 +25,10 @@ struct DatesInput: View {
             DatePicker(
                 TextConstants.MatchedBettingGameForm.fromDateText,
                 selection: $startDate,
+                in: startDate...DATE_LIMIT,
                 displayedComponents: [.date, .hourAndMinute]
             )
+                .datePickerStyle(CompactDatePickerStyle())
                 .foregroundColor(.white)
                 .accentColor(.codexGolden)
                 .cornerRadius(15)
@@ -32,12 +36,14 @@ struct DatesInput: View {
             
             DatePicker(TextConstants.MatchedBettingGameForm.toDateText,
                        selection: $endDate,
+                       in: startDate...DATE_LIMIT,
                        displayedComponents: [.date, .hourAndMinute]
             )
+                .datePickerStyle(CompactDatePickerStyle())
                 .foregroundColor(.white)
                 .accentColor(.codexGolden)
                 .cornerRadius(15)
-                .colorMultiply(.white)
+                .colorMultiply(.white)                
         }
     }
 }

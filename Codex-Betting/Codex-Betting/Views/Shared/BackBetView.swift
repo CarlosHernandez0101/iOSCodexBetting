@@ -8,43 +8,74 @@
 import SwiftUI
 
 struct BackBetView: View {
+    @Binding private var backStakeText: String
+    @Binding private var backOddsText: String
+    @Binding private var backCommision: String
+    
+    init(backStakeText: Binding<String>, backOddsText: Binding<String>, backCommision: Binding<String>) {
+        self._backStakeText = backStakeText
+        self._backOddsText = backOddsText
+        self._backCommision = backCommision
+    }
+    
     var body: some View {
         
         VStack(spacing: 16) {
             
-            HStack {
-                Text("Importe de apuesta (Bookie)")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+            VStack {
+                HStack {
+                    Text("Importe de apuesta (Bookie)")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    
+                    Spacer()
+                }
                 
-                Spacer()
+                CodexTextField(
+                    text: $backStakeText,
+                    placeholder: "Cuota a favor",
+                    keyboardType: .numberPad,
+                    disableAutocorrection: false,
+                    colorScheme: .light
+                )
             }
             
             HStack {
-                Text("Cuota a favor")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .leading) {
+                    Text("Cuota a favor")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    
+                    CodexTextField(text: $backOddsText, placeholder: "Cuota decimal", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                        .padding(.trailing)
+                }
                 
                 Spacer()
                 
-                Text("Comisión %")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .trailing) {
+                    Text("Comisión %")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    
+                    CodexTextField(text: $backCommision, placeholder: "", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                        .padding(.leading)
+                }
+                
             }
             .padding(.bottom, 16)
         }
@@ -56,7 +87,7 @@ struct BackBetView: View {
 
 struct BackBetView_Previews: PreviewProvider {
     static var previews: some View {
-        BackBetView()
+        BackBetView(backStakeText: .constant("100"), backOddsText: .constant("3.5"), backCommision: .constant("4"))
             .previewLayout(.sizeThatFits)
     }
 }

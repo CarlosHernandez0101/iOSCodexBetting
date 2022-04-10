@@ -56,7 +56,7 @@ struct InformationCardView: View {
                                label: { EmptyView() }
                 )
                 
-                NavigationLink(destination: MatchedBettingCalculatorView()
+                NavigationLink(destination: MatchedBettingCalculatorView(viewModel: MatchedBettingCalculatorViewModel())
                                 .navigationBarHidden(true),
                                tag: InformationCardViewModel.Router.calculator,
                                selection: $viewModel.route,

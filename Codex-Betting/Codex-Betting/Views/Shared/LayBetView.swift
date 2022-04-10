@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct LayBetView: View {
+    @Binding private var layOddsText: String
+    @Binding private var layCommisionText: String
+    
+    init(layOddsText: Binding<String>, layCommisionText: Binding<String>) {
+        self._layOddsText = layOddsText
+        self._layCommisionText = layCommisionText
+    }
+    
     var body: some View {
         VStack(spacing: 16) {
             
@@ -23,31 +31,44 @@ struct LayBetView: View {
                 
                 Spacer()
             }
+            .padding(.leading)
+            .padding(.top)
             
             HStack {
-                Text("Cuota en contra")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .leading) {
+                    Text("Cuota en contra")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    
+                    CodexTextField(text: $layOddsText, placeholder: "Cuota decimal", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                        .padding(.trailing)
+                }
                 
                 Spacer()
                 
-                Text("Comisión %")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .trailing) {
+                    Text("Comisión %")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    .padding(.trailing)
+                    
+                    CodexTextField(text: $layCommisionText, placeholder: "", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                        .padding(.trailing)
+                }
             }
             .padding(.bottom, 16)
+            .padding(.leading)
         }
-        .padding(16)
         .background(Color.codexGray)
         .cornerRadius(15)
     }
@@ -55,7 +76,7 @@ struct LayBetView: View {
 
 struct LayBetView_Previews: PreviewProvider {
     static var previews: some View {
-        LayBetView()
+        LayBetView(layOddsText: .constant("4.5"), layCommisionText: .constant("6.5"))
             .previewLayout(.sizeThatFits)
     }
 }

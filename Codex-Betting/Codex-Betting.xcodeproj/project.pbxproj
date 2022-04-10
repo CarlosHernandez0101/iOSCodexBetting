@@ -18,6 +18,12 @@
 		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
 		570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */; };
 		570F704027F415F00016EDB9 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703F27F415F00016EDB9 /* Date+ext.swift */; };
+		5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */; };
+		5719B5B027F90FD50021237E /* CalculatorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */; };
+		5719B5B227F9100C0021237E /* CalculatorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B127F9100C0021237E /* CalculatorSelection.swift */; };
+		5719B5B427F9119B0021237E /* CalculatorOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B327F9119B0021237E /* CalculatorOptionView.swift */; };
+		5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B527F9161E0021237E /* CalculatorBrain.swift */; };
+		5719B5B827FA51D80021237E /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B727FA51D80021237E /* String+ext.swift */; };
 		571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F997827C2018800F271C3 /* BackgroundContent.swift */; };
 		571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F99A127C34D0100F271C3 /* ContinueButton.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
@@ -70,6 +76,7 @@
 		5773655627B4D3F700567244 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655527B4D3F700567244 /* TextConstants.swift */; };
 		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
 		5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */; };
+		57803F7028033C3600B17EE1 /* Double+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F6F28033C3600B17EE1 /* Double+ext.swift */; };
 		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
@@ -131,6 +138,12 @@
 		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
 		570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappUtils.swift; sourceTree = "<group>"; };
 		570F703F27F415F00016EDB9 /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingCalculatorViewModel.swift; sourceTree = "<group>"; };
+		5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSelectorView.swift; sourceTree = "<group>"; };
+		5719B5B127F9100C0021237E /* CalculatorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSelection.swift; sourceTree = "<group>"; };
+		5719B5B327F9119B0021237E /* CalculatorOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOptionView.swift; sourceTree = "<group>"; };
+		5719B5B527F9161E0021237E /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		5719B5B727FA51D80021237E /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
 		571F997827C2018800F271C3 /* BackgroundContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContent.swift; sourceTree = "<group>"; };
 		571F99A127C34D0100F271C3 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -184,6 +197,7 @@
 		5773655527B4D3F700567244 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceManager.swift; sourceTree = "<group>"; };
+		57803F6F28033C3600B17EE1 /* Double+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+ext.swift"; sourceTree = "<group>"; };
 		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -249,6 +263,7 @@
 			children = (
 				5704562127C0B233005E3CCB /* MatchSelectionController.swift */,
 				572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */,
+				5719B5B127F9100C0021237E /* CalculatorSelection.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -368,6 +383,8 @@
 				572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */,
 				572B279727EE1A5B00F8E66C /* RequirementsView.swift */,
 				572B279927EE21D800F8E66C /* SuccessAlertView.swift */,
+				5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */,
+				5719B5B327F9119B0021237E /* CalculatorOptionView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -397,6 +414,8 @@
 				5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */,
 				570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */,
 				570F703F27F415F00016EDB9 /* Date+ext.swift */,
+				5719B5B727FA51D80021237E /* String+ext.swift */,
+				57803F6F28033C3600B17EE1 /* Double+ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -416,6 +435,7 @@
 				572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */,
 				572B279327EE031400F8E66C /* VerifyBetViewModel.swift */,
 				572B279527EE03CF00F8E66C /* RequirementViewModel.swift */,
+				5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -436,6 +456,7 @@
 				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
 				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
 				57BF88FC27F170B200745719 /* MatchRequestsManager.swift */,
+				5719B5B527F9161E0021237E /* CalculatorBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -665,10 +686,12 @@
 				572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
+				5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */,
 				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
 				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
 				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
 				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
+				5719B5B427F9119B0021237E /* CalculatorOptionView.swift in Sources */,
 				570F704027F415F00016EDB9 /* Date+ext.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
@@ -676,6 +699,9 @@
 				5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */,
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
 				5773655627B4D3F700567244 /* TextConstants.swift in Sources */,
+				57803F7028033C3600B17EE1 /* Double+ext.swift in Sources */,
+				5719B5B027F90FD50021237E /* CalculatorSelectorView.swift in Sources */,
+				5719B5B227F9100C0021237E /* CalculatorSelection.swift in Sources */,
 				5742F57327ECA0DF000A53DB /* VideoView.swift in Sources */,
 				57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */,
 				5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */,
@@ -685,6 +711,7 @@
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
+				5719B5B827FA51D80021237E /* String+ext.swift in Sources */,
 				57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
@@ -724,6 +751,7 @@
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
 				5773654027B477FC00567244 /* BreakdownRow.swift in Sources */,
 				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
+				5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */,
 				57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct BreakdownView: View {
+    
+    private let leftSideSportBook: String
+    private let rightSideSportBook: String
+    private let totalSportBook: String
+    private let leftSideExchange: String
+    private let rightSideExchange: String
+    private let totalExchange: String
+    
+    init(leftSideSportBook: String,
+         rightSideSportBook: String,
+         totalSportBook: String,
+         leftSideExchange: String,
+         rightSideExchange: String,
+         totalExchange: String) {
+        self.leftSideSportBook = leftSideSportBook
+        self.rightSideSportBook = rightSideSportBook
+        self.totalSportBook = totalSportBook
+        self.leftSideExchange = leftSideExchange
+        self.rightSideExchange = rightSideExchange
+        self.totalExchange = totalExchange
+    }
+    
     var body: some View {
         VStack(spacing: 16) {
-            
-            
+                        
             HStack {
 
                 Text("Bookie")
@@ -53,7 +74,7 @@ struct BreakdownView: View {
             BreakdownRow(text: "Si el sportbook gana", color: .codexGolden)
                 .cornerRadius(15)
                 
-            BreakdownResultRow()
+            BreakdownResultRow(leftResult: leftSideSportBook, rightResult: rightSideSportBook, total: totalSportBook)
             
             BreakdownRow(
                 text: "Si el Exchange gana",
@@ -61,7 +82,7 @@ struct BreakdownView: View {
             )
                 .cornerRadius(15)
             
-            BreakdownResultRow()
+            BreakdownResultRow(leftResult: leftSideExchange, rightResult: rightSideExchange, total: totalExchange)
             
         }
         .background(Color.codexBlack)
@@ -70,6 +91,13 @@ struct BreakdownView: View {
 
 struct BreakdownView_Previews: PreviewProvider {
     static var previews: some View {
-        BreakdownView()
+        BreakdownView(
+            leftSideSportBook: "25",
+            rightSideSportBook: "50",
+            totalSportBook: "100",
+            leftSideExchange: "125",
+            rightSideExchange: "150",
+            totalExchange: "200"
+        )
     }
 }

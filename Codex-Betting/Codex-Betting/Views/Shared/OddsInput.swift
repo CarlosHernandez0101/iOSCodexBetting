@@ -30,7 +30,7 @@ struct OddsInput: View {
                     text: $minimumOdd,
                     placeholder: "",
                     keyboardType: .decimalPad,
-                    disableAutocorrection: true
+                    disableAutocorrection: true, colorScheme: .dark
                 )
                     .padding(.trailing, 16)
             }
@@ -46,7 +46,7 @@ struct OddsInput: View {
                     text: $maximumOdd,
                     placeholder: "",
                     keyboardType: .decimalPad,
-                    disableAutocorrection: true
+                    disableAutocorrection: true, colorScheme: .dark
                 )
                     .padding(.leading, 16)
             }

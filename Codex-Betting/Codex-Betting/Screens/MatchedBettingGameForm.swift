@@ -36,7 +36,7 @@ struct MatchedBettingGameForm: View {
                             text: $viewModel.matchedBettingGameText,
                             placeholder: viewModel.matchedBettingGamePlaceholder,
                             keyboardType: .default,
-                            disableAutocorrection: false
+                            disableAutocorrection: false, colorScheme: .dark
                         )
                     }
                     
@@ -77,7 +77,7 @@ struct MatchedBettingGameForm: View {
                             text: $viewModel.sportbookSelected,
                             placeholder: viewModel.spoortbookPlaceholder,
                             keyboardType: .default,
-                            disableAutocorrection: false
+                            disableAutocorrection: false, colorScheme: .dark
                         )
                         
                     }

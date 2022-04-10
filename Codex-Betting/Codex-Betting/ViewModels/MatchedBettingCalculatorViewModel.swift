@@ -23,7 +23,11 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
     @Published var totalExchange: String = "0.00"
     @Published var isPositiveProfit: Bool = true
     @Published var totalProfit: String = "0.0"
-    @Published var calculatorSelection: CalculatorSelection = .normal
+    @Published var calculatorSelection: CalculatorSelection = .normal {
+        didSet {
+            self.calculate()
+        }
+    }
     
     private let calculator: CalculatorBrain = CalculatorBrain()
     
@@ -56,7 +60,15 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
         
         switch calculatorSelection {
         case .normal:
-            break
+            
+            let moneyToBetResult = self.calculator.getMoneyToBet(backStake: backStake, backOdds: backOdds, backCommision: backCommision, layOdds: layOdds, layCommision: layCommision)
+            
+            self.moneyToBet = moneyToBetResult.rounded(digits: 2)
+            
+            let liabilityResult = self.calculator.getLiability(moneyToBet: moneyToBetResult, layOdds: layOdds)
+            
+            self.liability = liabilityResult.rounded(digits: 2)
+            
             
         case .freebet:
             
@@ -70,19 +82,19 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             
             self.moneyToBet = moneyToBetResult.rounded(digits: 2)
             
-            let liabilityResult = self.calculator.getLiability(moneyToBet: moneyToBetResult, layOdds: layOdds)
+            let liabilityResult = self.calculator.getLiabilityFreebet(moneyToBet: moneyToBetResult, layOdds: layOdds)
             
             self.liability = liabilityResult.rounded(digits: 2)
             
-            let leftSideSportbook = self.calculator.getLeftSideSportbook(backStake: backStake, backOdds: backOdds, backCommision: backCommision)
+            let leftSideSportbook = self.calculator.getLeftSideSportbookForFreebet(backStake: backStake, backOdds: backOdds, backCommision: backCommision)
             
             self.leftSideSportBook = String(leftSideSportbook)
             
-            let rightSideSportBook = self.calculator.getRightSideSportbook()
+            let rightSideSportBook = self.calculator.getRightSideSportbookForFreebet()
             
             self.rightSideSportBook = String(rightSideSportBook.rounded(digits: 2))
             
-            let leftSideExchangeResult = self.calculator.getLeftSideExhange(moneyToBet: moneyToBetResult, layCommision: layCommision)
+            let leftSideExchangeResult = self.calculator.getLeftSideExhangeForFreebet(moneyToBet: moneyToBetResult, layCommision: layCommision)
             
             self.leftSideExchange = String(leftSideExchangeResult.rounded(digits: 2))
             
@@ -92,15 +104,17 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
                 return
             }
             
-            let sportbookTotalResult = self.calculator.getSportbookTotal(leftSidesSportBook: leftSideSportbook, rightSideExchange: rightSideExchangeDouble)
+            let sportbookTotalResult = self.calculator.getSportbookTotalForFreebet(leftSidesSportBook: leftSideSportbook, rightSideExchange: rightSideExchangeDouble)
             
             self.totalSportBook = String(sportbookTotalResult.rounded(digits: 2))
             
-            let exchangeTotalResult = self.calculator.getExchangeTotal(leftSideExchange: leftSideExchangeResult, rightSideSportbook: rightSideSportBook)
+            let exchangeTotalResult = self.calculator.getExchangeTotalForFreebet(leftSideExchange: leftSideExchangeResult, rightSideSportbook: rightSideSportBook)
             
             self.totalExchange = String(exchangeTotalResult.rounded(digits: 2))
             
             self.totalProfit = exchangeTotalResult > sportbookTotalResult ? totalExchange : totalSportBook
+            
+            self.isPositiveProfit = exchangeTotalResult > 0
                         
         }
     }

@@ -16,7 +16,7 @@ final class CalculatorBrain {
                                         layCommision: Double) -> Double {
 
         
-        let result = calculateMatchedBettingOperation(
+        let result = calculateMatchedBettingOperationForFreebet(
             backStake: backStake,
             backOdds: backOdds,
             layOdds: layOdds,
@@ -26,11 +26,11 @@ final class CalculatorBrain {
         return result-(result*backCommision/100)
     }
     
-    public func getLiability(moneyToBet: Double, layOdds: Double) -> Double {
+    public func getLiabilityFreebet(moneyToBet: Double, layOdds: Double) -> Double {
         (moneyToBet*layOdds)-moneyToBet
     }
             
-    private func calculateMatchedBettingOperation(backStake: Double,
+    private func calculateMatchedBettingOperationForFreebet(backStake: Double,
                                                   backOdds: Double,
                                                   layOdds: Double,
                                                   layCommision: Double) -> Double {
@@ -38,30 +38,43 @@ final class CalculatorBrain {
         (backOdds*backStake-(0*((backOdds-1)*backStake)/100)-backStake)/(layOdds-layCommision/100)
     }
     
-    public func getLeftSideSportbook(backStake: Double, backOdds: Double, backCommision: Double) -> Double {
-        let benefit = calculateSportbookBenefit(backStake: backStake, backOdds: backOdds)
+    public func getLeftSideSportbookForFreebet(backStake: Double, backOdds: Double, backCommision: Double) -> Double {
+        let benefit = calculateSportbookBenefitForFreebet(backStake: backStake, backOdds: backOdds)
         
         return benefit-(benefit*backCommision/100)
     }
     
-    public func getRightSideSportbook() -> Double {
+    public func getRightSideSportbookForFreebet() -> Double {
         return 0
     }
     
-    public func getLeftSideExhange(moneyToBet: Double, layCommision: Double) -> Double {
+    public func getLeftSideExhangeForFreebet(moneyToBet: Double, layCommision: Double) -> Double {
         moneyToBet-(moneyToBet*layCommision/100)
     }
     
-    public func getSportbookTotal(leftSidesSportBook: Double, rightSideExchange: Double) -> Double {
+    public func getSportbookTotalForFreebet(leftSidesSportBook: Double, rightSideExchange: Double) -> Double {
         leftSidesSportBook + rightSideExchange
     }
     
-    public func getExchangeTotal(leftSideExchange: Double, rightSideSportbook: Double) -> Double {
+    public func getExchangeTotalForFreebet(leftSideExchange: Double, rightSideSportbook: Double) -> Double {
         return leftSideExchange + rightSideSportbook
     }
     
-    private func calculateSportbookBenefit(backStake: Double, backOdds: Double) -> Double {
+    private func calculateSportbookBenefitForFreebet(backStake: Double, backOdds: Double) -> Double {
         (backStake * backOdds)-backStake
+    }
+    
+    public func getMoneyToBet(backStake: Double,
+                              backOdds: Double,
+                              backCommision: Double,
+                              layOdds: Double,
+                              layCommision: Double) -> Double {
+        
+        (backOdds*backStake-(0*((backOdds-1)*backStake)/100)-0)/(layOdds-layCommision/100)
+    }
+    
+    public func getLiability(moneyToBet: Double, layOdds: Double) -> Double {
+        return (moneyToBet*layOdds)-moneyToBet
     }
     
 }

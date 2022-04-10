@@ -31,7 +31,9 @@ struct CodexTextField: View {
     
     var body: some View {
         
-        TextField(placeholder, text: $text) {
+        TextField(placeholder, text: $text, onEditingChanged: { isEditing in
+            debugPrint("Editing")
+        }) {
             UIApplication.shared.endEditing()
             debugPrint("Action")
         }

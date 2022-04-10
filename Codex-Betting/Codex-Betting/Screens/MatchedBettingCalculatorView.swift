@@ -69,6 +69,7 @@ struct MatchedBettingCalculatorView: View {
         }
         .background(Color.codexBlack.edgesIgnoringSafeArea(.all))
         .onTapGesture {
+            UIApplication.shared.endEditing()
             viewModel.calculate()
         }
     }

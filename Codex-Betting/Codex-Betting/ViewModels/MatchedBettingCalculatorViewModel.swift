@@ -69,6 +69,33 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             
             self.liability = liabilityResult.rounded(digits: 2)
             
+            let leftSideSportbookResult = self.calculator.getLeftSideSportbook(backStake: backStake, backOdds: backOdds, backCommision: backCommision)
+            
+            self.leftSideSportBook = String(leftSideSportbookResult.rounded(digits: 2))
+            
+            let exchangeLeftSideResult = self.calculator.getLeftSideExchange(backStake: backStake)
+            
+            self.leftSideExchange = String(exchangeLeftSideResult.rounded(digits: 2))
+            
+            let sportbookRightSideResult = self.calculator.getRightSideSportbook(liability: liability)
+            
+            self.rightSideSportBook = String(sportbookRightSideResult.rounded(digits: 2))
+            
+            let rightSideExchangeResult = self.calculator.getRightSideExchangeForFreebet(moneyToBet: moneyToBetResult, layCommision: layCommision)
+            
+            self.rightSideExchange = String(rightSideExchangeResult.rounded(digits: 2))
+            
+            let totalSportBookResult = self.calculator.getTotalProfitSportbook(leftSideSportbook: leftSideSportbookResult, rightSideSportbook: sportbookRightSideResult)
+            
+            self.totalSportBook = String(totalSportBookResult.rounded(digits: 2))
+            
+            let totalExchangeResult = self.calculator.getTotalProfitExchange(leftSideExchange: exchangeLeftSideResult, rightSideExchage: rightSideExchangeResult)
+            
+            self.totalExchange = String(totalExchangeResult.rounded(digits: 2))
+            
+            self.totalProfit = totalExchangeResult > totalSportBookResult ? totalExchange : totalSportBook
+            
+            self.isPositiveProfit = totalExchangeResult > 0
             
         case .freebet:
             
@@ -90,25 +117,26 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             
             self.leftSideSportBook = String(leftSideSportbook)
             
-            let rightSideSportBook = self.calculator.getRightSideSportbookForFreebet()
+            let rightSideSportBookResult = self.calculator.getRightSideSportbookForFreebet(liability: liability)
             
-            self.rightSideSportBook = String(rightSideSportBook.rounded(digits: 2))
+            self.rightSideSportBook = String(rightSideSportBookResult)
             
-            let leftSideExchangeResult = self.calculator.getLeftSideExhangeForFreebet(moneyToBet: moneyToBetResult, layCommision: layCommision)
+            let leftSideExchangeResult = self.calculator.getLeftSideExhangeForFreebet()
             
             self.leftSideExchange = String(leftSideExchangeResult.rounded(digits: 2))
             
-            self.rightSideExchange = String(-self.liability)
+            let rightSideExcahngeResult = self.calculator.getRightSideExchangeForFreebet(moneyToBet: moneyToBetResult, layCommision: layCommision)
             
-            guard let rightSideExchangeDouble = rightSideExchange.double else {
-                return
-            }
+            self.rightSideExchange = String(rightSideExcahngeResult.rounded(digits: 2))
             
-            let sportbookTotalResult = self.calculator.getSportbookTotalForFreebet(leftSidesSportBook: leftSideSportbook, rightSideExchange: rightSideExchangeDouble)
+            let sportbookTotalResult = self.calculator.getSportbookTotalForFreebet(
+                leftSidesSportBook: leftSideSportbook,
+                rightSideSportbook: rightSideSportBookResult
+            )
             
             self.totalSportBook = String(sportbookTotalResult.rounded(digits: 2))
             
-            let exchangeTotalResult = self.calculator.getExchangeTotalForFreebet(leftSideExchange: leftSideExchangeResult, rightSideSportbook: rightSideSportBook)
+            let exchangeTotalResult = self.calculator.getExchangeTotalForFreebet(leftSideExchange: leftSideExchangeResult, rightSideExchange: rightSideExcahngeResult)
             
             self.totalExchange = String(exchangeTotalResult.rounded(digits: 2))
             

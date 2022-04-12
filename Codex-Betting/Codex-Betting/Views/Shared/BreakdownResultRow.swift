@@ -20,7 +20,7 @@ struct BreakdownResultRow: View {
     
     var body: some View {
         HStack {
-            Text(leftResult)
+            Text("$\(leftResult)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,
@@ -31,7 +31,7 @@ struct BreakdownResultRow: View {
             
             Spacer()
             
-            Text(rightResult)
+            Text("$\(rightResult)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,
@@ -42,7 +42,7 @@ struct BreakdownResultRow: View {
             
             Spacer()
             
-            Text(total)
+            Text("$\(total)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,

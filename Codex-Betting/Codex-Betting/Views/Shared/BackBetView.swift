@@ -39,7 +39,7 @@ struct BackBetView: View {
                 CodexTextField(
                     text: $backStakeText,
                     placeholder: "Cuota a favor",
-                    keyboardType: .numberPad,
+                    keyboardType: .decimalPad,
                     disableAutocorrection: false,
                     colorScheme: .light
                 )

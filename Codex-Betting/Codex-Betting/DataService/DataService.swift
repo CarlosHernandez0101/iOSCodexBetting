@@ -73,6 +73,7 @@ final class DataService {
         "El resultado a favor y en contra es el mismo en ambas casas de apuestas",
         "El monto por apostar está dentro del rango permitido",
         "Las ganancias y riesgo coinciden con los de la calculadora",
+        "El resultado por apostar tiene dinero suficiente en la bolsa",
         "En caso de existir, la apuesta no excede el límite de ganancia"
     ]
     

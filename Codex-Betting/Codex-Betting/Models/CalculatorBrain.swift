@@ -107,6 +107,15 @@ final class CalculatorBrain {
         return rightSideExchage + leftSideExchange
     }
     
+    public func convertAmericanToDecimalOdd(_ americanOdd: Double, type: AmericanOddType) -> Double {
+        switch type {
+        case .positive:
+            return (americanOdd/100) - 1
+        case .negative:
+            return (100 / americanOdd + 1).rounded(digits: 3)
+        }
+    }
+    
     private func calculateMatchedBettingOperation(backStake: Double, backOdds: Double) -> Double {
         return (backStake*backOdds)-backStake
     }

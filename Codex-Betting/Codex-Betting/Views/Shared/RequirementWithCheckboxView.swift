@@ -21,7 +21,7 @@ struct RequirementWithCheckboxView: View {
                 .font(
                     Font.custom(
                         HKGrotesk.bold.rawValue,
-                        size: 25
+                        size: 20
                     )
                 )
                 .foregroundColor(.white)

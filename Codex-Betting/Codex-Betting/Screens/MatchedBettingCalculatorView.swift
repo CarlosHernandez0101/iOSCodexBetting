@@ -17,6 +17,12 @@ struct MatchedBettingCalculatorView: View {
     var body: some View {
         ZStack {
             
+            SuccessAlertView(
+                text: TextConstants.VerifyBet.betAlertText,
+                isPresented: $viewModel.showSuccessAlert
+            )
+                .zIndex(1)
+            
             ScrollView(showsIndicators: false) {
                 
                 CodexToolBar()
@@ -46,22 +52,34 @@ struct MatchedBettingCalculatorView: View {
                 LiabilityView(liability: viewModel.liability)
                     .padding(.top, 8)
                 
-                BreakdownView(
-                    leftSideSportBook: viewModel.leftSideSportBook,
-                    rightSideSportBook: viewModel.rightSideSportBook,
-                    totalSportBook: viewModel.totalSportBook,
-                    leftSideExchange: viewModel.leftSideExchange,
-                    rightSideExchange: viewModel.rightSideExchange,
-                    totalExchange: viewModel.totalExchange
-                )
-                    .padding(.top, 32)
+                VStack {
+                    BreakdownView(
+                        leftSideSportBook: viewModel.leftSideSportBook,
+                        rightSideSportBook: viewModel.rightSideSportBook,
+                        totalSportBook: viewModel.totalSportBook,
+                        leftSideExchange: viewModel.leftSideExchange,
+                        rightSideExchange: viewModel.rightSideExchange,
+                        totalExchange: viewModel.totalExchange
+                    )
+                        .padding(.top, 32)
+                    
+                    ResultView(
+                        isPositive: viewModel.isPositiveProfit,
+                        total: viewModel.totalProfit
+                    )
+                        .padding(.top, 32)
+                        .padding(.bottom, 50)
+                }
                 
-                ResultView(
-                    isPositive: viewModel.isPositiveProfit,
-                    total: viewModel.totalProfit
-                )
-                    .padding(.top, 32)
-                    .padding(.bottom, 50)
+                VStack {
+
+                    OpenVerifyBetButton(showVerifyBet: $viewModel.showVerifyBet)
+                        .padding(.bottom)
+                    
+                    if viewModel.showVerifyBet {
+                        RequirementsView(requeriments: $viewModel.verifyBetRequeriments)
+                    }
+                }
                 
             }
             .padding(.top, 1)

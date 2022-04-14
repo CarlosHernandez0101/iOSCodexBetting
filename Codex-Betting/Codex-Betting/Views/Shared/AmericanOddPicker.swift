@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AmericanOddPicker: View {
     
-    @Binding private var americanOdd: Int
+    @Binding private var americanOdd: AmericanOddType
     
-    init(americanOdd: Binding<Int>) {
+    init(americanOdd: Binding<AmericanOddType>) {
         self._americanOdd = americanOdd
         UISegmentedControl.appearance()
             .selectedSegmentTintColor = UIColor(Color.codexGolden)
@@ -20,8 +20,8 @@ struct AmericanOddPicker: View {
     
     var body: some View {
         Picker("", selection: $americanOdd) {
-            Text("+").tag(0)
-            Text("-").tag(1)
+            Text("+").tag(AmericanOddType.positive)
+            Text("-").tag(AmericanOddType.negative)
         }
         .pickerStyle(.segmented)
         .frame(width: 80)
@@ -30,7 +30,7 @@ struct AmericanOddPicker: View {
 
 struct AmericanOddPicker_Previews: PreviewProvider {
     static var previews: some View {
-        AmericanOddPicker(americanOdd: .constant(0))
+        AmericanOddPicker(americanOdd: .constant(.positive))
             .previewLayout(.sizeThatFits)
     }
 }

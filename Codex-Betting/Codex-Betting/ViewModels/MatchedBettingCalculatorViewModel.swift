@@ -28,6 +28,13 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             self.calculate()
         }
     }
+    @Published var verifyBetRequeriments: [RequirementViewModel] = DataService.instance.getVerifyBetRequirements().map { req in RequirementViewModel(requerimentText: req) } {
+        willSet {
+            self.showSuccessAlert = verifyBetRequeriments.allSatisfy { $0.isDone }
+        }
+    }
+    @Published var showVerifyBet: Bool = false
+    @Published var showSuccessAlert: Bool = false
     
     private let calculator: CalculatorBrain = CalculatorBrain()
     

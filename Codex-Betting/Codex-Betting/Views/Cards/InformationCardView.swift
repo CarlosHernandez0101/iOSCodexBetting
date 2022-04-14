@@ -73,7 +73,7 @@ struct InformationCardView: View {
                                label: { EmptyView() }
                 )
                 
-                NavigationLink(destination: OddsConverterView()
+                NavigationLink(destination: OddsConverterView(viewModel: OddsConverterViewModel())
                                 .navigationBarHidden(true),
                                tag: InformationCardViewModel.Router.oddsConverter,
                                selection: $viewModel.route,

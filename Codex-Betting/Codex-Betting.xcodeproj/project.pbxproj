@@ -77,6 +77,9 @@
 		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
 		5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */; };
 		57803F7028033C3600B17EE1 /* Double+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F6F28033C3600B17EE1 /* Double+ext.swift */; };
+		57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */; };
+		57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F732807B9D100B17EE1 /* AmericanOddType.swift */; };
+		57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */; };
 		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
@@ -198,6 +201,9 @@
 		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceManager.swift; sourceTree = "<group>"; };
 		57803F6F28033C3600B17EE1 /* Double+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+ext.swift"; sourceTree = "<group>"; };
+		57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsConverterViewModel.swift; sourceTree = "<group>"; };
+		57803F732807B9D100B17EE1 /* AmericanOddType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanOddType.swift; sourceTree = "<group>"; };
+		57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVerifyBetButton.swift; sourceTree = "<group>"; };
 		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 				5704562127C0B233005E3CCB /* MatchSelectionController.swift */,
 				572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */,
 				5719B5B127F9100C0021237E /* CalculatorSelection.swift */,
+				57803F732807B9D100B17EE1 /* AmericanOddType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 				572B279927EE21D800F8E66C /* SuccessAlertView.swift */,
 				5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */,
 				5719B5B327F9119B0021237E /* CalculatorOptionView.swift */,
+				57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -436,6 +444,7 @@
 				572B279327EE031400F8E66C /* VerifyBetViewModel.swift */,
 				572B279527EE03CF00F8E66C /* RequirementViewModel.swift */,
 				5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */,
+				57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -684,8 +693,10 @@
 				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */,
+				57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
+				57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */,
 				5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */,
 				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
 				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
@@ -711,6 +722,7 @@
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
+				57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */,
 				5719B5B827FA51D80021237E /* String+ext.swift in Sources */,
 				57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,

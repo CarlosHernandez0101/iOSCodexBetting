@@ -22,7 +22,7 @@ struct OpenVerifyBetButton: View {
             }
         }) {
             HStack {
-                LeadingText(text: "Verificar apuesta")
+                LeadingTitle(title: "Verificar apuesta")
                 
                 Spacer()
                 

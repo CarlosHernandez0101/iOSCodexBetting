@@ -80,6 +80,13 @@
 		57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */; };
 		57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F732807B9D100B17EE1 /* AmericanOddType.swift */; };
 		57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */; };
+		57803F782808530200B17EE1 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F772808530200B17EE1 /* QuestionsView.swift */; };
+		57803F7A2808555700B17EE1 /* AllQuestionCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F792808555700B17EE1 /* AllQuestionCardsView.swift */; };
+		57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */; };
+		57803F7E2808564800B17EE1 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7D2808564800B17EE1 /* QuestionModel.swift */; };
+		57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */; };
+		57803F82280858EC00B17EE1 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F81280858EC00B17EE1 /* QuestionCardView.swift */; };
+		57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F832809AFDE00B17EE1 /* QuestionDetail.swift */; };
 		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
@@ -204,6 +211,13 @@
 		57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsConverterViewModel.swift; sourceTree = "<group>"; };
 		57803F732807B9D100B17EE1 /* AmericanOddType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanOddType.swift; sourceTree = "<group>"; };
 		57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVerifyBetButton.swift; sourceTree = "<group>"; };
+		57803F772808530200B17EE1 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
+		57803F792808555700B17EE1 /* AllQuestionCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionCardsView.swift; sourceTree = "<group>"; };
+		57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardsViewModel.swift; sourceTree = "<group>"; };
+		57803F7D2808564800B17EE1 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		57803F81280858EC00B17EE1 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		57803F832809AFDE00B17EE1 /* QuestionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetail.swift; sourceTree = "<group>"; };
 		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -325,6 +339,8 @@
 				57F132A027B3825200146A63 /* OddsConverterView.swift */,
 				5742F57027EC9F90000A53DB /* VideoDetailView.swift */,
 				5742F57227ECA0DF000A53DB /* VideoView.swift */,
+				57803F772808530200B17EE1 /* QuestionsView.swift */,
+				57803F832809AFDE00B17EE1 /* QuestionDetail.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -335,7 +351,6 @@
 				572746C627B0E44300A3CF06 /* Lists */,
 				572746BA27B0DC2600A3CF06 /* Shared */,
 				572746B927B0DC1800A3CF06 /* Cards */,
-				571F99A127C34D0100F271C3 /* ContinueButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +364,8 @@
 				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
 				572746BE27B0DE7300A3CF06 /* LessonCards.swift */,
 				5796577927B0E82A0084ADDA /* LockFeatureView.swift */,
+				57803F792808555700B17EE1 /* AllQuestionCardsView.swift */,
+				57803F81280858EC00B17EE1 /* QuestionCardView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -356,6 +373,7 @@
 		572746BA27B0DC2600A3CF06 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				571F99A127C34D0100F271C3 /* ContinueButton.swift */,
 				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
 				572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */,
 				572746C227B0E07400A3CF06 /* LeadingTitle.swift */,
@@ -445,6 +463,8 @@
 				572B279527EE03CF00F8E66C /* RequirementViewModel.swift */,
 				5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */,
 				57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */,
+				57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */,
+				57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -466,6 +486,7 @@
 				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
 				57BF88FC27F170B200745719 /* MatchRequestsManager.swift */,
 				5719B5B527F9161E0021237E /* CalculatorBrain.swift */,
+				57803F7D2808564800B17EE1 /* QuestionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -680,11 +701,13 @@
 				5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */,
 				5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */,
 				5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */,
+				57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
 				5773655127B4D23C00567244 /* DataService.swift in Sources */,
+				57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */,
 				572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
@@ -702,6 +725,8 @@
 				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
 				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
 				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
+				57803F7A2808555700B17EE1 /* AllQuestionCardsView.swift in Sources */,
+				57803F82280858EC00B17EE1 /* QuestionCardView.swift in Sources */,
 				5719B5B427F9119B0021237E /* CalculatorOptionView.swift in Sources */,
 				570F704027F415F00016EDB9 /* Date+ext.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
@@ -734,8 +759,10 @@
 				571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */,
 				572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
+				57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
+				57803F7E2808564800B17EE1 /* QuestionModel.swift in Sources */,
 				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
 				572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
@@ -746,6 +773,7 @@
 				5773655827B4DA8A00567244 /* URLConstants.swift in Sources */,
 				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,
 				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
+				57803F782808530200B17EE1 /* QuestionsView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
 				572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */,

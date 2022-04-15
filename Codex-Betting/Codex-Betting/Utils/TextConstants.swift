@@ -62,6 +62,10 @@ struct TextConstants {
         static let title = "Lecciones"
     }
     
+    enum Questions {
+        static let title = "Preguntas frecuentes"
+    }
+    
     enum Tools {
         static let title = "Herramientas"
     }

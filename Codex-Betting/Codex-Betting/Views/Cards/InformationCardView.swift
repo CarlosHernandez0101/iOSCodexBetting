@@ -79,6 +79,14 @@ struct InformationCardView: View {
                                selection: $viewModel.route,
                                label: { EmptyView() }
                 )
+
+                NavigationLink(destination: QuestionsView()
+                                .navigationBarHidden(true),
+                               tag: InformationCardViewModel.Router.questions,
+                               selection: $viewModel.route,
+                               label: { EmptyView() }
+                )
+                
             }
 
             

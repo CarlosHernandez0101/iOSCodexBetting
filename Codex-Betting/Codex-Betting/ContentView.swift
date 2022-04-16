@@ -10,20 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("showRecommendations") var showRecommendations = true
     
-    @State var showLogIn: Bool = true
+    private let menuManager: MenuManager = MenuManager()
     
     var body: some View {
-        
-        ZStack {
-            
-            if showLogIn {
-                LogInView(showLogin: $showLogIn)
-            } else {
-                MainView(viewModel: MainViewModel())
-            }
-                
-        }
-        .preferredColorScheme(.dark)
+        RootView()
+            .preferredColorScheme(.dark)
+            .environmentObject(menuManager)
     }
 }
 

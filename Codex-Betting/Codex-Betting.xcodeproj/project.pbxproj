@@ -87,6 +87,11 @@
 		57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */; };
 		57803F82280858EC00B17EE1 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F81280858EC00B17EE1 /* QuestionCardView.swift */; };
 		57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F832809AFDE00B17EE1 /* QuestionDetail.swift */; };
+		57803F862809B22A00B17EE1 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F852809B22A00B17EE1 /* LogInView.swift */; };
+		57803F88280A2B3300B17EE1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F87280A2B3300B17EE1 /* RegisterView.swift */; };
+		57803F8A280A2ED100B17EE1 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */; };
+		57803F8C280A39C000B17EE1 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F8B280A39C000B17EE1 /* GoogleButton.swift */; };
+		57803F8E280A3CD500B17EE1 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */; };
 		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
@@ -218,6 +223,11 @@
 		57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		57803F81280858EC00B17EE1 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
 		57803F832809AFDE00B17EE1 /* QuestionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetail.swift; sourceTree = "<group>"; };
+		57803F852809B22A00B17EE1 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		57803F87280A2B3300B17EE1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		57803F8B280A39C000B17EE1 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -341,6 +351,9 @@
 				5742F57227ECA0DF000A53DB /* VideoView.swift */,
 				57803F772808530200B17EE1 /* QuestionsView.swift */,
 				57803F832809AFDE00B17EE1 /* QuestionDetail.swift */,
+				57803F852809B22A00B17EE1 /* LogInView.swift */,
+				57803F87280A2B3300B17EE1 /* RegisterView.swift */,
+				57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -411,6 +424,8 @@
 				5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */,
 				5719B5B327F9119B0021237E /* CalculatorOptionView.swift */,
 				57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */,
+				57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */,
+				57803F8B280A39C000B17EE1 /* GoogleButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -703,6 +718,7 @@
 				5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */,
 				57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				57803F8E280A3CD500B17EE1 /* ForgetPasswordView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
@@ -749,6 +765,7 @@
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
 				57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */,
 				5719B5B827FA51D80021237E /* String+ext.swift in Sources */,
+				57803F862809B22A00B17EE1 /* LogInView.swift in Sources */,
 				57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
@@ -762,8 +779,10 @@
 				57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
+				57803F8C280A39C000B17EE1 /* GoogleButton.swift in Sources */,
 				57803F7E2808564800B17EE1 /* QuestionModel.swift in Sources */,
 				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
+				57803F8A280A2ED100B17EE1 /* UnderlinedButton.swift in Sources */,
 				572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
@@ -785,6 +804,7 @@
 				578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */,
 				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
+				57803F88280A2B3300B17EE1 /* RegisterView.swift in Sources */,
 				57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */,
 				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				5773654427B47DE600567244 /* ResultView.swift in Sources */,

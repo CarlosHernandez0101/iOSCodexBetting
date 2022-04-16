@@ -63,6 +63,7 @@ struct LogInView: View {
                                 
                             
                             NormalText(text: "Contraseña")
+                                .padding(.top)
                             
                             VStack {
                                 PasswordTextField(text: $textPassword, placeholder: "Ingrese su contraseña", colorScheme: .light)
@@ -77,7 +78,6 @@ struct LogInView: View {
                                 }
                                 .padding(.trailing, 60)
                             }
-                            .padding(.top)
                             
                             ContinueButton(buttonText: "Iniciar sesión", action: {
                                 withAnimation {

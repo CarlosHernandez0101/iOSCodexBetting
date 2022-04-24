@@ -11,9 +11,13 @@ struct LayBetView: View {
     @Binding private var layOddsText: String
     @Binding private var layCommisionText: String
     
-    init(layOddsText: Binding<String>, layCommisionText: Binding<String>) {
+    private let calculate: () -> Void
+    
+    init(layOddsText: Binding<String>, layCommisionText: Binding<String>, calculate: @escaping () -> Void) {
         self._layOddsText = layOddsText
         self._layCommisionText = layCommisionText
+        
+        self.calculate = calculate
     }
     
     var body: some View {
@@ -27,7 +31,7 @@ struct LayBetView: View {
                             size: 20
                         )
                     )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
                 
                 Spacer()
             }
@@ -43,10 +47,18 @@ struct LayBetView: View {
                                 size: 20
                             )
                         )
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                     
-                    CodexTextField(text: $layOddsText, placeholder: "Cuota decimal", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                    DecimalPadTextField(
+                        text: $layOddsText,
+                        keyType: .decimalPad,
+                        placeholder: "Cuota en contra",
+                        onSubmit:
+                            calculate
+                    )
+                    
                         .padding(.trailing)
+                    
                 }
                 
                 Spacer()
@@ -59,11 +71,15 @@ struct LayBetView: View {
                                 size: 20
                             )
                         )
-                    .foregroundColor(.white)
-                    .padding(.trailing)
-                    
-                    CodexTextField(text: $layCommisionText, placeholder: "", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                        .foregroundColor(.white)
                         .padding(.trailing)
+                                        
+                    DecimalPadTextField(
+                        text: $layCommisionText,
+                        keyType: .decimalPad,
+                        placeholder: "",
+                        onSubmit: calculate)
+                    
                 }
             }
             .padding(.bottom, 16)
@@ -76,7 +92,9 @@ struct LayBetView: View {
 
 struct LayBetView_Previews: PreviewProvider {
     static var previews: some View {
-        LayBetView(layOddsText: .constant("4.5"), layCommisionText: .constant("6.5"))
+        LayBetView(layOddsText: .constant("4.5"), layCommisionText: .constant("6.5"),
+                   calculate: {}
+        )
             .previewLayout(.sizeThatFits)
     }
 }

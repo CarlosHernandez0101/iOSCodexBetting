@@ -24,7 +24,8 @@ struct OddsInput: View {
                 HStack {
                     NormalText(text: TextConstants.MatchedBettingGameForm.OddsInput.minimum)
                     Spacer()
-                }                    
+                }
+                
                 
                 CodexTextField(
                     text: $minimumOdd,
@@ -33,6 +34,7 @@ struct OddsInput: View {
                     disableAutocorrection: true, colorScheme: .dark
                 )
                     .padding(.trailing, 16)
+                
             }
             
             VStack {
@@ -41,7 +43,7 @@ struct OddsInput: View {
                     Spacer()
                     NormalText(text: TextConstants.MatchedBettingGameForm.OddsInput.maximum)
                 }
-                
+                                
                 CodexTextField(
                     text: $maximumOdd,
                     placeholder: "",
@@ -49,6 +51,7 @@ struct OddsInput: View {
                     disableAutocorrection: true, colorScheme: .dark
                 )
                     .padding(.leading, 16)
+                
             }
         }
         .background(Color.codexBlack)

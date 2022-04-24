@@ -41,7 +41,6 @@ struct CodexTextField: View {
         .textFieldStyle(.roundedBorder)
         .disableAutocorrection(self.disableAutocorrection)
         .keyboardType(self.keyboardType)
-        
     }
 }
 
@@ -63,16 +62,19 @@ struct PasswordTextField: View {
     
     var body: some View {
         ZStack {
-                        
+            
             if showPassword {
+                
                 CodexTextField(
                     text: $text, placeholder: placeholder, keyboardType: .default, disableAutocorrection: true, colorScheme: colorScheme)
+                
+                
             } else {
                 SecureField(placeholder, text: $text)
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                     .keyboardType(.default)
-                .colorScheme(colorScheme)
+                    .colorScheme(colorScheme)
             }
             
             HStack {
@@ -92,8 +94,10 @@ struct PasswordTextField: View {
 
 struct CodexTextField_Previews: PreviewProvider {
     static var previews: some View {
+        
         CodexTextField(text: .constant(""), placeholder: "Ingrese una cantidad", keyboardType: .default, disableAutocorrection: true, colorScheme: .light)
             .previewLayout(.sizeThatFits)
+        
         
         CodexTextField(text: .constant(""), placeholder: "Ingrese una cantidad", keyboardType: .default, disableAutocorrection: true, colorScheme: .dark)
             .previewLayout(.sizeThatFits)

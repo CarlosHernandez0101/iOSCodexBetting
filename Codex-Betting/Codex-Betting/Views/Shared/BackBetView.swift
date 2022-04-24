@@ -12,10 +12,14 @@ struct BackBetView: View {
     @Binding private var backOddsText: String
     @Binding private var backCommision: String
     
-    init(backStakeText: Binding<String>, backOddsText: Binding<String>, backCommision: Binding<String>) {
+    private let calculate: () -> Void
+    
+    init(backStakeText: Binding<String>, backOddsText: Binding<String>, backCommision: Binding<String>, calculate: @escaping () -> Void) {
         self._backStakeText = backStakeText
         self._backOddsText = backOddsText
         self._backCommision = backCommision
+        
+        self.calculate = calculate
     }
     
     var body: some View {
@@ -31,18 +35,18 @@ struct BackBetView: View {
                                 size: 20
                             )
                         )
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                     
                     Spacer()
                 }
                 
-                CodexTextField(
+                DecimalPadTextField(
                     text: $backStakeText,
-                    placeholder: "Cuota a favor",
-                    keyboardType: .decimalPad,
-                    disableAutocorrection: false,
-                    colorScheme: .light
+                    keyType: .decimalPad,
+                    placeholder: "Importe de apuesta",
+                    onSubmit: calculate
                 )
+                
             }
             
             HStack {
@@ -54,9 +58,15 @@ struct BackBetView: View {
                                 size: 20
                             )
                         )
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                     
-                    CodexTextField(text: $backOddsText, placeholder: "Cuota decimal", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
+                    
+                    DecimalPadTextField(
+                        text: $backOddsText,
+                        keyType: .decimalPad,
+                        placeholder: "Cuota decimal",
+                        onSubmit: calculate
+                    )
                         .padding(.trailing)
                 }
                 
@@ -70,24 +80,30 @@ struct BackBetView: View {
                                 size: 20
                             )
                         )
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                     
-                    CodexTextField(text: $backCommision, placeholder: "", keyboardType: .decimalPad, disableAutocorrection: true, colorScheme: .light)
-                        .padding(.leading)
+                    
+                    DecimalPadTextField(
+                        text: $backCommision,
+                        keyType: .decimalPad,
+                        placeholder: "",
+                        onSubmit: calculate
+                    )
+                        .padding(.leading)                    
                 }
                 
             }
             .padding(.bottom, 16)
         }
         .padding(16)
-        .background(Color.codexGolden)        
+        .background(Color.codexGolden)
         .cornerRadius(15)
     }
 }
 
 struct BackBetView_Previews: PreviewProvider {
     static var previews: some View {
-        BackBetView(backStakeText: .constant("100"), backOddsText: .constant("3.5"), backCommision: .constant("4"))
+        BackBetView(backStakeText: .constant("100"), backOddsText: .constant("3.5"), backCommision: .constant("4"), calculate: {})
             .previewLayout(.sizeThatFits)
     }
 }

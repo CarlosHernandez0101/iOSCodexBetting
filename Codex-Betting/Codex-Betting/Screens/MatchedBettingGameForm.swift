@@ -32,12 +32,14 @@ struct MatchedBettingGameForm: View {
                     MultiOptionSelectorView(currentSelection: $viewModel.currentMatchedBettingGameSelection)
                     
                     if viewModel.showMatchedBettingTextField {
+                        
                         CodexTextField(
                             text: $viewModel.matchedBettingGameText,
                             placeholder: viewModel.matchedBettingGamePlaceholder,
                             keyboardType: .default,
                             disableAutocorrection: false, colorScheme: .dark
                         )
+                        
                     }
                     
                     CustomDivider(dividerColor: .codexGray)
@@ -73,12 +75,14 @@ struct MatchedBettingGameForm: View {
                         
                         LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
                         
+                        
                         CodexTextField(
                             text: $viewModel.sportbookSelected,
                             placeholder: viewModel.spoortbookPlaceholder,
                             keyboardType: .default,
                             disableAutocorrection: false, colorScheme: .dark
                         )
+                        
                         
                     }
                 }

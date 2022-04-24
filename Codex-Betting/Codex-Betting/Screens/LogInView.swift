@@ -41,9 +41,9 @@ struct LogInView: View {
                     VStack {
                         Image(ImageConstants.codexLogo)
                             .resizable()
-                        .frame(width: 250, height: 250, alignment: .center)
-                        .scaledToFit()
-                        .padding(.top, 25)
+                            .frame(width: 250, height: 250, alignment: .center)
+                            .scaledToFit()
+                            .padding(.top, 25)
                         
                         Text("Iniciar sesión")
                             .foregroundColor(.white)
@@ -52,15 +52,17 @@ struct LogInView: View {
                                     HKGrotesk.bold.rawValue,
                                     size: 32
                                 )
-                        )
+                            )
                         
                         VStack {
                             
                             NormalText(text: "Correo eléctronico")
                             
+                            
                             CodexTextField(text: .constant(""), placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light)
                                 .frame(width: TEXT_FIELD_WIDTH)
-                                
+                            
+                            
                             
                             NormalText(text: "Contraseña")
                                 .padding(.top)
@@ -85,7 +87,7 @@ struct LogInView: View {
                                 }
                             }, isDisabled: .constant(false))
                                 .padding(.top, 20)
-                                                        
+                            
                             NormalText(text: "O ingresa con")
                                 .padding(.top)
                             
@@ -99,7 +101,7 @@ struct LogInView: View {
                                 UnderlinedButton(text: "Regístrate", action: {
                                     showRegister = true
                                 }, fontSize: 20, color: .white)
-                                .padding(.top, 20)
+                                    .padding(.top, 20)
                             }
                         }
                         .padding(.top, 20)

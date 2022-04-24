@@ -17,8 +17,10 @@ struct ForgetPasswordView: View {
                 
                 NormalText(text: "Escribe la dirección de correo relacionada con tu cuenta y nosotros enviaremos un enlace para que restablezcas tu constraseña.")
                 
+                
                 CodexTextField(text: .constant(""), placeholder: "Ingresa tu correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light)
-
+                
+                
             }
             
             ContinueButton(buttonText: "Enviar", action: {}, isDisabled: .constant(false))

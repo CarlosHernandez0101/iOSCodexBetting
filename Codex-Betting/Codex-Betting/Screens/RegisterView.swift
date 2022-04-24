@@ -26,14 +26,16 @@ struct RegisterView: View {
                         HKGrotesk.bold.rawValue,
                         size: 32
                     )
-            )
+                )
             
             VStack(alignment: .leading) {
                 NormalText(text: "Correo eléctronico")
                 
+                
                 CodexTextField(text: .constant(""), placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light)
                     .frame(width: TEXT_FIELD_WIDTH)
-
+                
+                
                 NormalText(text: "Contraseña")
                 
                 PasswordTextField(text: .constant(""), placeholder: "Ingrese su contraseña", colorScheme: .light)
@@ -43,7 +45,7 @@ struct RegisterView: View {
                 
                 PasswordTextField(text: .constant(""), placeholder: "Confirme su contraseña", colorScheme: .light)
                     .frame(width: TEXT_FIELD_WIDTH)
-
+                
             }
             .padding(.top, 20)
             
@@ -72,7 +74,7 @@ struct RegisterView: View {
             
             ContinueButton(buttonText: "Crear cuenta", action: {}, isDisabled: .constant(false))
                 .padding(.top)
-
+            
             NormalText(text: "O registrate con:")
                 .padding(.top, 20)
             
@@ -86,7 +88,7 @@ struct RegisterView: View {
                 UnderlinedButton(text: "Iniciar sesión", action: {
                     presentationMode.wrappedValue.dismiss()
                 }, fontSize: 20, color: .white)
-                .padding(.top, 20)
+                    .padding(.top, 20)
             }
             
             

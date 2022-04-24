@@ -104,6 +104,7 @@
 		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
 		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
 		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
+		57B49BE82814F645006C325D /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B49BE72814F645006C325D /* TestTextField.swift */; };
 		57BF88FD27F170B200745719 /* MatchRequestsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF88FC27F170B200745719 /* MatchRequestsManager.swift */; };
 		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
 		57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */; };
@@ -245,6 +246,7 @@
 		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
 		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
+		57B49BE72814F645006C325D /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
 		57BF88FC27F170B200745719 /* MatchRequestsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRequestsManager.swift; sourceTree = "<group>"; };
 		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
 		57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardButton.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				57803F8B280A39C000B17EE1 /* GoogleButton.swift */,
 				57803F8F280A745500B17EE1 /* MenuButton.swift */,
 				57803F93280A779F00B17EE1 /* MenuOptionView.swift */,
+				57B49BE72814F645006C325D /* TestTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
 				57803F8A280A2ED100B17EE1 /* UnderlinedButton.swift in Sources */,
 				572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */,
+				57B49BE82814F645006C325D /* TestTextField.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
 				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,

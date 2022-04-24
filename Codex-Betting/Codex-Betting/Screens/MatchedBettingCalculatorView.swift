@@ -36,13 +36,15 @@ struct MatchedBettingCalculatorView: View {
                 BackBetView(
                     backStakeText: $viewModel.backStake,
                     backOddsText: $viewModel.backOdds,
-                    backCommision: $viewModel.backCommision
+                    backCommision: $viewModel.backCommision,
+                    calculate: viewModel.calculate
                 )
                     .padding(.top, 32)
                 
                 LayBetView(
                     layOddsText: $viewModel.layOdds,
-                    layCommisionText: $viewModel.layCommision
+                    layCommisionText: $viewModel.layCommision,
+                    calculate: viewModel.calculate
                 )
                     .padding(.top, 16)
                 

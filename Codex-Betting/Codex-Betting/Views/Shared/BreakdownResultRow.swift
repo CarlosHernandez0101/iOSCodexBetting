@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct BreakdownResultRow: View {
+    private let leftResult: String
+    private let rightResult: String
+    private let total: String
+    
+    init(leftResult: String, rightResult: String, total: String) {
+        self.leftResult = leftResult
+        self.rightResult = rightResult
+        self.total = total
+    }
+    
     var body: some View {
         HStack {
-            Text("1350")
+            Text("$\(leftResult)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,
@@ -21,7 +31,7 @@ struct BreakdownResultRow: View {
             
             Spacer()
             
-            Text("0")
+            Text("$\(rightResult)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,
@@ -32,7 +42,7 @@ struct BreakdownResultRow: View {
             
             Spacer()
             
-            Text("-10")
+            Text("$\(total)")
                 .font(
                     Font.custom(
                         HKGrotesk.regular.rawValue,
@@ -48,6 +58,6 @@ struct BreakdownResultRow: View {
 
 struct BreakdownResultRow_Previews: PreviewProvider {
     static var previews: some View {
-        BreakdownResultRow()
+        BreakdownResultRow(leftResult: "100", rightResult: "100", total: "100")
     }
 }

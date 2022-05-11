@@ -8,60 +8,60 @@
 import SwiftUI
 
 struct OddsConverterView: View {
+        
+    @StateObject private var viewModel: OddsConverterViewModel
     
-    @State private var americanOdd: Int = 0
+    init(viewModel: OddsConverterViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ZStack {
             Color.codexBlack.edgesIgnoringSafeArea(.all)
             
+            CodexToolBar()
+                .padding(.leading, 16)
+            
             VStack {
                 
-                Text("Cuota americana")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
-                    )
-                    .foregroundColor(.white)
+                NormalText(text: TextConstants.OddsConverter.americanOdd)
              
                 HStack {
 
-                    AmericanOddPicker(americanOdd: $americanOdd)
+                    AmericanOddPicker(americanOdd: $viewModel.americanOddType)
                     
                     Spacer()
-                }
-                
-                Text("Cuota decimal")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
+                    
+                    CodexTextField(
+                        text: $viewModel.americanOdd,
+                        placeholder: "Ingrese la cuota",
+                        keyboardType: .numberPad,
+                        disableAutocorrection: true,
+                        colorScheme: .dark
                     )
-                    .foregroundColor(.white)
+                        .frame(width: 200)
+                                        
+                }
+                .padding(.horizontal, 40)
+                
+                NormalText(text: TextConstants.OddsConverter.decimalOdd)
                     .padding(.top, 32)
                 
-                Text("1.7")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.regular.rawValue,
-                            size: 20
-                        )
-                    )
-                    .foregroundColor(.white)
+                NormalText(text: viewModel.decimalOdd)
                     .padding(.top, 16)
                 
             }
             .padding(.horizontal, 16)
             
         }
+        .onTapGesture {
+            viewModel.convertAmericanOdd()
+        }
     }
 }
 
 struct OddsConverterView_Previews: PreviewProvider {
     static var previews: some View {
-        OddsConverterView()
+        OddsConverterView(viewModel: OddsConverterViewModel())
     }
 }

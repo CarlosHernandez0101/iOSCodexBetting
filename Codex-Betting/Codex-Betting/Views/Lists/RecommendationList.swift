@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct RecommendationList: View {
+    
+    @StateObject private var viewModel: RecommendationListViewModel
+    
+    init(viewModel: RecommendationListViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         
         VStack(spacing: 8) {
             
-            LeadingText(text: "1. Solicita partidos de fútbol")
-            
-            LeadingText(text: "1. Solicita partidos de fútbol")
-            
-            LeadingText(text: "1. Solicita partidos de fútbol")
+            ForEach(0..<viewModel.recommendations.count, id: \.self) { index in
+                LeadingText(text: viewModel.recommendations[index])
+            }
             
             Spacer()
         }
@@ -27,7 +32,7 @@ struct RecommendationLists_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.codexBlack
-            RecommendationList()
+            RecommendationList(viewModel: RecommendationListViewModel())
         }
     }
 }

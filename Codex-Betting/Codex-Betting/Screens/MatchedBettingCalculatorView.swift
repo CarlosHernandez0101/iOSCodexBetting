@@ -8,46 +8,95 @@
 import SwiftUI
 
 struct MatchedBettingCalculatorView: View {
+    @StateObject private var viewModel: MatchedBettingCalculatorViewModel
+    
+    init(viewModel: MatchedBettingCalculatorViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         ZStack {
             
-            Color.codexBlack.edgesIgnoringSafeArea(.all)
+            SuccessAlertView(
+                text: TextConstants.VerifyBet.betAlertText,
+                isPresented: $viewModel.showSuccessAlert
+            )
+                .zIndex(1)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
+                
+                CodexToolBar()
+                    .padding(.leading, 16)
                 
                 LeadingText(text: "Tipo de apuesta")
+                    .padding(.leading, 16)
                 
-                MultiOptionSelectorView()
+                CalculatorSelectorView(currentSelection: $viewModel.calculatorSelection)
+                
+                BackBetView(
+                    backStakeText: $viewModel.backStake,
+                    backOddsText: $viewModel.backOdds,
+                    backCommision: $viewModel.backCommision,
+                    calculate: viewModel.calculate
+                )
                     .padding(.top, 32)
                 
-                BackBetView()
-                    .padding(.top, 32)
-                
-                LayBetView()
+                LayBetView(
+                    layOddsText: $viewModel.layOdds,
+                    layCommisionText: $viewModel.layCommision,
+                    calculate: viewModel.calculate
+                )
                     .padding(.top, 16)
                 
-                LayStakeRequiredView(moneyToBet: 50.5)
+                LayStakeRequiredView(moneyToBet: viewModel.moneyToBet)
                     .padding(.top, 16)
                 
-                LiabilityView(liability: 500)
+                LiabilityView(liability: viewModel.liability)
                     .padding(.top, 8)
                 
-                BreakdownView()
-                    .padding(.top, 32)
+                VStack {
+                    BreakdownView(
+                        leftSideSportBook: viewModel.leftSideSportBook,
+                        rightSideSportBook: viewModel.rightSideSportBook,
+                        totalSportBook: viewModel.totalSportBook,
+                        leftSideExchange: viewModel.leftSideExchange,
+                        rightSideExchange: viewModel.rightSideExchange,
+                        totalExchange: viewModel.totalExchange
+                    )
+                        .padding(.top, 32)
+                    
+                    ResultView(
+                        isPositive: viewModel.isPositiveProfit,
+                        total: viewModel.totalProfit
+                    )
+                        .padding(.top, 32)
+                        .padding(.bottom, 50)
+                }
                 
-                ResultView()
-                    .padding(.top, 32)
+                VStack {
+
+                    OpenVerifyBetButton(showVerifyBet: $viewModel.showVerifyBet)
+                        .padding(.bottom)
+                    
+                    if viewModel.showVerifyBet {
+                        RequirementsView(requeriments: $viewModel.verifyBetRequeriments)
+                    }
+                }
                 
             }
+            .padding(.top, 1)
             .padding(.horizontal, 16)
-            .padding(.bottom, 50)
-            
+        }
+        .background(Color.codexBlack.edgesIgnoringSafeArea(.all))
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+            viewModel.calculate()
         }
     }
 }
 
 struct MatchedBettingCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedBettingCalculatorView()
+        MatchedBettingCalculatorView(viewModel: MatchedBettingCalculatorViewModel())
     }
 }

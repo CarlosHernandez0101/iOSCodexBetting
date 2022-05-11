@@ -17,8 +17,13 @@ struct LessonsView: View {
                 
                 LeadingTitle(title: TextConstants.Lessons.title)
                 
-                LessonCards()
+                LessonCards(
+                    viewModel: LessonCardsViewModel(
+                        repository: VideoCourseRepository()
+                    )
+                )
             }
+            .padding(.top, 1)
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 32)

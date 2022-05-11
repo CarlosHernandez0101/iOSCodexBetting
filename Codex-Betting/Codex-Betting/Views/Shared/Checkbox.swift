@@ -10,9 +10,15 @@ import SwiftUI
 struct Checkbox: View {
     
     @Binding private var isSelected: Bool
+    private let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
-    init(isSelected: Binding<Bool>) {
+    private var squareSize: CGFloat = 40
+    private var checkmarkSize: CGFloat = 30
+    
+    init(isSelected: Binding<Bool>, squareSize: CGFloat = 40, checkmarkSize: CGFloat = 30) {
         self._isSelected = isSelected
+        self.squareSize = squareSize
+        self.checkmarkSize = checkmarkSize
     }
     
     var body: some View {
@@ -20,17 +26,21 @@ struct Checkbox: View {
             
             Image(systemName: "square")
                 .foregroundColor(.white)
-                .font(.system(size: 40))
+                .font(.system(size: squareSize))
                 
             
             if isSelected {
                 Image(systemName: "checkmark")
                     .foregroundColor(.codexGreen)
-                    .font(.system(size: 30))
+                    .font(.system(size: checkmarkSize))
             }
             
         }
         .background(Color.codexBlack)
+        .onTapGesture {
+            isSelected.toggle()
+            impactFeedbackGenerator.impactOccurred()
+        }
     }
 }
 

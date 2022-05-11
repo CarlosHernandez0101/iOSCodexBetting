@@ -39,6 +39,12 @@ final class InformationCardViewModel: ObservableObject {
             open(.match)
         case .questions:
             open(.questions)
+        case .calculator:
+            open(.calculator)
+        case .verifyBet:
+            open(.verifyBet)
+        case .oddConverter:
+            open(.oddsConverter)
         }
     }
     
@@ -59,5 +65,8 @@ extension InformationCardViewModel {
         case tools
         case match
         case questions
+        case calculator
+        case verifyBet
+        case oddsConverter
     }
 }

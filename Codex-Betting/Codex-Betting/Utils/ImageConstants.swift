@@ -10,5 +10,6 @@ import Foundation
 struct ImageConstants {
     
     static let codexLogo = "codex-logo"
+    static let googleLogo = "google-icon"
     
 }

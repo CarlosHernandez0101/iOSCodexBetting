@@ -17,25 +17,31 @@ struct MainView: View {
     
     var body: some View {
         
-        
         NavigationView {
             ZStack {
                 
                 Color.codexBlack
-                    .edgesIgnoringSafeArea(.all)
+                
+                MenuView()
+                    .padding()
+                    .zIndex(1)
                 
                 ScrollView(showsIndicators: false) {
+                    
+                    MenuButton()                    
                     
                     Image(ImageConstants.codexLogo)
                         .resizable()
                         .frame(width: 250, height: 250, alignment: .center)
                     
+                    
                     InformationCards(
                         viewModel: InformationCardsViewModel()
                     )
                 }
-                .padding(.vertical, 32)
-                .edgesIgnoringSafeArea(.top)
+                .padding(.top, 1)
+                .padding(.bottom, 32)
+                
             }
         }
         .navigationBarTitle("", displayMode: .inline)

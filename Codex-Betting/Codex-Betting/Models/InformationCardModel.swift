@@ -20,5 +20,8 @@ struct InformationCardModel: Identifiable {
         case tools
         case match
         case questions
+        case calculator
+        case verifyBet
+        case oddConverter
     }
 }

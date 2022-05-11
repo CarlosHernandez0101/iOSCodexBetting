@@ -3,13 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561227C0A205005E3CCB /* CodexTextField.swift */; };
+		5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */; };
+		5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561A27C0A971005E3CCB /* OddsInput.swift */; };
+		5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561C27C0ADDB005E3CCB /* DatesInput.swift */; };
+		5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */; };
+		5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704562127C0B233005E3CCB /* MatchSelectionController.swift */; };
 		5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */; };
-		5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* OptionView.swift */; };
+		5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */; };
 		5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709983227B16D0A00D8FCFB /* OptionCircle.swift */; };
+		570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */; };
+		570F704027F415F00016EDB9 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F703F27F415F00016EDB9 /* Date+ext.swift */; };
+		5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */; };
+		5719B5B027F90FD50021237E /* CalculatorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */; };
+		5719B5B227F9100C0021237E /* CalculatorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B127F9100C0021237E /* CalculatorSelection.swift */; };
+		5719B5B427F9119B0021237E /* CalculatorOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B327F9119B0021237E /* CalculatorOptionView.swift */; };
+		5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B527F9161E0021237E /* CalculatorBrain.swift */; };
+		5719B5B827FA51D80021237E /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719B5B727FA51D80021237E /* String+ext.swift */; };
+		571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F997827C2018800F271C3 /* BackgroundContent.swift */; };
+		571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F99A127C34D0100F271C3 /* ContinueButton.swift */; };
 		57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B0F27AF80CB0082ECF6 /* Colors.swift */; };
 		57268B1427AF84060082ECF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1327AF84060082ECF6 /* Launch Screen.storyboard */; };
 		57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57268B1727AF87A30082ECF6 /* Grotesk-Light.ttf */; };
@@ -22,7 +38,7 @@
 		57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57268B2827AF971A0082ECF6 /* InformationCards.swift */; };
 		572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B127B0D69E00A3CF06 /* ToolsView.swift */; };
 		572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B327B0D85B00A3CF06 /* ToolsCards.swift */; };
-		572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* LessonCardView.swift */; };
+		572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */; };
 		572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746B727B0DBC300A3CF06 /* LessonsView.swift */; };
 		572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */; };
 		572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746BE27B0DE7300A3CF06 /* LessonCards.swift */; };
@@ -31,6 +47,21 @@
 		572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C427B0E31600A3CF06 /* LeadingText.swift */; };
 		572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C727B0E46300A3CF06 /* RecommendationList.swift */; };
 		572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */; };
+		572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */; };
+		572B278E27EDFC5E00F8E66C /* VerifySelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */; };
+		572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */; };
+		572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */; };
+		572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279327EE031400F8E66C /* VerifyBetViewModel.swift */; };
+		572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279527EE03CF00F8E66C /* RequirementViewModel.swift */; };
+		572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279727EE1A5B00F8E66C /* RequirementsView.swift */; };
+		572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279927EE21D800F8E66C /* SuccessAlertView.swift */; };
+		5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */; };
+		5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */; };
+		5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56727EC99E0000A53DB /* CourseVideoModel.swift */; };
+		5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */; };
+		5742F56D27EC9EC0000A53DB /* CourseVideos.json in Resources */ = {isa = PBXBuildFile; fileRef = 5742F56C27EC9EC0000A53DB /* CourseVideos.json */; };
+		5742F57127EC9F90000A53DB /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F57027EC9F90000A53DB /* VideoDetailView.swift */; };
+		5742F57327ECA0DF000A53DB /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F57227ECA0DF000A53DB /* VideoView.swift */; };
 		576F42B127B235F50041E597 /* LayBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F42B027B235F50041E597 /* LayBetView.swift */; };
 		5773653E27B4756D00567244 /* BreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653D27B4756D00567244 /* BreakdownView.swift */; };
 		5773654027B477FC00567244 /* BreakdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773653F27B477FC00567244 /* BreakdownRow.swift */; };
@@ -44,8 +75,37 @@
 		5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655327B4D25E00567244 /* InformationCardModel.swift */; };
 		5773655627B4D3F700567244 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655527B4D3F700567244 /* TextConstants.swift */; };
 		5773655827B4DA8A00567244 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773655727B4DA8A00567244 /* URLConstants.swift */; };
+		5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */; };
+		57803F7028033C3600B17EE1 /* Double+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F6F28033C3600B17EE1 /* Double+ext.swift */; };
+		57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */; };
+		57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F732807B9D100B17EE1 /* AmericanOddType.swift */; };
+		57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */; };
+		57803F782808530200B17EE1 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F772808530200B17EE1 /* QuestionsView.swift */; };
+		57803F7A2808555700B17EE1 /* AllQuestionCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F792808555700B17EE1 /* AllQuestionCardsView.swift */; };
+		57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */; };
+		57803F7E2808564800B17EE1 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7D2808564800B17EE1 /* QuestionModel.swift */; };
+		57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */; };
+		57803F82280858EC00B17EE1 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F81280858EC00B17EE1 /* QuestionCardView.swift */; };
+		57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F832809AFDE00B17EE1 /* QuestionDetail.swift */; };
+		57803F862809B22A00B17EE1 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F852809B22A00B17EE1 /* LogInView.swift */; };
+		57803F88280A2B3300B17EE1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F87280A2B3300B17EE1 /* RegisterView.swift */; };
+		57803F8A280A2ED100B17EE1 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */; };
+		57803F8C280A39C000B17EE1 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F8B280A39C000B17EE1 /* GoogleButton.swift */; };
+		57803F8E280A3CD500B17EE1 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */; };
+		57803F90280A745500B17EE1 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F8F280A745500B17EE1 /* MenuButton.swift */; };
+		57803F92280A755000B17EE1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F91280A755000B17EE1 /* MenuView.swift */; };
+		57803F94280A779F00B17EE1 /* MenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F93280A779F00B17EE1 /* MenuOptionView.swift */; };
+		57803F96280A7AF900B17EE1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F95280A7AF900B17EE1 /* RootView.swift */; };
+		57803F9A280A7B7000B17EE1 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F99280A7B7000B17EE1 /* MenuManager.swift */; };
+		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
+		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
+		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
+		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
+		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
+		57B49BE82814F645006C325D /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B49BE72814F645006C325D /* TestTextField.swift */; };
+		57BF88FD27F170B200745719 /* MatchRequestsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF88FC27F170B200745719 /* MatchRequestsManager.swift */; };
 		57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6727B423DF0023B359 /* LiabilityView.swift */; };
 		57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */; };
 		57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16D327AE485C006C44DB /* Codex_BettingApp.swift */; };
@@ -56,6 +116,8 @@
 		57DE16EF27AE485C006C44DB /* Codex_BettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */; };
 		57DE16F127AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */; };
 		57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */; };
+		57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */; };
+		57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */; };
 		57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */; };
 		57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */; };
 		57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC9C1E27B220930083DD83 /* Checkbox.swift */; };
@@ -86,9 +148,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5704561227C0A205005E3CCB /* CodexTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexTextField.swift; sourceTree = "<group>"; };
+		5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ext.swift"; sourceTree = "<group>"; };
+		5704561A27C0A971005E3CCB /* OddsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsInput.swift; sourceTree = "<group>"; };
+		5704561C27C0ADDB005E3CCB /* DatesInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesInput.swift; sourceTree = "<group>"; };
+		5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormHeader.swift; sourceTree = "<group>"; };
+		5704562127C0B233005E3CCB /* MatchSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionController.swift; sourceTree = "<group>"; };
 		5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiOptionSelectorView.swift; sourceTree = "<group>"; };
-		5709983027B16BEE00D8FCFB /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBettingGameOption.swift; sourceTree = "<group>"; };
 		5709983227B16D0A00D8FCFB /* OptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircle.swift; sourceTree = "<group>"; };
+		570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappUtils.swift; sourceTree = "<group>"; };
+		570F703F27F415F00016EDB9 /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingCalculatorViewModel.swift; sourceTree = "<group>"; };
+		5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSelectorView.swift; sourceTree = "<group>"; };
+		5719B5B127F9100C0021237E /* CalculatorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSelection.swift; sourceTree = "<group>"; };
+		5719B5B327F9119B0021237E /* CalculatorOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOptionView.swift; sourceTree = "<group>"; };
+		5719B5B527F9161E0021237E /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		5719B5B727FA51D80021237E /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
+		571F997827C2018800F271C3 /* BackgroundContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContent.swift; sourceTree = "<group>"; };
+		571F99A127C34D0100F271C3 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		57268B0F27AF80CB0082ECF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		57268B1327AF84060082ECF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		57268B1627AF87950082ECF6 /* Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grotesk-Regular.ttf"; sourceTree = "<group>"; };
@@ -102,7 +180,7 @@
 		57268B2827AF971A0082ECF6 /* InformationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCards.swift; sourceTree = "<group>"; };
 		572746B127B0D69E00A3CF06 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		572746B327B0D85B00A3CF06 /* ToolsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsCards.swift; sourceTree = "<group>"; };
-		572746B527B0D9A600A3CF06 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoCardView.swift; sourceTree = "<group>"; };
 		572746B727B0DBC300A3CF06 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithNumber.swift; sourceTree = "<group>"; };
 		572746BE27B0DE7300A3CF06 /* LessonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCards.swift; sourceTree = "<group>"; };
@@ -111,6 +189,21 @@
 		572746C427B0E31600A3CF06 /* LeadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingText.swift; sourceTree = "<group>"; };
 		572746C727B0E46300A3CF06 /* RecommendationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationList.swift; sourceTree = "<group>"; };
 		572746C927B0E53C00A3CF06 /* MatchedBettingGameForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameForm.swift; sourceTree = "<group>"; };
+		572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetSelectorView.swift; sourceTree = "<group>"; };
+		572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySelectionController.swift; sourceTree = "<group>"; };
+		572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionView.swift; sourceTree = "<group>"; };
+		572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetOptionsViewModel.swift; sourceTree = "<group>"; };
+		572B279327EE031400F8E66C /* VerifyBetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetViewModel.swift; sourceTree = "<group>"; };
+		572B279527EE03CF00F8E66C /* RequirementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementViewModel.swift; sourceTree = "<group>"; };
+		572B279727EE1A5B00F8E66C /* RequirementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsView.swift; sourceTree = "<group>"; };
+		572B279927EE21D800F8E66C /* SuccessAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAlertView.swift; sourceTree = "<group>"; };
+		5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardsViewModel.swift; sourceTree = "<group>"; };
+		5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseViewModel.swift; sourceTree = "<group>"; };
+		5742F56727EC99E0000A53DB /* CourseVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoModel.swift; sourceTree = "<group>"; };
+		5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseRepository.swift; sourceTree = "<group>"; };
+		5742F56C27EC9EC0000A53DB /* CourseVideos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CourseVideos.json; sourceTree = "<group>"; };
+		5742F57027EC9F90000A53DB /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
+		5742F57227ECA0DF000A53DB /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		576F42B027B235F50041E597 /* LayBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayBetView.swift; sourceTree = "<group>"; };
 		5773653D27B4756D00567244 /* BreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownView.swift; sourceTree = "<group>"; };
 		5773653F27B477FC00567244 /* BreakdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownRow.swift; sourceTree = "<group>"; };
@@ -124,8 +217,37 @@
 		5773655327B4D25E00567244 /* InformationCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCardModel.swift; sourceTree = "<group>"; };
 		5773655527B4D3F700567244 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		5773655727B4DA8A00567244 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceManager.swift; sourceTree = "<group>"; };
+		57803F6F28033C3600B17EE1 /* Double+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+ext.swift"; sourceTree = "<group>"; };
+		57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsConverterViewModel.swift; sourceTree = "<group>"; };
+		57803F732807B9D100B17EE1 /* AmericanOddType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanOddType.swift; sourceTree = "<group>"; };
+		57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVerifyBetButton.swift; sourceTree = "<group>"; };
+		57803F772808530200B17EE1 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
+		57803F792808555700B17EE1 /* AllQuestionCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionCardsView.swift; sourceTree = "<group>"; };
+		57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardsViewModel.swift; sourceTree = "<group>"; };
+		57803F7D2808564800B17EE1 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		57803F81280858EC00B17EE1 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		57803F832809AFDE00B17EE1 /* QuestionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetail.swift; sourceTree = "<group>"; };
+		57803F852809B22A00B17EE1 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		57803F87280A2B3300B17EE1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		57803F8B280A39C000B17EE1 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		57803F8F280A745500B17EE1 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		57803F91280A755000B17EE1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		57803F93280A779F00B17EE1 /* MenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionView.swift; sourceTree = "<group>"; };
+		57803F95280A7AF900B17EE1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		57803F99280A7B7000B17EE1 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
+		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
+		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
+		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
+		57B49BE72814F645006C325D /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
+		57BF88FC27F170B200745719 /* MatchRequestsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRequestsManager.swift; sourceTree = "<group>"; };
 		57D2FB6727B423DF0023B359 /* LiabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiabilityView.swift; sourceTree = "<group>"; };
 		57D2FB6927B4254A0023B359 /* CopyToClipboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardButton.swift; sourceTree = "<group>"; };
 		57DE16D027AE485C006C44DB /* Codex-Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codex-Betting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +261,8 @@
 		57DE16EE27AE485C006C44DB /* Codex_BettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITests.swift; sourceTree = "<group>"; };
 		57DE16F027AE485C006C44DB /* Codex_BettingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codex_BettingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexToolBar.swift; sourceTree = "<group>"; };
+		57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCardsViewModel.swift; sourceTree = "<group>"; };
+		57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalText.swift; sourceTree = "<group>"; };
 		57EC9C1A27B21F2D0083DD83 /* VerifyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyBetView.swift; sourceTree = "<group>"; };
 		57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementWithCheckboxView.swift; sourceTree = "<group>"; };
 		57EC9C1E27B220930083DD83 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -176,6 +300,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5704562027C0B1E4005E3CCB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5704562127C0B233005E3CCB /* MatchSelectionController.swift */,
+				572B278D27EDFC5E00F8E66C /* VerifySelectionController.swift */,
+				5719B5B127F9100C0021237E /* CalculatorSelection.swift */,
+				57803F732807B9D100B17EE1 /* AmericanOddType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		57268B0E27AF80B70082ECF6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +359,15 @@
 				57EC9C2027B2253E0083DD83 /* VerifyBetOptionsView.swift */,
 				57EC9C2427B230A40083DD83 /* MatchedBettingCalculatorView.swift */,
 				57F132A027B3825200146A63 /* OddsConverterView.swift */,
+				5742F57027EC9F90000A53DB /* VideoDetailView.swift */,
+				5742F57227ECA0DF000A53DB /* VideoView.swift */,
+				57803F772808530200B17EE1 /* QuestionsView.swift */,
+				57803F832809AFDE00B17EE1 /* QuestionDetail.swift */,
+				57803F852809B22A00B17EE1 /* LogInView.swift */,
+				57803F87280A2B3300B17EE1 /* RegisterView.swift */,
+				57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */,
+				57803F91280A755000B17EE1 /* MenuView.swift */,
+				57803F95280A7AF900B17EE1 /* RootView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -243,10 +387,12 @@
 			children = (
 				57268B2827AF971A0082ECF6 /* InformationCards.swift */,
 				57268B2427AF90CE0082ECF6 /* InformationCardView.swift */,
-				572746B527B0D9A600A3CF06 /* LessonCardView.swift */,
+				572746B527B0D9A600A3CF06 /* CourseVideoCardView.swift */,
 				572746B327B0D85B00A3CF06 /* ToolsCards.swift */,
 				572746BE27B0DE7300A3CF06 /* LessonCards.swift */,
 				5796577927B0E82A0084ADDA /* LockFeatureView.swift */,
+				57803F792808555700B17EE1 /* AllQuestionCardsView.swift */,
+				57803F81280858EC00B17EE1 /* QuestionCardView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -254,13 +400,14 @@
 		572746BA27B0DC2600A3CF06 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				571F99A127C34D0100F271C3 /* ContinueButton.swift */,
 				57268B2627AF91A90082ECF6 /* CustomDivider.swift */,
 				572746BC27B0DD6E00A3CF06 /* CircleWithNumber.swift */,
 				572746C227B0E07400A3CF06 /* LeadingTitle.swift */,
 				572746C427B0E31600A3CF06 /* LeadingText.swift */,
 				5796577727B0E6020084ADDA /* CloseButton.swift */,
 				5709982E27B16BB700D8FCFB /* MultiOptionSelectorView.swift */,
-				5709983027B16BEE00D8FCFB /* OptionView.swift */,
+				5709983027B16BEE00D8FCFB /* MatchBettingGameOption.swift */,
 				5709983227B16D0A00D8FCFB /* OptionCircle.swift */,
 				57EC9C1C27B21FD60083DD83 /* RequirementWithCheckboxView.swift */,
 				57EC9C1E27B220930083DD83 /* Checkbox.swift */,
@@ -276,6 +423,26 @@
 				5773654127B47AE600567244 /* BreakdownResultRow.swift */,
 				5773654327B47DE600567244 /* ResultView.swift */,
 				57E8C3C827B8D64F0058A7FA /* CodexToolBar.swift */,
+				57E8C3CC27BBE7DF0058A7FA /* NormalText.swift */,
+				5704561227C0A205005E3CCB /* CodexTextField.swift */,
+				5704561A27C0A971005E3CCB /* OddsInput.swift */,
+				5704561C27C0ADDB005E3CCB /* DatesInput.swift */,
+				5704561E27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift */,
+				571F997827C2018800F271C3 /* BackgroundContent.swift */,
+				578B104927ED36560093DA26 /* BackButtonView.swift */,
+				578B104B27ED377E0093DA26 /* FootnoteView.swift */,
+				572B278B27EDFC1700F8E66C /* VerifyBetSelectorView.swift */,
+				572B278F27EDFD3F00F8E66C /* VerifyBetOptionView.swift */,
+				572B279727EE1A5B00F8E66C /* RequirementsView.swift */,
+				572B279927EE21D800F8E66C /* SuccessAlertView.swift */,
+				5719B5AF27F90FD50021237E /* CalculatorSelectorView.swift */,
+				5719B5B327F9119B0021237E /* CalculatorOptionView.swift */,
+				57803F752807D80E00B17EE1 /* OpenVerifyBetButton.swift */,
+				57803F89280A2ED100B17EE1 /* UnderlinedButton.swift */,
+				57803F8B280A39C000B17EE1 /* GoogleButton.swift */,
+				57803F8F280A745500B17EE1 /* MenuButton.swift */,
+				57803F93280A779F00B17EE1 /* MenuOptionView.swift */,
+				57B49BE72814F645006C325D /* TestTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -288,12 +455,25 @@
 			path = Lists;
 			sourceTree = "<group>";
 		};
+		5742F56927EC9A38000A53DB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5742F56A27EC9A61000A53DB /* VideoCourseRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		5773654527B4CA1B00567244 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				5773654627B4CA3200567244 /* ImageConstants.swift */,
 				5773655527B4D3F700567244 /* TextConstants.swift */,
 				5773655727B4DA8A00567244 /* URLConstants.swift */,
+				5704561827C0A4F0005E3CCB /* UIApplication+ext.swift */,
+				570F703D27F40B2D0016EDB9 /* WhatsappUtils.swift */,
+				570F703F27F415F00016EDB9 /* Date+ext.swift */,
+				5719B5B727FA51D80021237E /* String+ext.swift */,
+				57803F6F28033C3600B17EE1 /* Double+ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,6 +484,19 @@
 				5773654927B4CA8300567244 /* MainViewModel.swift */,
 				5773654B27B4CBF400567244 /* InformationCardsViewModel.swift */,
 				5773654D27B4CD6E00567244 /* InformationCardViewModel.swift */,
+				57E8C3CA27B8DFE20058A7FA /* ToolCardsViewModel.swift */,
+				57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */,
+				57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */,
+				57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */,
+				5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */,
+				5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */,
+				572B279127EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift */,
+				572B279327EE031400F8E66C /* VerifyBetViewModel.swift */,
+				572B279527EE03CF00F8E66C /* RequirementViewModel.swift */,
+				5719B5AB27F90A970021237E /* MatchedBettingCalculatorViewModel.swift */,
+				57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */,
+				57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */,
+				57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -312,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				5773655027B4D23C00567244 /* DataService.swift */,
+				5742F56C27EC9EC0000A53DB /* CourseVideos.json */,
 			);
 			path = DataService;
 			sourceTree = "<group>";
@@ -320,8 +514,21 @@
 			isa = PBXGroup;
 			children = (
 				5773655327B4D25E00567244 /* InformationCardModel.swift */,
+				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
+				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
+				57BF88FC27F170B200745719 /* MatchRequestsManager.swift */,
+				5719B5B527F9161E0021237E /* CalculatorBrain.swift */,
+				57803F7D2808564800B17EE1 /* QuestionModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		57803F98280A7B5800B17EE1 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				57803F99280A7B7000B17EE1 /* MenuManager.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		57DE16C727AE485C006C44DB = {
@@ -347,6 +554,9 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				57803F98280A7B5800B17EE1 /* Environment */,
+				5742F56927EC9A38000A53DB /* Repository */,
+				5704562027C0B1E4005E3CCB /* Enums */,
 				5773655227B4D24E00567244 /* Models */,
 				5773654F27B4D22000567244 /* DataService */,
 				5773654827B4CA7100567244 /* ViewModels */,
@@ -469,7 +679,7 @@
 				};
 			};
 			buildConfigurationList = 57DE16CB27AE485C006C44DB /* Build configuration list for PBXProject "Codex-Betting" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -499,6 +709,7 @@
 				57268B1A27AF8A470082ECF6 /* Grotesk-Light.ttf in Resources */,
 				57DE16DB27AE485C006C44DB /* Preview Assets.xcassets in Resources */,
 				57DE16D827AE485C006C44DB /* Assets.xcassets in Resources */,
+				5742F56D27EC9EC0000A53DB /* CourseVideos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,55 +734,116 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */,
+				5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */,
 				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
+				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
+				5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */,
+				5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */,
+				5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */,
+				57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				57803F8E280A3CD500B17EE1 /* ForgetPasswordView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
+				57803F92280A755000B17EE1 /* MenuView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
+				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
 				5773655127B4D23C00567244 /* DataService.swift in Sources */,
+				57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */,
+				572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
+				5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */,
 				5773654727B4CA3200567244 /* ImageConstants.swift in Sources */,
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
+				572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */,
+				57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
+				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
+				57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */,
+				5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */,
+				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
+				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
+				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
+				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
+				57803F7A2808555700B17EE1 /* AllQuestionCardsView.swift in Sources */,
+				57803F82280858EC00B17EE1 /* QuestionCardView.swift in Sources */,
+				5719B5B427F9119B0021237E /* CalculatorOptionView.swift in Sources */,
+				570F704027F415F00016EDB9 /* Date+ext.swift in Sources */,
 				5773654A27B4CA8300567244 /* MainViewModel.swift in Sources */,
 				57268B2527AF90CE0082ECF6 /* InformationCardView.swift in Sources */,
+				57803F9A280A7B7000B17EE1 /* MenuManager.swift in Sources */,
 				57268B2927AF971A0082ECF6 /* InformationCards.swift in Sources */,
+				5776DBC127C5E0E2001A3419 /* CustomerServiceManager.swift in Sources */,
 				572746BD27B0DD6E00A3CF06 /* CircleWithNumber.swift in Sources */,
 				5773655627B4D3F700567244 /* TextConstants.swift in Sources */,
+				57803F7028033C3600B17EE1 /* Double+ext.swift in Sources */,
+				5719B5B027F90FD50021237E /* CalculatorSelectorView.swift in Sources */,
+				5719B5B227F9100C0021237E /* CalculatorSelection.swift in Sources */,
+				5742F57327ECA0DF000A53DB /* VideoView.swift in Sources */,
 				57E8C3C927B8D64F0058A7FA /* CodexToolBar.swift in Sources */,
+				5704561F27C0AF43005E3CCB /* MatchedBettingGameFormHeader.swift in Sources */,
 				5773653E27B4756D00567244 /* BreakdownView.swift in Sources */,
-				5709983127B16BEE00D8FCFB /* OptionView.swift in Sources */,
+				5709983127B16BEE00D8FCFB /* MatchBettingGameOption.swift in Sources */,
+				572B278E27EDFC5E00F8E66C /* VerifySelectionController.swift in Sources */,
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
+				57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */,
+				5719B5B827FA51D80021237E /* String+ext.swift in Sources */,
+				57803F862809B22A00B17EE1 /* LogInView.swift in Sources */,
+				57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */,
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
 				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
+				572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */,
+				57803F96280A7AF900B17EE1 /* RootView.swift in Sources */,
 				572746CA27B0E53C00A3CF06 /* MatchedBettingGameForm.swift in Sources */,
+				571F997927C2018800F271C3 /* BackgroundContent.swift in Sources */,
+				572B279027EDFD3F00F8E66C /* VerifyBetOptionView.swift in Sources */,
 				5709982F27B16BB700D8FCFB /* MultiOptionSelectorView.swift in Sources */,
+				57803F80280856EC00B17EE1 /* QuestionViewModel.swift in Sources */,
 				5773654C27B4CBF400567244 /* InformationCardsViewModel.swift in Sources */,
 				5773655427B4D25E00567244 /* InformationCardModel.swift in Sources */,
+				57803F8C280A39C000B17EE1 /* GoogleButton.swift in Sources */,
+				57803F7E2808564800B17EE1 /* QuestionModel.swift in Sources */,
+				578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */,
+				57803F8A280A2ED100B17EE1 /* UnderlinedButton.swift in Sources */,
+				572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */,
+				57B49BE82814F645006C325D /* TestTextField.swift in Sources */,
+				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
+				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
+				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,
+				5742F57127EC9F90000A53DB /* VideoDetailView.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
 				5773655827B4DA8A00567244 /* URLConstants.swift in Sources */,
+				57803F90280A745500B17EE1 /* MenuButton.swift in Sources */,
 				57F132A127B3825200146A63 /* OddsConverterView.swift in Sources */,
 				57EC9C1B27B21F2D0083DD83 /* VerifyBetView.swift in Sources */,
+				57803F782808530200B17EE1 /* QuestionsView.swift in Sources */,
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
-				572746B627B0D9A600A3CF06 /* LessonCardView.swift in Sources */,
+				572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
+				57803F94280A779F00B17EE1 /* MenuOptionView.swift in Sources */,
+				57BF88FD27F170B200745719 /* MatchRequestsManager.swift in Sources */,
+				57E8C3CB27B8DFE20058A7FA /* ToolCardsViewModel.swift in Sources */,
 				5773654227B47AE600567244 /* BreakdownResultRow.swift in Sources */,
+				578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */,
 				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
+				57803F88280A2B3300B17EE1 /* RegisterView.swift in Sources */,
 				57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */,
 				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				5773654427B47DE600567244 /* ResultView.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
 				5773654027B477FC00567244 /* BreakdownRow.swift in Sources */,
 				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
+				5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */,
 				57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ResultView: View {
+    private let isPositive: Bool
+    private let total: String
+    
+    init(isPositive: Bool, total: String) {
+        self.isPositive = isPositive
+        self.total = total
+    }
+    
+    private var fontColor: Color {
+        isPositive ? .codexGreen : .red
+    }
+    
     var body: some View {
         HStack {
-            Text("Ganarás")
+            Text(isPositive ? "Ganarás" : "Perderás")
                 .foregroundColor(.white)
                 .font(
                     Font.custom(
@@ -19,8 +31,8 @@ struct ResultView: View {
                     )
             )
             
-            Text("$1000.00")
-                .foregroundColor(.codexGreen)
+            Text("$\(total)")
+                .foregroundColor(fontColor)
                 .font(
                     Font.custom(
                         HKGrotesk.bold.rawValue,
@@ -35,6 +47,6 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
+        ResultView(isPositive: true, total: "1000")
     }
 }

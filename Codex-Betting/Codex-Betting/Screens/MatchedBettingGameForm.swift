@@ -9,79 +9,114 @@ import SwiftUI
 
 struct MatchedBettingGameForm: View {
     
-    @State var showingSheet: Bool = false
-    @State var textFieldText: String = ""
+    @StateObject private var viewModel: MatchedBettingGameFormViewModel
+    
+    init(viewModel: MatchedBettingGameFormViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ZStack {
-            Color.codexBlack
-                .edgesIgnoringSafeArea(.all)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
+                
+                CodexToolBar()
+                
+                MatchedBettingGameFormHeader()
                 
                 VStack {
-                    LeadingTitle(title: "Solicitar partido")
+                    
+                    LeadingText(text: TextConstants.MatchedBettingGameForm.askText)
+                        .padding(.top, 32)
+                    
+                    MultiOptionSelectorView(currentSelection: $viewModel.currentMatchedBettingGameSelection)
+                    
+                    if viewModel.showMatchedBettingTextField {
+                        
+                        CodexTextField(
+                            text: $viewModel.matchedBettingGameText,
+                            placeholder: viewModel.matchedBettingGamePlaceholder,
+                            keyboardType: .default,
+                            disableAutocorrection: false, colorScheme: .dark
+                        )
+                        
+                    }
                     
                     CustomDivider(dividerColor: .codexGray)
-                    
-                    LeadingText(text: "Solicitar")
-                        .padding(.top, 32)
                 }
                 
                 
-                MultiOptionSelectorView()
-                
-                //TODO: Add text field here
-                
-                CustomDivider(dividerColor: .codexGray)
-                
-                LeadingText(text: "Cuotas")
-                    .padding(.top, 32)
-                
-                CustomDivider(dividerColor: .codexGray)
-                
-                LeadingText(text: "Fechas")
-                    .padding(.top, 32)
-                
-                VStack(spacing: 8) {
-                    DatePicker(
-                        "Desde",
-                        selection: .constant(Date()),
-                        displayedComponents: [.date, .hourAndMinute]
-                    )
-                        .background(Color.codexGolden)
-                        .foregroundColor(.black)
-                        .accentColor(.codexGolden)
-                        .cornerRadius(15)
+                if !viewModel.showOnlyRequestButton {
+                    VStack {
+                        
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.oddsText)
+                            .padding(.top, 32)
+                            .padding(.bottom, 16)
+                        
+                        OddsInput(
+                            minimumOdd: $viewModel.minimumOdd,
+                            maximumOdd: $viewModel.maximumOdd
+                        )
+                        
+                        CustomDivider(dividerColor: .codexGray)
+                    }
                     
-                    DatePicker(
-                        "Hasta",
-                        selection: .constant(Date()),
-                        displayedComponents: [.date, .hourAndMinute]
-                    )
-                        .background(Color.codexGolden)
-                        .foregroundColor(.black)
-                        .accentColor(.codexGolden)
-                        .cornerRadius(15)
+                    
+                    VStack {
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.datesText)
+                            .padding(.top, 32)
+                        
+                        DatesInput(startDate: $viewModel.gameStartDate, endDate: $viewModel.gameEndDate)
+                    }
+                    
+                    VStack {
+                        CustomDivider(dividerColor: .codexGray)
+                            .padding(.vertical, 32)
+                        
+                        LeadingText(text: TextConstants.MatchedBettingGameForm.spoortBookText)
+                        
+                        
+                        CodexTextField(
+                            text: $viewModel.sportbookSelected,
+                            placeholder: viewModel.spoortbookPlaceholder,
+                            keyboardType: .default,
+                            disableAutocorrection: false, colorScheme: .dark
+                        )
+                        
+                        
+                    }
                 }
                 
-                CustomDivider(dividerColor: .codexGray)
-                    .padding(.vertical, 32)
-                
-                LeadingText(text: "Casa de apuestas")
+                ContinueButton(
+                    buttonText: TextConstants.MatchedBettingGameForm.Button.sendRequest,
+                    action: viewModel.sendMessageToCodexTeam,
+                    isDisabled: $viewModel.disableRequestButton
+                )
+                    .padding(.bottom, 150)
+                    .padding(.top, 32)
                 
             }
+            .padding(.top, 1)
             .padding(.horizontal, 16)
-            
+            .padding(.bottom, 32)
         }
-        .sheet(isPresented: $showingSheet) {
-            RecommendationView(isPresented: $showingSheet)
+        .sheet(isPresented: $viewModel.isPresentedRecommendations) {
+            if viewModel.isPresentedRecommendations {
+                RecommendationView(
+                    viewModel: RecommendationViewModel(),
+                    isPresented: $viewModel.isPresentedRecommendations
+                )
+            }
         }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
+        .background(Color.codexBlack.edgesIgnoringSafeArea(.all))
     }
 }
 
 struct MatchedBettingGameForm_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedBettingGameForm()
+        MatchedBettingGameForm(viewModel: MatchedBettingGameFormViewModel(requestsManager: MatchRequestsManager()))
     }
 }

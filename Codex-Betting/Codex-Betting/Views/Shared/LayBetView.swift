@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct LayBetView: View {
+    @Binding private var layOddsText: String
+    @Binding private var layCommisionText: String
+    
+    private let calculate: () -> Void
+    
+    init(layOddsText: Binding<String>, layCommisionText: Binding<String>, calculate: @escaping () -> Void) {
+        self._layOddsText = layOddsText
+        self._layCommisionText = layCommisionText
+        
+        self.calculate = calculate
+    }
+    
     var body: some View {
         VStack(spacing: 16) {
             
@@ -19,35 +31,60 @@ struct LayBetView: View {
                             size: 20
                         )
                     )
-                .foregroundColor(.white)
+                    .foregroundColor(.white)
                 
                 Spacer()
             }
+            .padding(.leading)
+            .padding(.top)
             
             HStack {
-                Text("Cuota en contra")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .leading) {
+                    Text("Cuota en contra")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
+                        .foregroundColor(.white)
+                    
+                    DecimalPadTextField(
+                        text: $layOddsText,
+                        keyType: .decimalPad,
+                        placeholder: "Cuota en contra",
+                        onSubmit:
+                            calculate
                     )
-                .foregroundColor(.white)
+                    
+                        .padding(.trailing)
+                    
+                }
                 
                 Spacer()
                 
-                Text("Comisión %")
-                    .font(
-                        Font.custom(
-                            HKGrotesk.bold.rawValue,
-                            size: 20
+                VStack(alignment: .trailing) {
+                    Text("Comisión %")
+                        .font(
+                            Font.custom(
+                                HKGrotesk.bold.rawValue,
+                                size: 20
+                            )
                         )
-                    )
-                .foregroundColor(.white)
+                        .foregroundColor(.white)
+                        .padding(.trailing)
+                                        
+                    DecimalPadTextField(
+                        text: $layCommisionText,
+                        keyType: .decimalPad,
+                        placeholder: "",
+                        onSubmit: calculate)
+                    
+                }
             }
             .padding(.bottom, 16)
+            .padding(.leading)
         }
-        .padding(16)
         .background(Color.codexGray)
         .cornerRadius(15)
     }
@@ -55,7 +92,9 @@ struct LayBetView: View {
 
 struct LayBetView_Previews: PreviewProvider {
     static var previews: some View {
-        LayBetView()
+        LayBetView(layOddsText: .constant("4.5"), layCommisionText: .constant("6.5"),
+                   calculate: {}
+        )
             .previewLayout(.sizeThatFits)
     }
 }

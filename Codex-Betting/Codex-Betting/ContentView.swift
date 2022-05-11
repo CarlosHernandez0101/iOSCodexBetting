@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("showRecommendations") var showRecommendations = true
+    
+    private let menuManager: MenuManager = MenuManager()
+    
     var body: some View {
-        
-        MainView(viewModel: MainViewModel())
+        RootView()
             .preferredColorScheme(.dark)
-                        
+            .environmentObject(menuManager)
     }
 }
 

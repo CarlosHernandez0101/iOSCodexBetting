@@ -9,26 +9,26 @@ import SwiftUI
 
 struct RequirementWithCheckboxView: View {
     
-    private let requirementText: String
+    @Binding private var viewModel: RequirementViewModel
     
-    init(requirementText: String) {
-        self.requirementText = requirementText
+    init(viewModel: Binding<RequirementViewModel>) {
+        self._viewModel = viewModel
     }
     
     var body: some View {
         HStack {
-            Text(requirementText)
+            Text(viewModel.requerimentText)
                 .font(
                     Font.custom(
                         HKGrotesk.bold.rawValue,
-                        size: 25
+                        size: 20
                     )
                 )
                 .foregroundColor(.white)
             
             Spacer()
             
-            Checkbox(isSelected: .constant(true))
+            Checkbox(isSelected: $viewModel.isDone)
                 
         }
         .padding(.vertical, 32)
@@ -40,7 +40,7 @@ struct RequirementWithCheckboxView: View {
 struct RequirementWithCheckboxView_Previews: PreviewProvider {
     static var previews: some View {
         RequirementWithCheckboxView(
-            requirementText: "Los partidos coinciden"
+            viewModel: .constant(RequirementViewModel(requerimentText: ""))
         )
             .previewLayout(.sizeThatFits)
     }

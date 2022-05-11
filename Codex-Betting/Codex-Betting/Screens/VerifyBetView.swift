@@ -8,41 +8,38 @@
 import SwiftUI
 
 struct VerifyBetView: View {
+    @StateObject private var viewModel: VerifyBetViewModel
+    
+    init(viewModel: VerifyBetViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         ZStack {
-            Color.codexBlack.edgesIgnoringSafeArea(.all)
+                                    
+            SuccessAlertView(
+                text: viewModel.alertText,
+                isPresented: $viewModel.showSuccessAlert
+            )
+                .zIndex(1)            
             
-            ScrollView {
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos coinciden"
-                )
+            ScrollView(showsIndicators: false) {
                 
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos son a la misma hora"
-                )
+                CodexToolBar()
                 
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos coinciden"
-                )
-                
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos son a la misma hora"
-                )
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos coinciden"
-                )
-                
-                RequirementWithCheckboxView(
-                    requirementText: "Los partidos son a la misma hora"
-                )
+                RequirementsView(requeriments: $viewModel.requirements)
             }
             .padding(.horizontal, 16)
         }
+        .padding(.vertical)
+        .background(Color.codexBlack.edgesIgnoringSafeArea(.all))
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)        
     }
 }
 
 struct VerifyBetView_Previews: PreviewProvider {
     static var previews: some View {
-        VerifyBetView()
+        VerifyBetView(viewModel: VerifyBetViewModel(currentSelection: .bet))
     }
 }

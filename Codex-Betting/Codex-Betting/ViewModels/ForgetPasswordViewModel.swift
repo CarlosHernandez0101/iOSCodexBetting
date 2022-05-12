@@ -2,7 +2,7 @@
 //  ForgetPasswordViewModel.swift
 //  Codex-Betting
 //
-//  Created by Casai User on 11/05/22.
+//  Created by Carlos Hernández on 11/05/22.
 //
 
 import Foundation

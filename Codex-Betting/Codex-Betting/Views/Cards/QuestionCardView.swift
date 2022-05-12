@@ -2,7 +2,7 @@
 //  QuestionCardView.swift
 //  Codex-Betting
 //
-//  Created by Casai User on 14/04/22.
+//  Created by Carlos Hernández on 14/04/22.
 //
 
 import SwiftUI

@@ -104,6 +104,7 @@
 		579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C6E282C842600C00422 /* LogInViewModel.swift */; };
 		579C6C71282CB91A00C00422 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C70282CB91A00C00422 /* ForgetPasswordViewModel.swift */; };
 		579C6C73282CBC7B00C00422 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C72282CBC7B00C00422 /* RegisterViewModel.swift */; };
+		579C6C77282CC4A800C00422 /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C76282CC4A800C00422 /* LegalView.swift */; };
 		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
 		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
 		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
@@ -249,6 +250,7 @@
 		579C6C6E282C842600C00422 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		579C6C70282CB91A00C00422 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		579C6C72282CBC7B00C00422 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		579C6C76282CC4A800C00422 /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
 		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
 		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				57803F8D280A3CD500B17EE1 /* ForgetPasswordView.swift */,
 				57803F91280A755000B17EE1 /* MenuView.swift */,
 				57803F95280A7AF900B17EE1 /* RootView.swift */,
+				579C6C76282CC4A800C00422 /* LegalView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				576F42B127B235F50041E597 /* LayBetView.swift in Sources */,
 				572B279427EE031400F8E66C /* VerifyBetViewModel.swift in Sources */,
 				57803F722807A51900B17EE1 /* OddsConverterViewModel.swift in Sources */,
+				579C6C77282CC4A800C00422 /* LegalView.swift in Sources */,
 				572746B227B0D69E00A3CF06 /* ToolsView.swift in Sources */,
 				571F99A227C34D0100F271C3 /* ContinueButton.swift in Sources */,
 				57803F762807D80E00B17EE1 /* OpenVerifyBetButton.swift in Sources */,

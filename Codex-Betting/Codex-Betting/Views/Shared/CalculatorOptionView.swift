@@ -2,7 +2,7 @@
 //  CalculatorOptionView.swift
 //  Codex-Betting
 //
-//  Created by Casai User on 02/04/22.
+//  Created by Carlos Hernández on 02/04/22.
 //
 
 import SwiftUI

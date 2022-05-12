@@ -12,6 +12,7 @@ struct RegisterView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @StateObject private var viewModel: RegisterViewModel
+    @State private var goToTerms: Bool = false
     
     private let TEXT_FIELD_WIDTH = UIScreen.main.bounds.width - 120
     
@@ -21,6 +22,13 @@ struct RegisterView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
+            
+            NavigationLink(
+                isActive: $goToTerms) {
+                    LegalView()
+                } label: {
+                    EmptyView()
+                }
             
             CodexToolBar()
                 .padding(.horizontal)
@@ -86,7 +94,9 @@ struct RegisterView: View {
                     
                     NormalText(text: "Aceptar ")
                     
-                    UnderlinedButton(text: " Política de privacidad y T&C", action: {}, fontSize: 20, color: .codexGolden)
+                    UnderlinedButton(text: " Política de privacidad y T&C", action: {
+                        self.goToTerms = true
+                    }, fontSize: 20, color: .codexGolden)
                     
                     Spacer()
                 }

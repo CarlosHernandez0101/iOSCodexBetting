@@ -30,7 +30,7 @@ struct LogInView: View {
                     EmptyView()
                 }.hidden()
                 
-                NavigationLink(destination: RegisterView(),
+                NavigationLink(destination: RegisterView(viewModel: RegisterViewModel()),
                                tag: LogInViewModel.Router.register,
                                selection: $viewModel.router) {
                     EmptyView()

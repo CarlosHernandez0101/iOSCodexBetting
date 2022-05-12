@@ -11,7 +11,13 @@ struct RegisterView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @StateObject private var viewModel: RegisterViewModel
+    
     private let TEXT_FIELD_WIDTH = UIScreen.main.bounds.width - 120
+    
+    init(viewModel: RegisterViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -32,47 +38,71 @@ struct RegisterView: View {
                 NormalText(text: "Correo eléctronico")
                 
                 
-                CodexTextField(text: .constant(""), placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light)
+                CodexTextField(text: $viewModel.emailText, placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light,
+                               onCommit: {
+                    viewModel.verifyEmail()
+                })
                     .frame(width: TEXT_FIELD_WIDTH)
                 
+                if !viewModel.emailError.isEmpty {
+                    Text(viewModel.emailError)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 5)
+                }
                 
                 NormalText(text: "Contraseña")
                 
-                PasswordTextField(text: .constant(""), placeholder: "Ingrese su contraseña", colorScheme: .light)
+                PasswordTextField(text: $viewModel.passwordText, placeholder: "Ingrese su contraseña", colorScheme: .light, onCommit: {
+                    viewModel.verifyPassword()
+                })
                     .frame(width: TEXT_FIELD_WIDTH)
+                
+                if !viewModel.passwordError.isEmpty {
+                    Text(viewModel.passwordError)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 5)
+                }
                 
                 NormalText(text: "Confirmar contraseña")
                 
-                PasswordTextField(text: .constant(""), placeholder: "Confirme su contraseña", colorScheme: .light)
+                PasswordTextField(text: $viewModel.passwordConfirmationText, placeholder: "Confirme su contraseña", colorScheme: .light, onCommit: {
+                    viewModel.verifyPasswordMatch()
+                })
                     .frame(width: TEXT_FIELD_WIDTH)
+                
+                if !viewModel.passwordConfirmationError.isEmpty {
+                    Text(viewModel.passwordConfirmationError)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 5)
+                }
                 
             }
             .padding(.top, 20)
             
             VStack(alignment: .leading) {
-                HStack(spacing: 0) {
-                    Checkbox(isSelected: .constant(true), squareSize: 25, checkmarkSize: 15)
+                HStack(alignment: .top, spacing: 0) {
+                    Checkbox(isSelected: $viewModel.hasAcceptedTerms, squareSize: 25, checkmarkSize: 15)
+                        .padding(.trailing, 5)
                     
                     NormalText(text: "Aceptar ")
                     
-                    UnderlinedButton(text: " Terminos y condiciones", action: {}, fontSize: 20, color: .codexGolden)
+                    UnderlinedButton(text: " Política de privacidad y T&C", action: {}, fontSize: 20, color: .codexGolden)
                     
                     Spacer()
                 }
                 .padding(.top)
                 
-                HStack(spacing: 0) {
-                    Checkbox(isSelected: .constant(true), squareSize: 25, checkmarkSize: 15)
-                    
-                    NormalText(text: "Aceptar ")
-                    
-                    UnderlinedButton(text: " Política de privacidad", action: {}, fontSize: 20, color: .codexGolden)
+                if !viewModel.termsError.isEmpty {
+                    Text(viewModel.termsError)
+                        .foregroundColor(.red)
                 }
             }
             .padding(.leading, 60)
             .padding(.top)
             
-            ContinueButton(buttonText: "Crear cuenta", action: {}, isDisabled: .constant(false))
+            ContinueButton(buttonText: "Crear cuenta", action: {
+                viewModel.didTapOnCreateAccountButton()
+            }, isDisabled: .constant(false))
                 .padding(.top)
             
             NormalText(text: "O registrate con:")
@@ -101,6 +131,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(viewModel: RegisterViewModel())
     }
 }

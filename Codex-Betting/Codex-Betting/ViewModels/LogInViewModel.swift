@@ -21,7 +21,9 @@ final class LogInViewModel: ObservableObject {
         self.router = .forgetPassword
     }
     
-    func didTapOnLogInButton() {        
+    func didTapOnLogInButton() {
+        verifyEmail()
+        verifyPassword()
         if textEmail.isEmail && textPassword.count >= PASSWORD_LENGHT {
             debugPrint("LOG IN")
         }

@@ -14,7 +14,7 @@ struct RootView: View {
         ZStack {
             
             if showLogIn {
-                LogInView(showLogin: $showLogIn)
+                LogInView(viewModel: LogInViewModel())
             } else {
                 MainView(viewModel: MainViewModel())
             }

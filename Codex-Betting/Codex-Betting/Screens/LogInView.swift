@@ -13,25 +13,28 @@ struct LogInView: View {
     @State private var showRegister: Bool = false
     @State private var showForgetPassword: Bool = false
     
-    @Binding var showLogin: Bool
+    
+    @StateObject private var viewModel: LogInViewModel
+    
+    init(viewModel: LogInViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         NavigationView {
             ZStack {
                 
-                NavigationLink(
-                    isActive: $showRegister) {
-                        RegisterView()
-                    } label: {
-                        EmptyView()
-                    }
+                NavigationLink(destination: ForgetPasswordView(),
+                               tag: LogInViewModel.Router.forgetPassword,
+                               selection: $viewModel.router) {
+                    EmptyView()
+                }.hidden()
                 
-                NavigationLink(
-                    isActive: $showForgetPassword) {
-                        ForgetPasswordView()
-                    } label: {
-                        EmptyView()
-                    }
+                NavigationLink(destination: RegisterView(),
+                               tag: LogInViewModel.Router.register,
+                               selection: $viewModel.router) {
+                    EmptyView()
+                }.hidden()
                 
                 Color.codexBlack
                     .edgesIgnoringSafeArea(.all)
@@ -59,31 +62,43 @@ struct LogInView: View {
                             NormalText(text: "Correo eléctronico")
                             
                             
-                            CodexTextField(text: .constant(""), placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light)
+                            CodexTextField(text: $viewModel.textEmail, placeholder: "Ingrese su correo eléctronico", keyboardType: .emailAddress, disableAutocorrection: true, colorScheme: .light, onCommit: {
+                                viewModel.verifyEmail()
+                            })
                                 .frame(width: TEXT_FIELD_WIDTH)
                             
-                            
+                            if !viewModel.emailError.isEmpty {
+                                Text(viewModel.emailError)
+                                    .foregroundColor(.red)
+                            }
                             
                             NormalText(text: "Contraseña")
                                 .padding(.top)
                             
                             VStack {
-                                PasswordTextField(text: $textPassword, placeholder: "Ingrese su contraseña", colorScheme: .light)
+                                PasswordTextField(text: $viewModel.textPassword, placeholder: "Ingrese su contraseña", colorScheme: .light, onCommit: {
+                                    viewModel.verifyPassword()
+                                })
                                     .frame(width: TEXT_FIELD_WIDTH)
                                 
                                 HStack {
                                     Spacer()
                                     
                                     UnderlinedButton(text: "¿Olvidaste tu contraseña?", action: {
-                                        showForgetPassword = true
+                                        viewModel.didTapOnForgetPasswordButton()
                                     }, fontSize: 12, color: .white)
                                 }
                                 .padding(.trailing, 60)
                             }
                             
+                            if !viewModel.passwordError.isEmpty {
+                                Text(viewModel.passwordError)
+                                    .foregroundColor(.red)
+                            }
+                            
                             ContinueButton(buttonText: "Iniciar sesión", action: {
                                 withAnimation {
-                                    showLogin = false
+                                    viewModel.didTapOnLogInButton()
                                 }
                             }, isDisabled: .constant(false))
                                 .padding(.top, 20)
@@ -99,7 +114,7 @@ struct LogInView: View {
                                     .padding(.top, 20)
                                 
                                 UnderlinedButton(text: "Regístrate", action: {
-                                    showRegister = true
+                                    viewModel.didTapOnRegisterButton()
                                 }, fontSize: 20, color: .white)
                                     .padding(.top, 20)
                             }
@@ -118,6 +133,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView(showLogin: .constant(false))
+        LogInView(viewModel: LogInViewModel())
     }
 }

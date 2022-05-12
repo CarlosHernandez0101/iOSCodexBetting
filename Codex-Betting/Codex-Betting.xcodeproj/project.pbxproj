@@ -101,6 +101,7 @@
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
+		579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C6E282C842600C00422 /* LogInViewModel.swift */; };
 		57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */; };
 		57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */; };
 		57B290A927BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */; };
@@ -243,6 +244,7 @@
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
+		579C6C6E282C842600C00422 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		57B290A427BCBB8D008DBBDC /* RecommendationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListViewModel.swift; sourceTree = "<group>"; };
 		57B290A627BCBF6E008DBBDC /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 		57B290A827BCC231008DBBDC /* MatchedBettingGameFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedBettingGameFormViewModel.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 				57803F712807A51900B17EE1 /* OddsConverterViewModel.swift */,
 				57803F7B280855FA00B17EE1 /* QuestionCardsViewModel.swift */,
 				57803F7F280856EC00B17EE1 /* QuestionViewModel.swift */,
+				579C6C6E282C842600C00422 /* LogInViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -818,6 +821,7 @@
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
 				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,
 				5742F57127EC9F90000A53DB /* VideoDetailView.swift in Sources */,
+				579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */,
 				572746B427B0D85B00A3CF06 /* ToolsCards.swift in Sources */,
 				5773655827B4DA8A00567244 /* URLConstants.swift in Sources */,
 				57803F90280A745500B17EE1 /* MenuButton.swift in Sources */,

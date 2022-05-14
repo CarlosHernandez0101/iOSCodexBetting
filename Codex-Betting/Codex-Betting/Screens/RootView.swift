@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct RootView: View {
-    @State var showLogIn: Bool = true
+    @StateObject private var viewModel: RootViewModel
+    
+    init(viewModel: RootViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ZStack {
             
-            if showLogIn {
-                LogInView(viewModel: LogInViewModel())
+            if viewModel.showLogIn {
+                LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager())))
             } else {
                 MainView(viewModel: MainViewModel())
             }
@@ -26,6 +30,6 @@ struct RootView: View {
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        RootView(viewModel: RootViewModel())
     }
 }

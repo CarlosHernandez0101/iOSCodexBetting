@@ -133,6 +133,9 @@ struct RegisterView: View {
             
             
         }
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text("Error"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("Aceptar")))
+        })
         .background(Color.codexBlack)
         .navigationBarTitle("")
         .navigationBarHidden(true)
@@ -141,6 +144,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView(viewModel: RegisterViewModel())
+        RegisterView(viewModel: RegisterViewModel(repository: UserRepository(auth: AuthManager())))
     }
 }

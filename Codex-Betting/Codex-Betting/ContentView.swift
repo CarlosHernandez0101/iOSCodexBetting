@@ -13,7 +13,7 @@ struct ContentView: View {
     private let menuManager: MenuManager = MenuManager()
     
     var body: some View {
-        RootView()
+        RootView(viewModel: RootViewModel())
             .preferredColorScheme(.dark)
             .environmentObject(menuManager)
     }

@@ -30,7 +30,7 @@ struct LogInView: View {
                     EmptyView()
                 }.hidden()
                 
-                NavigationLink(destination: RegisterView(viewModel: RegisterViewModel()),
+                NavigationLink(destination: RegisterView(viewModel: RegisterViewModel(repository: UserRepository(auth: AuthManager()))),
                                tag: LogInViewModel.Router.register,
                                selection: $viewModel.router) {
                     EmptyView()
@@ -38,6 +38,7 @@ struct LogInView: View {
                 
                 Color.codexBlack
                     .edgesIgnoringSafeArea(.all)
+                
                 
                 ScrollView(showsIndicators: false) {
                     
@@ -126,6 +127,9 @@ struct LogInView: View {
             }
             .ignoresSafeArea()
         }
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text("Error"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("Aceptar")))
+        })
         .navigationBarTitle("")
         .navigationBarHidden(true)
     }
@@ -133,6 +137,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView(viewModel: LogInViewModel())
+        LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager())))
     }
 }

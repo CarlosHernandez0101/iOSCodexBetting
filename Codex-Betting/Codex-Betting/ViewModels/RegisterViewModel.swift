@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
 
 final class RegisterViewModel: ObservableObject {
     
@@ -16,6 +18,9 @@ final class RegisterViewModel: ObservableObject {
     @Published var passwordError: String = ""
     @Published var passwordConfirmationError: String = ""
     @Published var termsError: String = ""
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
+    @Published var isLoadingRegister: Bool = false
     @Published var hasAcceptedTerms: Bool = false {
         didSet {
             verifyTerms()
@@ -23,6 +28,13 @@ final class RegisterViewModel: ObservableObject {
     }
     
     private let PASSWORD_LENGHT = 6
+    
+    private var repository: UserRepositoryProtocol
+    
+    init(repository: UserRepositoryProtocol) {
+        self.repository = repository
+        self.repository.delegate = self
+    }
     
     func verifyEmail() {
         emailError = !emailText.isEmail ? "Ingrese un correo eléctronico válido" : ""
@@ -46,13 +58,34 @@ final class RegisterViewModel: ObservableObject {
         verifyPassword()
         verifyPasswordMatch()
         verifyTerms()
+        
+        if isLoadingRegister {
+           return
+        }
+        
+        self.isLoadingRegister = true
+        
         if emailText.isEmail && passwordText.count >= PASSWORD_LENGHT && hasAcceptedTerms {
-            debugPrint("Create account")
+            self.repository.createUser(email: emailText, password: passwordText)
         }
     }
     
     func didTapOnRegisterWithGoogle() {
         
     }
+}
+
+extension RegisterViewModel: UserRepositoryDelegate, GlobalStateInjector {
+    func didCreateUser(with result: User) {
+        let userSession = UserSession(uid: result.uid , email: result.email ?? "")
+        debugPrint("SUCCESS UID", result.uid)
+        debugPrint("SUCCESS EMAIL", result.email ?? "")
+        globalState.userSession.send(userSession)
+        self.isLoadingRegister = false
+    }
     
+    func didFailCreateUser(with error: Error) {
+        self.alertMessage = error.localizedDescription
+        self.showAlert = true
+    }
 }

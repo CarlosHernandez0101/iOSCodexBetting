@@ -44,7 +44,7 @@ final class LogInViewModel: ObservableObject {
         self.isLoadingLogIn = true
         
         if textEmail.isEmail && textPassword.count >= PASSWORD_LENGHT {
-//            self.repository.signIn(email: textEmail, password: textPassword)
+            self.repository.signIn(email: textEmail, password: textPassword)
         }
     }
     

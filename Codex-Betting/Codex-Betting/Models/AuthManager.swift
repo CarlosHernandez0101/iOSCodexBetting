@@ -11,6 +11,7 @@ import FirebaseAuth
 protocol AuthManagerProtocol {
     func createUser(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func signIn(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
+    func getIDToken(completion: @escaping (Result<String, Error>) -> Void)
 }
 
 
@@ -52,5 +53,20 @@ final class AuthManager: AuthManagerProtocol {
             
             completion(.success(authResult))            
         }
+    }
+    
+    func getIDToken(completion: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().currentUser?.getIDToken(completion: { token, error in
+            if let error = error {
+                return completion(.failure(error))
+            }
+            
+            guard let token = token else {
+                debugPrint("User token nil")
+                return
+            }
+            
+            completion(.success(token))
+        })        
     }
 }

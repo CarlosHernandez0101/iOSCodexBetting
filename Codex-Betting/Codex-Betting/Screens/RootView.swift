@@ -20,7 +20,7 @@ struct RootView: View {
             if viewModel.showLogIn {
                 LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager())))
             } else {
-                MainView(viewModel: MainViewModel())
+                MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager())))
             }
                 
         }

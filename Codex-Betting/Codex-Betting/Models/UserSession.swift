@@ -10,4 +10,6 @@ import Foundation
 struct UserSession {
     var uid: String
     var email: String
+    var token: String?
+    var isCodexBettingMember: Bool?
 }

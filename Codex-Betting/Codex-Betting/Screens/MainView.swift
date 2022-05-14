@@ -46,11 +46,14 @@ struct MainView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
+        .onAppear {
+            debugPrint("MAIN ON APPEAR")
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel())
+        MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager())))
     }
 }

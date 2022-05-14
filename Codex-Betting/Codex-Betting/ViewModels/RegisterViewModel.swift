@@ -77,7 +77,10 @@ final class RegisterViewModel: ObservableObject {
 
 extension RegisterViewModel: UserRepositoryDelegate, GlobalStateInjector {
     func didCreateUser(with result: User) {
-        let userSession = UserSession(uid: result.uid , email: result.email ?? "")
+        let userSession = UserSession(
+            uid: result.uid ,
+            email: result.email ?? ""
+        )
         debugPrint("SUCCESS UID", result.uid)
         debugPrint("SUCCESS EMAIL", result.email ?? "")
         globalState.userSession.send(userSession)

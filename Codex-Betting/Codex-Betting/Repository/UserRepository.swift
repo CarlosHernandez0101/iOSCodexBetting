@@ -14,6 +14,8 @@ protocol UserRepositoryDelegate: AnyObject{
     func didFailCreateUser(with error: Error)
     func didSignIn(with user: User)
     func didFailSignIn(with error: Error)
+    func didGetToken(with token: String)
+    func didFailGetToken(with error: Error)
 }
 
 extension UserRepositoryDelegate {
@@ -29,6 +31,12 @@ extension UserRepositoryDelegate {
     func didCreateUser(with result: User) {
         return
     }
+    func didGetToken(with token: String) {
+        return
+    }
+    func didFailGetToken(with error: Error) {
+        return
+    }
 }
 
 protocol UserRepositoryProtocol {
@@ -36,6 +44,7 @@ protocol UserRepositoryProtocol {
     var auth: AuthManagerProtocol { get }
     func createUser(email: String, password: String)
     func signIn(email: String, password: String)
+    func getIDToken()
 }
 
 final class UserRepository: UserRepositoryProtocol {
@@ -68,6 +77,17 @@ final class UserRepository: UserRepositoryProtocol {
                 self?.delegate?.didFailSignIn(with: error)
             }
         }
-    }    
+    }
+    
+    func getIDToken() {
+        self.auth.getIDToken { [weak self] (result: Result<String, Error>) in
+            switch result {
+            case .success(let token):
+                self?.delegate?.didGetToken(with: token)
+            case .failure(let error):
+                self?.delegate?.didFailGetToken(with: error)
+            }
+        }
+    }
 }
 

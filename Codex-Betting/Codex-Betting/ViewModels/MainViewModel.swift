@@ -11,6 +11,8 @@ final class MainViewModel: ObservableObject {
             
     private var repository: UserRepositoryProtocol
     
+    @Published var isLoadingUserInfo: Bool = false
+    
     init(repository: UserRepositoryProtocol) {
         self.repository = repository
         self.repository.delegate = self
@@ -20,6 +22,7 @@ final class MainViewModel: ObservableObject {
     private func getUserToken() {
         
         if !tokenExists() {
+            self.isLoadingUserInfo = true
             self.repository.getIDToken()
             debugPrint("USER ID INVOKED")
         }
@@ -63,9 +66,11 @@ extension MainViewModel: UserRepositoryDelegate {
             isCodexBettingMember: user.isCodexBettingMember ?? false
             )
         )
+        self.isLoadingUserInfo = false
     }
     
     func didFailGetUser(with error: String) {
+        self.isLoadingUserInfo = false
         debugPrint("FAILED GET USER", error)
     }
 }

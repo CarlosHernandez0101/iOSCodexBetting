@@ -1,5 +1,5 @@
 //
-//  UserNetwork.swift
+//  VideosNetwork.swift
 //  Codex-Betting
 //
 //  Created by Carlos Hernández on 15/05/22.
@@ -7,18 +7,19 @@
 
 import Foundation
 
-typealias onSuccess = (UserModel) -> Void
-typealias onError = (String) -> Void
+typealias onVideosSuccess = ([CourseVideoModel]) -> Void
+typealias onVideosError = (String) -> Void
 
-protocol UserNetworkProtocol {
-    func getUser(with uid: String, token: String, onSuccess: @escaping onSuccess, onError: @escaping onError)
+
+protocol CourseVideosNetworkProtocol {
+    func getVideos(token: String, onSuccess: @escaping onVideosSuccess, onError: @escaping onVideosError)
 }
 
-final class UserNetwork: UserNetworkProtocol {
+final class CourseVideosNetwork: CourseVideosNetworkProtocol {
     
     private let decoder = JSONDecoder()
     
-    func getUser(with uid: String, token: String, onSuccess: @escaping onSuccess, onError: @escaping onError) {
+    func getVideos(token: String, onSuccess: @escaping onVideosSuccess, onError: @escaping onVideosError) {
         
         let sessionConfig = URLSessionConfiguration.default
         let authValue: String? = "Bearer \(token)"
@@ -26,7 +27,7 @@ final class UserNetwork: UserNetworkProtocol {
         let session = URLSession(configuration: sessionConfig, delegate: self as? URLSessionDelegate, delegateQueue: nil)
         
         guard let url = URL(string:
-                                "\(URLContants.USERS_URL)\(uid)") else {
+                                "\(URLContants.VIDEOS_URL)") else {
             return
         }
         
@@ -54,9 +55,9 @@ final class UserNetwork: UserNetworkProtocol {
                     }
                     
                     if response.statusCode == 200 {
-                        let user = try self.decoder.decode(UserModel.self, from: data)
+                        let videos = try self.decoder.decode([CourseVideoModel].self, from: data)
                         
-                        onSuccess(user)
+                        onSuccess(videos)
                         return
                     }
                     
@@ -69,5 +70,5 @@ final class UserNetwork: UserNetworkProtocol {
         
         task.resume()
     }
-    
+        
 }

@@ -14,43 +14,31 @@ protocol VideoCourseRepositoryDelegate: AnyObject {
 
 protocol VideoCourseRepositoryProtocol {
     var delegate: VideoCourseRepositoryDelegate? { get set }
+    var network: CourseVideosNetworkProtocol { get }
     func getVideos()
 }
 
 final class VideoCourseRepository: VideoCourseRepositoryProtocol {
     weak var delegate: VideoCourseRepositoryDelegate?
+    var network: CourseVideosNetworkProtocol
     
-    let decoder: JSONDecoder = JSONDecoder()
+    
+    init(network: CourseVideosNetworkProtocol) {
+        self.network = network
+    }
     
     func getVideos() {
-        do {
-            
-            guard let data = loadJSON() else {
-                self.delegate?.didFailGetVideos()
-                return
-            }
-            
-            let videoCourses = try decoder.decode([CourseVideoModel].self, from: data)
-            
-            self.delegate?.didUpdateVideos(videoCourses)
-            
-        } catch {
-            debugPrint("ERROR PARSING JSON", error.localizedDescription)
+        self.network.getVideos(token: getUserToken() ?? "") { videos in
+            self.delegate?.didUpdateVideos(videos)
+        } onError: { error in
             self.delegate?.didFailGetVideos()
         }
     }
-    
-    private func loadJSON() -> Data? {
-        do {
-            
-            if let bundlePath = Bundle.main.path(forResource: "CourseVideos", ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-            
-        } catch {
-            debugPrint("EROR LOADING JSON", error.localizedDescription)
-        }
-        
-        return nil
+}
+
+extension VideoCourseRepository: GlobalStateInjector {
+    func getUserToken() -> String? {
+        globalState.userSession.value?.token
     }
+
 }

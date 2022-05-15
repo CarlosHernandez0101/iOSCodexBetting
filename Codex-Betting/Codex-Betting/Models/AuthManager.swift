@@ -57,17 +57,17 @@ final class AuthManager: AuthManagerProtocol {
     }
     
     func getIDToken(completion: @escaping (Result<String, Error>) -> Void) {
-        Auth.auth().currentUser?.getIDTokenResult(completion: { token, error in
+        Auth.auth().currentUser?.getIDTokenResult(completion: { result, error in
             if let error = error {
                 return completion(.failure(error))
             }
             
-            guard let token = token else {
+            guard let result = result else {
                 debugPrint("User token nil")
                 return
             }
             
-            completion(.success(token.token))
+            completion(.success(result.token))
         })
         
     }

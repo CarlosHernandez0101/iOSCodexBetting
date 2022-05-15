@@ -60,7 +60,10 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    static let manager = MenuManager()
+    
     static var previews: some View {
         MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
+            .environmentObject(manager)
     }
 }

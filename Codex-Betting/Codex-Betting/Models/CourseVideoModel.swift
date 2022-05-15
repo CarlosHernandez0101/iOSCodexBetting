@@ -8,6 +8,8 @@
 import Foundation
 
 struct CourseVideoModel: Codable {
+    let id: String
+    let index: Int
     let title: String?
     let description: String?
     let url: String?

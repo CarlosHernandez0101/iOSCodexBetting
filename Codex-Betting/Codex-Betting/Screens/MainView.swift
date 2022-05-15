@@ -22,7 +22,15 @@ struct MainView: View {
                 
                 Color.codexBlack
                 
-                MenuView()
+                MenuView(
+                    viewModel: MenuViewModel(
+                        repository: UserRepository(
+                            auth: AuthManager(),
+                            db: UserDatabase(),
+                            network: UserNetwork()
+                        )
+                    )
+                )
                     .padding()
                     .zIndex(1)
                 
@@ -34,9 +42,8 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 250, height: 250, alignment: .center)
                     
-                    
                     InformationCards(
-                        viewModel: InformationCardsViewModel()
+                        viewModel: InformationCardsViewModel() 
                     )
                 }
                 .padding(.top, 1)
@@ -54,6 +61,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager())))
+        MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
     }
 }

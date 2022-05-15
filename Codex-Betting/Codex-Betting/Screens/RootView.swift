@@ -18,9 +18,25 @@ struct RootView: View {
         ZStack {
             
             if viewModel.showLogIn {
-                LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager())))
+                LogInView(
+                    viewModel: LogInViewModel(
+                        repository: UserRepository(
+                            auth: AuthManager(),
+                            db: UserDatabase(),
+                            network: UserNetwork()
+                        )
+                    )
+                )
             } else {
-                MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager())))
+                MainView(
+                    viewModel: MainViewModel(
+                        repository: UserRepository(
+                            auth: AuthManager(),
+                            db: UserDatabase(),
+                            network: UserNetwork()
+                        )
+                    )
+                )
             }
                 
         }
@@ -30,6 +46,6 @@ struct RootView: View {
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(viewModel: RootViewModel())
+        RootView(viewModel: RootViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
     }
 }

@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct WhatsAppUtils {
     
     private let BaseUrl = "https://api.whatsapp.com/send"
+    
+    static let instance = WhatsAppUtils()
     
     func getWhatsAppURL(initialMessage: String?) -> URL? {
         var queryItems: [URLQueryItem] = []
@@ -27,5 +30,23 @@ struct WhatsAppUtils {
     
     private func getWhatsAppNumber() -> String {
         return "525520995011"
+    }
+    
+    func requestBuyCourse() {
+        let url = self.getWhatsAppURL(initialMessage: "Hola! \n\nQuiero adquirir el curso de Codex Betting, ¿me podrían dar la información correspondiente?")
+        
+        guard let url = url else {
+            return
+        }
+        
+        UIApplication.shared.open(url)
+    }
+    
+    func requestHelp() {
+        guard let url = self.getWhatsAppURL(initialMessage: "") else {
+            return
+        }
+        
+        UIApplication.shared.open(url)
     }
 }

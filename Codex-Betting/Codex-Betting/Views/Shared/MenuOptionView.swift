@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MenuOptionView: View {
     private let title: String
+    private let action: () -> Void
     
-    init(title: String) {
+    init(title: String, action: @escaping () -> Void) {
         self.title = title
+        self.action = action
     }
     
     var body: some View {
@@ -29,12 +31,15 @@ struct MenuOptionView: View {
             .padding()
                         
         }
+        .onTapGesture {
+            action()
+        }
         .background(Color.codexBlack)
     }
 }
 
 struct MenuOptionView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuOptionView(title: "Cerrar sesión")
+        MenuOptionView(title: "Cerrar sesión", action: {})
     }
 }

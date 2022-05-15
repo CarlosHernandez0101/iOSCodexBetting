@@ -10,10 +10,25 @@ import SwiftUI
 struct MenuView: View {
     @EnvironmentObject var menuManager: MenuManager
     
+    @StateObject private var viewModel: MenuViewModel
+    @State private var goToTerms: Bool = false
+    
+    init(viewModel: MenuViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     private let SCREEN_WIDTH: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
         VStack {
+            
+            NavigationLink(
+                isActive: $goToTerms) {
+                    LegalView()
+                } label: {
+                    EmptyView()
+                }
+            
             HStack {
                 LeadingTitle(title: "Menú")
                 
@@ -31,26 +46,44 @@ struct MenuView: View {
             LeadingText(text: "Usuario:")
                 .padding()
             
-            LeadingText(text: "chedezv@gmail.com")
+            LeadingText(text: viewModel.userEmail ?? "")
                 .padding()
             
-            HStack {
-                LeadingText(text: "Miembro Premium")
-                    .padding()
-                
-                Image(systemName: "star.fill")
-                    .foregroundColor(.codexGolden)
-                    .font(.system(size: 25))
+            if viewModel.isCodexBettingMember ?? false {
+                HStack {
+                    LeadingText(text: "Miembro Premium")
+                        .padding()
+                    
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.codexGolden)
+                        .font(.system(size: 25))
+                }
+            } else {
+                HStack {
+                    UnderlinedButton(text: "Comprar curso", action: {
+                        viewModel.didTapOnBuyCourse()
+                    }, fontSize: 20, color: .white)
+                    
+                    Spacer()
+                }
+                .padding(.leading)
             }
             
             VStack {
-                MenuOptionView(title: "Buscar ayuda")
+                MenuOptionView(title: "Buscar ayuda", action: {
+                    viewModel.didTapOnHelp()
+                })
                 
-                MenuOptionView(title: "Política de privacidad")
+                MenuOptionView(title: "Política de privacidad y T & C", action: {
+                    self.goToTerms = true
+                })
                 
-                MenuOptionView(title: "Términos y condiciones")
-                
-                MenuOptionView(title: "Cerrar sesión")
+                MenuOptionView(title: "Cerrar sesión", action: {
+                    withAnimation {
+                        viewModel.didTapOnSignOut()
+                    }
+                    menuManager.closeMenu()
+                })
                 
                 CustomDivider(dividerColor: .codexGray)
             }
@@ -75,7 +108,7 @@ struct MenuView_Previews: PreviewProvider {
     static let menuManager = MenuManager()
     
     static var previews: some View {
-        MenuView()
+        MenuView(viewModel: MenuViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
             .environmentObject(menuManager)
     }
 }

@@ -104,6 +104,14 @@
 		579646B6282F2F040059F828 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646B5282F2F040059F828 /* UserSession.swift */; };
 		579646B8282F32A20059F828 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646B7282F32A20059F828 /* RootViewModel.swift */; };
 		579646BC282F348C0059F828 /* CompleteLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646BB282F348C0059F828 /* CompleteLoaderView.swift */; };
+		579646BF283065CA0059F828 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 579646BE283065CA0059F828 /* Realm */; };
+		579646C1283065CA0059F828 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 579646C0283065CA0059F828 /* RealmSwift */; };
+		579646C42830AC3F0059F828 /* UserDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646C32830AC3F0059F828 /* UserDatabaseModel.swift */; };
+		579646C62830AD6C0059F828 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646C52830AD6C0059F828 /* UserDatabase.swift */; };
+		579646C92830B2530059F828 /* UserModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646C82830B2530059F828 /* UserModelAdapter.swift */; };
+		579646CB2830BCC60059F828 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646CA2830BCC60059F828 /* MenuViewModel.swift */; };
+		579646CE28316F790059F828 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646CD28316F790059F828 /* UserModel.swift */; };
+		579646D1283171A90059F828 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D0283171A90059F828 /* UserNetwork.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C6E282C842600C00422 /* LogInViewModel.swift */; };
@@ -261,6 +269,12 @@
 		579646B5282F2F040059F828 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		579646B7282F32A20059F828 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		579646BB282F348C0059F828 /* CompleteLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteLoaderView.swift; sourceTree = "<group>"; };
+		579646C32830AC3F0059F828 /* UserDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabaseModel.swift; sourceTree = "<group>"; };
+		579646C52830AD6C0059F828 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
+		579646C82830B2530059F828 /* UserModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelAdapter.swift; sourceTree = "<group>"; };
+		579646CA2830BCC60059F828 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		579646CD28316F790059F828 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		579646D0283171A90059F828 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		579C6C6E282C842600C00422 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -306,10 +320,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579646C1283065CA0059F828 /* RealmSwift in Frameworks */,
 				579C6C7C282DDF8800C00422 /* FirebaseAuth in Frameworks */,
 				579C6C85282DEFA800C00422 /* GoogleSignIn in Frameworks */,
 				579C6C7E282DDF8800C00422 /* FirebaseFirestore in Frameworks */,
 				579C6C80282DDF8800C00422 /* FirebaseFirestoreSwift in Frameworks */,
+				579646BF283065CA0059F828 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +550,7 @@
 				579C6C70282CB91A00C00422 /* ForgetPasswordViewModel.swift */,
 				579C6C72282CBC7B00C00422 /* RegisterViewModel.swift */,
 				579646B7282F32A20059F828 /* RootViewModel.swift */,
+				579646CA2830BCC60059F828 /* MenuViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -550,6 +567,8 @@
 		5773655227B4D24E00567244 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				579646CC28316F610059F828 /* Network */,
+				579646C22830AC2B0059F828 /* Database */,
 				5773655327B4D25E00567244 /* InformationCardModel.swift */,
 				5776DBC027C5E0E2001A3419 /* CustomerServiceManager.swift */,
 				5742F56727EC99E0000A53DB /* CourseVideoModel.swift */,
@@ -558,6 +577,7 @@
 				57803F7D2808564800B17EE1 /* QuestionModel.swift */,
 				579C6C81282DE0D800C00422 /* AuthManager.swift */,
 				579646B5282F2F040059F828 /* UserSession.swift */,
+				579646C52830AD6C0059F828 /* UserDatabase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -569,6 +589,38 @@
 				579646B3282F2ED20059F828 /* GlobalState.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		579646C22830AC2B0059F828 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				579646C32830AC3F0059F828 /* UserDatabaseModel.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		579646C72830B23F0059F828 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				579646C82830B2530059F828 /* UserModelAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		579646CC28316F610059F828 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				579646CD28316F790059F828 /* UserModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		579646CF2831719D0059F828 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				579646D0283171A90059F828 /* UserNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		57DE16C727AE485C006C44DB = {
@@ -594,6 +646,8 @@
 		57DE16D227AE485C006C44DB /* Codex-Betting */ = {
 			isa = PBXGroup;
 			children = (
+				579646CF2831719D0059F828 /* Network */,
+				579646C72830B23F0059F828 /* Adapter */,
 				57803F98280A7B5800B17EE1 /* Environment */,
 				5742F56927EC9A38000A53DB /* Repository */,
 				5704562027C0B1E4005E3CCB /* Enums */,
@@ -661,6 +715,8 @@
 				579C6C7D282DDF8800C00422 /* FirebaseFirestore */,
 				579C6C7F282DDF8800C00422 /* FirebaseFirestoreSwift */,
 				579C6C84282DEFA800C00422 /* GoogleSignIn */,
+				579646BE283065CA0059F828 /* Realm */,
+				579646C0283065CA0059F828 /* RealmSwift */,
 			);
 			productName = "Codex-Betting";
 			productReference = 57DE16D027AE485C006C44DB /* Codex-Betting.app */;
@@ -737,6 +793,7 @@
 			packageReferences = (
 				579C6C7A282DDF8800C00422 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				579C6C83282DEFA800C00422 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				579646BD283065CA0059F828 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 57DE16D127AE485C006C44DB /* Products */;
 			projectDirPath = "";
@@ -789,6 +846,7 @@
 				572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */,
 				5742F56B27EC9A61000A53DB /* VideoCourseRepository.swift in Sources */,
 				5709983327B16D0A00D8FCFB /* OptionCircle.swift in Sources */,
+				579646CB2830BCC60059F828 /* MenuViewModel.swift in Sources */,
 				57E8C3CD27BBE7DF0058A7FA /* NormalText.swift in Sources */,
 				57268B1F27AF8C370082ECF6 /* HKGrotesk.swift in Sources */,
 				5704561D27C0ADDB005E3CCB /* DatesInput.swift in Sources */,
@@ -821,6 +879,7 @@
 				5719B5AC27F90A970021237E /* MatchedBettingCalculatorViewModel.swift in Sources */,
 				572B279227EDFF4B00F8E66C /* VerifyBetOptionsViewModel.swift in Sources */,
 				570F703E27F40B2D0016EDB9 /* WhatsappUtils.swift in Sources */,
+				579646D1283171A90059F828 /* UserNetwork.swift in Sources */,
 				5704561B27C0A971005E3CCB /* OddsInput.swift in Sources */,
 				57B290A727BCBF6E008DBBDC /* RecommendationViewModel.swift in Sources */,
 				57803F7A2808555700B17EE1 /* AllQuestionCardsView.swift in Sources */,
@@ -845,8 +904,10 @@
 				572B278E27EDFC5E00F8E66C /* VerifySelectionController.swift in Sources */,
 				57F132A527B3890400146A63 /* LayStakeRequiredView.swift in Sources */,
 				57EC9C1F27B220930083DD83 /* Checkbox.swift in Sources */,
+				579646C42830AC3F0059F828 /* UserDatabaseModel.swift in Sources */,
 				57EC9C2127B2253E0083DD83 /* VerifyBetOptionsView.swift in Sources */,
 				579646B6282F2F040059F828 /* UserSession.swift in Sources */,
+				579646C62830AD6C0059F828 /* UserDatabase.swift in Sources */,
 				57803F742807B9D100B17EE1 /* AmericanOddType.swift in Sources */,
 				5719B5B827FA51D80021237E /* String+ext.swift in Sources */,
 				57803F862809B22A00B17EE1 /* LogInView.swift in Sources */,
@@ -854,6 +915,7 @@
 				57268B2227AF8FCC0082ECF6 /* MainView.swift in Sources */,
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
 				579646B1282F25CA0059F828 /* UserRepository.swift in Sources */,
+				579646C92830B2530059F828 /* UserModelAdapter.swift in Sources */,
 				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */,
@@ -888,6 +950,7 @@
 				572746BF27B0DE7300A3CF06 /* LessonCards.swift in Sources */,
 				5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */,
 				572746B627B0D9A600A3CF06 /* CourseVideoCardView.swift in Sources */,
+				579646CE28316F790059F828 /* UserModel.swift in Sources */,
 				572746C527B0E31600A3CF06 /* LeadingText.swift in Sources */,
 				57DE16D427AE485C006C44DB /* Codex_BettingApp.swift in Sources */,
 				57803F94280A779F00B17EE1 /* MenuOptionView.swift in Sources */,
@@ -1241,6 +1304,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		579646BD283065CA0059F828 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
 		579C6C7A282DDF8800C00422 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1260,6 +1331,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		579646BE283065CA0059F828 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 579646BD283065CA0059F828 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		579646C0283065CA0059F828 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 579646BD283065CA0059F828 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		579C6C7B282DDF8800C00422 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 579C6C7A282DDF8800C00422 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

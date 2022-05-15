@@ -7,22 +7,29 @@
 
 import Foundation
 import UIKit
+import Combine
 
-final class InformationCardViewModel: ObservableObject {
-    
-    @Published var isEnabled: Bool = false
+final class InformationCardViewModel: ObservableObject, GlobalStateInjector {
+        
     @Published var showLockedFeature: Bool = false
-    @Published var isCodexBettingMember: Bool = true
+    @Published var isCodexBettingMember: Bool = false
     @Published var route: Router?
     @Published var cardType: InformationCardModel.InformationCardType
+    private var cancelBag = Set<AnyCancellable>()
     
     init(informationCard: InformationCardModel) {
-        self.isEnabled = informationCard.isEnabledByDefault
         self.cardType = informationCard.cardType
+        self.setIsCodexBettingMember()
+        self.suscribeToUserSession()
+        debugPrint("SUSCRIBING TO USER")
+    }
+    
+    private func setIsCodexBettingMember() {
+        self.isCodexBettingMember = globalState.userSession.value?.isCodexBettingMember ?? false
     }
     
     public func didTapInformativeCard() {
-        if isEnabled || isCodexBettingMember {
+        if isCodexBettingMember {
             didTapOnInformationCard(with: cardType)
         } else {
             showLockedFeature.toggle()
@@ -53,8 +60,14 @@ final class InformationCardViewModel: ObservableObject {
     }
     
     public func openURLToBuyCourse() {
-        if let url = URL(string: "https://www.youtube.com/watch?v=q52YORZ3lrc") {
-            UIApplication.shared.open(url)
+        WhatsAppUtils.instance.requestBuyCourse()
+    }
+    
+    func suscribeToUserSession() {
+        func subscribeToUserSession() {
+            globalState.userSession.sink { [weak self] user in
+                self?.isCodexBettingMember = user?.isCodexBettingMember ?? false
+            }.store(in: &cancelBag)
         }
     }
 }

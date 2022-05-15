@@ -144,6 +144,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView(viewModel: RegisterViewModel(repository: UserRepository(auth: AuthManager())))
+        RegisterView(viewModel: RegisterViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
     }
 }

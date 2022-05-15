@@ -13,7 +13,6 @@ struct InformationCardView: View {
     private let cardImage: String
     private let cardDescription: String
     private let feedback = UINotificationFeedbackGenerator()
-    @State var isLocked: Bool = false
     
     @StateObject private var viewModel: InformationCardViewModel
     
@@ -149,7 +148,7 @@ struct InformationCardView_Previews: PreviewProvider {
         InformationCardView(
             cardTitle: "Lecciones", 
             cardImage: "book",
-            cardDescription: "Aquí encontrarás todas las lecciones del curso y mucho más",
+            cardDescription: "Aquí encontrarás todas las lecciones del curso y mucho más",            
             viewModel: InformationCardViewModel(
                 informationCard: InformationCardModel(
                     title: "Lecciones",
@@ -157,7 +156,7 @@ struct InformationCardView_Previews: PreviewProvider {
                     description: "",
                     isEnabledByDefault: false,
                     cardType: .lessons
-                )                
+                )
             )
         )
             .previewLayout(.sizeThatFits)

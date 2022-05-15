@@ -8,9 +8,7 @@
 import Foundation
 
 final class MainViewModel: ObservableObject {
-    
-    @Published var isCodexBettingMember: Bool = false
-    
+            
     private var repository: UserRepositoryProtocol
     
     init(repository: UserRepositoryProtocol) {
@@ -26,25 +24,60 @@ final class MainViewModel: ObservableObject {
             debugPrint("USER ID INVOKED")
         }
     }
+    
+    private func getCurrentUser() {
+        
+        guard let userId = getCurrentUserId() else {
+            debugPrint("Not found current user")
+            return
+        }
+     
+        debugPrint("CALLED GET USER")
+        self.repository.getUser(with: userId)
+    }
 }
 
 extension MainViewModel: UserRepositoryDelegate {
     func didGetToken(with token: String) {
-        debugPrint("SUCCESS USER TOKEN", token)
-        addUserToken(token)
+        globalState.userSession.send(
+            UserSession(
+                uid: globalState.userSession.value?.uid ?? "",
+                email: globalState.userSession.value?.email ?? "",
+                token: token,
+                isCodexBettingMember: globalState.userSession.value?.isCodexBettingMember ?? false
+            )
+        )
+        getCurrentUser()
     }
     
     func didFailGetToken(with error: Error) {
         debugPrint("GET TOKEN FAILED")
     }
+    
+    func didUpdateUser(with user: UserModel) {        
+        globalState.userSession.send(
+            UserSession(
+            uid: user.id,
+            email: user.email ?? "",
+            token: globalState.userSession.value?.token,
+            isCodexBettingMember: user.isCodexBettingMember ?? false
+            )
+        )
+    }
+    
+    func didFailGetUser(with error: String) {
+        debugPrint("FAILED GET USER", error)
+    }
 }
 
 extension MainViewModel: GlobalStateInjector {
-    func addUserToken(_ token: String) {
-        globalState.userSession.value?.token = token
-    }
-    
+
     func tokenExists() -> Bool {
         globalState.userSession.value?.token != nil
     }
+    
+    func getCurrentUserId() -> String? {
+        globalState.userSession.value?.uid
+    }
+
 }

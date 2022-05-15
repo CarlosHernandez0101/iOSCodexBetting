@@ -11,7 +11,7 @@ final class ToolCardsViewModel: ObservableObject {
     
     @Published var toolsCards: [InformationCardModel] = []
     
-    init() {
+    init() {        
         self.toolsCards = DataService.instance.getToolCards()
     }
 }

@@ -31,13 +31,6 @@ final class DataService {
             description: TextConstants.InformativeCards.Match.description,
             isEnabledByDefault: false,
             cardType: .match
-        ),
-        InformationCardModel(
-            title: TextConstants.InformativeCards.Questions.title,
-            image: TextConstants.InformativeCards.Questions.image,
-            description: TextConstants.InformativeCards.Questions.description,
-            isEnabledByDefault: true,
-            cardType: .questions
         )
     ]
     

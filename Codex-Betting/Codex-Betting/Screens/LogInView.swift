@@ -30,7 +30,15 @@ struct LogInView: View {
                     EmptyView()
                 }.hidden()
                 
-                NavigationLink(destination: RegisterView(viewModel: RegisterViewModel(repository: UserRepository(auth: AuthManager()))),
+                NavigationLink(destination: RegisterView(
+                    viewModel: RegisterViewModel(
+                        repository: UserRepository(
+                            auth: AuthManager(),
+                            db: UserDatabase(),
+                            network: UserNetwork()
+                        )
+                    )
+                ),
                                tag: LogInViewModel.Router.register,
                                selection: $viewModel.router) {
                     EmptyView()
@@ -137,6 +145,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager())))
+        LogInView(viewModel: LogInViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
     }
 }

@@ -11,11 +11,19 @@ import Combine
 final class RootViewModel: ObservableObject {
     
     @Published var showLogIn: Bool = true
-    private var cancelBag = Set<AnyCancellable>()
     
-    init() {
-        subscribeToUserSession()
-    }    
+    private var cancelBag = Set<AnyCancellable>()
+    private var repository: UserRepositoryProtocol
+    
+    init(repository: UserRepositoryProtocol) {
+        self.repository = repository
+        self.subscribeToUserSession()
+        self.initializeUserSession()
+    }
+    
+    private func initializeUserSession() {
+        self.repository.getLastUser()
+    }
 }
 
 extension RootViewModel: GlobalStateInjector {

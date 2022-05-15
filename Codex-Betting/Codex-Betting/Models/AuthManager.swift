@@ -12,6 +12,7 @@ protocol AuthManagerProtocol {
     func createUser(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func signIn(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func getIDToken(completion: @escaping (Result<String, Error>) -> Void)
+    func signOut()
 }
 
 
@@ -56,7 +57,7 @@ final class AuthManager: AuthManagerProtocol {
     }
     
     func getIDToken(completion: @escaping (Result<String, Error>) -> Void) {
-        Auth.auth().currentUser?.getIDToken(completion: { token, error in
+        Auth.auth().currentUser?.getIDTokenResult(completion: { token, error in
             if let error = error {
                 return completion(.failure(error))
             }
@@ -66,7 +67,17 @@ final class AuthManager: AuthManagerProtocol {
                 return
             }
             
-            completion(.success(token))
-        })        
+            completion(.success(token.token))
+        })
+        
+    }
+    
+    func signOut() {
+        do {
+             try Auth.auth().signOut()
+            
+        } catch {
+             debugPrint("Sign Out Error", error.localizedDescription)
+        }
     }
 }

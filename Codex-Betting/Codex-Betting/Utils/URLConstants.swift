@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct URLContants {
+    static let BASE_URL = "https://us-central1-codexbetting.cloudfunctions.net/app/users/"
+}

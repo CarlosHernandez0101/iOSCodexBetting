@@ -9,11 +9,10 @@ import SwiftUI
 
 struct InformationCards: View {
         
-    @StateObject private var viewModel: InformationCardsViewModel
+    @StateObject private var viewModel: InformationCardsViewModel    
     
     init(viewModel: InformationCardsViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        
     }
     
     var body: some View {
@@ -38,7 +37,6 @@ struct InformationCards: View {
 struct InformationCards_Previews: PreviewProvider {
     static var previews: some View {
         InformationCards(
-             viewModel: InformationCardsViewModel()
-        )
+            viewModel: InformationCardsViewModel())
     }
 }

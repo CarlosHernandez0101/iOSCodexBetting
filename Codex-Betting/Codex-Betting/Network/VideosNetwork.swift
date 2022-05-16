@@ -50,7 +50,7 @@ final class CourseVideosNetwork: CourseVideosNetworkProtocol {
                 do {
                     
                     if response.statusCode == 403 {
-                        onError("Unauthorized")
+                        onError("UNAUTHORIZED")
                         return
                     }
                     

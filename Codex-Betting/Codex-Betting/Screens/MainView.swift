@@ -42,9 +42,13 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 250, height: 250, alignment: .center)
                     
-                    InformationCards(
-                        viewModel: InformationCardsViewModel() 
-                    )
+                    if viewModel.isLoadingUserInfo {
+                        DotsLoader()
+                    } else {
+                        InformationCards(
+                            viewModel: InformationCardsViewModel()
+                        )
+                    }
                 }
                 .padding(.top, 1)
                 .padding(.bottom, 32)

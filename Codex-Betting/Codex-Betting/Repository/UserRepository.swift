@@ -148,6 +148,7 @@ final class UserRepository: UserRepositoryProtocol {
         self.db.deleteAllUsers()
         self.auth.signOut()
         self.sendUserSessionNil()
+        self.resetUserDefaults()
     }
     
     func getUser(with id: String) {
@@ -163,7 +164,14 @@ final class UserRepository: UserRepositoryProtocol {
         } onError: { error in
             self.delegate?.didFailGetUser(with: error)
         }
-
+    }
+    
+    private func resetUserDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
     }
 }
 

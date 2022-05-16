@@ -112,6 +112,12 @@
 		579646CE28316F790059F828 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646CD28316F790059F828 /* UserModel.swift */; };
 		579646D1283171A90059F828 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D0283171A90059F828 /* UserNetwork.swift */; };
 		579646D32831AAB10059F828 /* VideosNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D22831AAB10059F828 /* VideosNetwork.swift */; };
+		579646D52831C54B0059F828 /* SingleDotsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D42831C54B0059F828 /* SingleDotsLoader.swift */; };
+		579646D72831C5CE0059F828 /* DotsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D62831C5CE0059F828 /* DotsLoader.swift */; };
+		579646D92831C94E0059F828 /* RefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646D82831C94E0059F828 /* RefreshManager.swift */; };
+		579646DB2831D14F0059F828 /* VideoDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646DA2831D14F0059F828 /* VideoDatabaseModel.swift */; };
+		579646DD2831D25E0059F828 /* VideoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646DC2831D25E0059F828 /* VideoDatabase.swift */; };
+		579646DF2831D8440059F828 /* VideoModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646DE2831D8440059F828 /* VideoModelAdapter.swift */; };
 		5796577827B0E6020084ADDA /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577727B0E6020084ADDA /* CloseButton.swift */; };
 		5796577A27B0E82A0084ADDA /* LockFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796577927B0E82A0084ADDA /* LockFeatureView.swift */; };
 		579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579C6C6E282C842600C00422 /* LogInViewModel.swift */; };
@@ -275,6 +281,12 @@
 		579646CD28316F790059F828 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		579646D0283171A90059F828 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		579646D22831AAB10059F828 /* VideosNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosNetwork.swift; sourceTree = "<group>"; };
+		579646D42831C54B0059F828 /* SingleDotsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDotsLoader.swift; sourceTree = "<group>"; };
+		579646D62831C5CE0059F828 /* DotsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsLoader.swift; sourceTree = "<group>"; };
+		579646D82831C94E0059F828 /* RefreshManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshManager.swift; sourceTree = "<group>"; };
+		579646DA2831D14F0059F828 /* VideoDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDatabaseModel.swift; sourceTree = "<group>"; };
+		579646DC2831D25E0059F828 /* VideoDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDatabase.swift; sourceTree = "<group>"; };
+		579646DE2831D8440059F828 /* VideoModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelAdapter.swift; sourceTree = "<group>"; };
 		5796577727B0E6020084ADDA /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		5796577927B0E82A0084ADDA /* LockFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockFeatureView.swift; sourceTree = "<group>"; };
 		579C6C6E282C842600C00422 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -491,6 +503,8 @@
 				57803F93280A779F00B17EE1 /* MenuOptionView.swift */,
 				57B49BE72814F645006C325D /* TestTextField.swift */,
 				579646BB282F348C0059F828 /* CompleteLoaderView.swift */,
+				579646D42831C54B0059F828 /* SingleDotsLoader.swift */,
+				579646D62831C5CE0059F828 /* DotsLoader.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -577,6 +591,8 @@
 				579C6C81282DE0D800C00422 /* AuthManager.swift */,
 				579646B5282F2F040059F828 /* UserSession.swift */,
 				579646C52830AD6C0059F828 /* UserDatabase.swift */,
+				579646D82831C94E0059F828 /* RefreshManager.swift */,
+				579646DC2831D25E0059F828 /* VideoDatabase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -594,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				579646C32830AC3F0059F828 /* UserDatabaseModel.swift */,
+				579646DA2831D14F0059F828 /* VideoDatabaseModel.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -602,6 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				579646C82830B2530059F828 /* UserModelAdapter.swift */,
+				579646DE2831D8440059F828 /* VideoModelAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -854,8 +872,10 @@
 				57803F7C280855FA00B17EE1 /* QuestionCardsViewModel.swift in Sources */,
 				579646BC282F348C0059F828 /* CompleteLoaderView.swift in Sources */,
 				57DE16D627AE485C006C44DB /* ContentView.swift in Sources */,
+				579646DB2831D14F0059F828 /* VideoDatabaseModel.swift in Sources */,
 				57803F8E280A3CD500B17EE1 /* ForgetPasswordView.swift in Sources */,
 				572746C127B0DF4100A3CF06 /* RecommendationView.swift in Sources */,
+				579646D52831C54B0059F828 /* SingleDotsLoader.swift in Sources */,
 				57803F92280A755000B17EE1 /* MenuView.swift in Sources */,
 				572746C327B0E07400A3CF06 /* LeadingTitle.swift in Sources */,
 				5704561927C0A4F0005E3CCB /* UIApplication+ext.swift in Sources */,
@@ -937,6 +957,7 @@
 				57B49BE82814F645006C325D /* TestTextField.swift in Sources */,
 				57B290A527BCBB8D008DBBDC /* RecommendationListViewModel.swift in Sources */,
 				5704562227C0B233005E3CCB /* MatchSelectionController.swift in Sources */,
+				579646D72831C5CE0059F828 /* DotsLoader.swift in Sources */,
 				5704561327C0A205005E3CCB /* CodexTextField.swift in Sources */,
 				5742F57127EC9F90000A53DB /* VideoDetailView.swift in Sources */,
 				579C6C6F282C842600C00422 /* LogInViewModel.swift in Sources */,
@@ -960,14 +981,17 @@
 				578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */,
 				57F132A327B385F300146A63 /* AmericanOddPicker.swift in Sources */,
 				579C6C73282CBC7B00C00422 /* RegisterViewModel.swift in Sources */,
+				579646DF2831D8440059F828 /* VideoModelAdapter.swift in Sources */,
 				572746B827B0DBC300A3CF06 /* LessonsView.swift in Sources */,
 				57803F88280A2B3300B17EE1 /* RegisterView.swift in Sources */,
 				57D2FB6827B423DF0023B359 /* LiabilityView.swift in Sources */,
+				579646D92831C94E0059F828 /* RefreshManager.swift in Sources */,
 				572746C827B0E46300A3CF06 /* RecommendationList.swift in Sources */,
 				5773654427B47DE600567244 /* ResultView.swift in Sources */,
 				57268B2727AF91A90082ECF6 /* CustomDivider.swift in Sources */,
 				5773654027B477FC00567244 /* BreakdownRow.swift in Sources */,
 				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
+				579646DD2831D25E0059F828 /* VideoDatabase.swift in Sources */,
 				5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */,
 				57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */,
 			);

@@ -19,7 +19,7 @@ struct LessonsView: View {
                 
                 LessonCards(
                     viewModel: LessonCardsViewModel(
-                        repository: VideoCourseRepository(network: CourseVideosNetwork())
+                        repository: VideoCourseRepository(network: CourseVideosNetwork(), db: VideoDatabase())
                     )
                 )
             }

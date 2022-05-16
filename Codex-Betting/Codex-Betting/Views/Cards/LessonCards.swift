@@ -40,7 +40,7 @@ struct LessonCards_Previews: PreviewProvider {
     static var previews: some View {
         LessonCards(
             viewModel: LessonCardsViewModel(
-                repository: VideoCourseRepository(network: CourseVideosNetwork())
+                repository: VideoCourseRepository(network: CourseVideosNetwork(), db: VideoDatabase())
             )
         )
     }

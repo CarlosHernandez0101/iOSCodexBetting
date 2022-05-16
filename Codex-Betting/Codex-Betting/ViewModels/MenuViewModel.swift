@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Combine
 
 final class MenuViewModel: ObservableObject {
     
     @Published var userEmail: String?
     @Published var isCodexBettingMember: Bool?
+    private var cancelBag = Set<AnyCancellable>()
     
     private var repository: UserRepositoryProtocol
     
@@ -22,6 +24,7 @@ final class MenuViewModel: ObservableObject {
     private func setUserInfo() {
         self.setUserEmail()
         self.setIsCodexBettingMember()
+        self.subscribeToUserSession()
     }
     
     func didTapOnHelp() {
@@ -44,5 +47,12 @@ extension MenuViewModel: GlobalStateInjector {
     
     private func setIsCodexBettingMember() {
         self.isCodexBettingMember = globalState.userSession.value?.isCodexBettingMember
+    }
+    
+    func subscribeToUserSession() {
+        globalState.userSession.sink { [weak self] user in
+            self?.userEmail = user?.email
+            self?.isCodexBettingMember = user?.isCodexBettingMember
+        }.store(in: &cancelBag)
     }
 }

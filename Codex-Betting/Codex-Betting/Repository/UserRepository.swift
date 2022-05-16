@@ -54,6 +54,7 @@ protocol UserRepositoryProtocol {
     var network: UserNetworkProtocol { get }
     func createUser(email: String, password: String)
     func signIn(email: String, password: String)
+    func signInWithGoogle()
     func getIDToken()
     func getLastUser()
     func signOut()
@@ -114,6 +115,24 @@ final class UserRepository: UserRepositoryProtocol {
         }
     }
     
+    func signInWithGoogle() {
+        self.auth.signInWithGoogle { [weak self] (result: Result<AuthDataResult, Error>) in
+            switch result {
+            case .success(let result):
+                guard let user = self?.adapter.toDatabaseModel(result.user) else {
+                    return
+                }
+                
+                self?.db.createUser(user: user)
+                
+                self?.delegate?.didSignIn(with: result.user)
+                
+            case .failure(let error):
+                self?.delegate?.didFailSignIn(with: error)
+            }
+        }
+    }
+    
     func getIDToken() {
         self.auth.getIDToken { [weak self] (result: Result<String, Error>) in
             switch result {
@@ -149,6 +168,7 @@ final class UserRepository: UserRepositoryProtocol {
         self.auth.signOut()
         self.sendUserSessionNil()
         self.resetUserDefaults()
+        VideoDatabase().deleteAllVideos()
     }
     
     func getUser(with id: String) {

@@ -118,7 +118,9 @@ struct RegisterView: View {
             NormalText(text: "O registrate con:")
                 .padding(.top, 20)
             
-            GoogleButton(action: {}, buttonText: "Registrarse con Google")
+            GoogleButton(action: {
+                viewModel.didTapOnRegisterWithGoogle()
+            }, buttonText: "Registrarse con Google")
                 .padding(.top)
             
             HStack {

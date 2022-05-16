@@ -115,7 +115,9 @@ struct LogInView: View {
                             NormalText(text: "O ingresa con")
                                 .padding(.top)
                             
-                            GoogleButton(action: {}, buttonText: "Iniciar sesión con Google")
+                            GoogleButton(action: {
+                                viewModel.didTapOnLogInWithGoogleButton()
+                            }, buttonText: "Iniciar sesión con Google")
                                 .padding(.top)
                             
                             HStack {

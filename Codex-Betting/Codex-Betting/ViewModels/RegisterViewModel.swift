@@ -71,12 +71,13 @@ final class RegisterViewModel: ObservableObject {
     }
     
     func didTapOnRegisterWithGoogle() {
-        
+        self.repository.signInWithGoogle()
     }
 }
 
 extension RegisterViewModel: UserRepositoryDelegate, GlobalStateInjector {
     func didCreateUser(with result: User) {
+        debugPrint("USER SUCCESS GOOGLE")
         let userSession = UserSession(
             uid: result.uid ,
             email: result.email ?? ""
@@ -88,7 +89,21 @@ extension RegisterViewModel: UserRepositoryDelegate, GlobalStateInjector {
     }
     
     func didFailCreateUser(with error: Error) {
+        debugPrint("USER ERRROR GOOGLE")
         self.alertMessage = error.localizedDescription
         self.showAlert = true
     }
+    
+    func didSignIn(with user: User) {
+        let userSession = UserSession(uid: user.uid , email: user.email ?? "")
+        debugPrint("SUCCESS UID", user.uid)
+        debugPrint("SUCCESS EMAIL", user.email ?? "")
+        globalState.userSession.send(userSession)
+    }
+    
+    func didFailSignIn(with error: Error) {
+        self.alertMessage = error.localizedDescription
+        self.showAlert = true        
+    }
+
 }

@@ -49,7 +49,7 @@ final class LogInViewModel: ObservableObject {
     }
     
     func didTapOnLogInWithGoogleButton() {
-        
+        self.repository.signInWithGoogle()
     }
     
     func didTapOnRegisterButton() {

@@ -55,6 +55,7 @@
 		572B279627EE03CF00F8E66C /* RequirementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279527EE03CF00F8E66C /* RequirementViewModel.swift */; };
 		572B279827EE1A5B00F8E66C /* RequirementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279727EE1A5B00F8E66C /* RequirementsView.swift */; };
 		572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B279927EE21D800F8E66C /* SuccessAlertView.swift */; };
+		57392F082833336600333922 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57392F072833336600333922 /* NetworkErrorView.swift */; };
 		5742F56427EC9965000A53DB /* LessonCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */; };
 		5742F56627EC9985000A53DB /* VideoCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */; };
 		5742F56827EC99E0000A53DB /* CourseVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742F56727EC99E0000A53DB /* CourseVideoModel.swift */; };
@@ -226,6 +227,7 @@
 		572B279527EE03CF00F8E66C /* RequirementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementViewModel.swift; sourceTree = "<group>"; };
 		572B279727EE1A5B00F8E66C /* RequirementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsView.swift; sourceTree = "<group>"; };
 		572B279927EE21D800F8E66C /* SuccessAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAlertView.swift; sourceTree = "<group>"; };
+		57392F072833336600333922 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 		5742F56327EC9965000A53DB /* LessonCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardsViewModel.swift; sourceTree = "<group>"; };
 		5742F56527EC9985000A53DB /* VideoCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourseViewModel.swift; sourceTree = "<group>"; };
 		5742F56727EC99E0000A53DB /* CourseVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoModel.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				579646BB282F348C0059F828 /* CompleteLoaderView.swift */,
 				579646D42831C54B0059F828 /* SingleDotsLoader.swift */,
 				579646D62831C5CE0059F828 /* DotsLoader.swift */,
+				57392F072833336600333922 /* NetworkErrorView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -936,6 +939,7 @@
 				57EC9C2727B2339A0083DD83 /* BackBetView.swift in Sources */,
 				579646B1282F25CA0059F828 /* UserRepository.swift in Sources */,
 				579646C92830B2530059F828 /* UserModelAdapter.swift in Sources */,
+				57392F082833336600333922 /* NetworkErrorView.swift in Sources */,
 				57EC9C2527B230A40083DD83 /* MatchedBettingCalculatorView.swift in Sources */,
 				5796577827B0E6020084ADDA /* CloseButton.swift in Sources */,
 				572B279A27EE21D800F8E66C /* SuccessAlertView.swift in Sources */,

@@ -42,7 +42,9 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 250, height: 250, alignment: .center)
                     
-                    if viewModel.isLoadingUserInfo {
+                    if viewModel.hasNetworkError {
+                        NetworkErrorView()
+                    } else if viewModel.isLoadingUserInfo {
                         DotsLoader()
                     } else {
                         InformationCards(

@@ -12,6 +12,7 @@ final class MainViewModel: ObservableObject {
     private var repository: UserRepositoryProtocol
     
     @Published var isLoadingUserInfo: Bool = false
+    @Published var hasNetworkError: Bool = false
     
     init(repository: UserRepositoryProtocol) {
         self.repository = repository
@@ -71,6 +72,7 @@ extension MainViewModel: UserRepositoryDelegate {
     
     func didFailGetUser(with error: String) {
         self.isLoadingUserInfo = false
+        self.hasNetworkError = true
         debugPrint("FAILED GET USER", error)
     }
 }

@@ -11,6 +11,7 @@ final class LessonCardsViewModel: ObservableObject {
     
     @Published var courseVideos: [VideoCourseViewModel] = []
     @Published var isLoadingVideos: Bool = false
+    @Published var hasError: Bool = false
     
     private let defaults = UserDefaults.standard
     
@@ -60,6 +61,7 @@ extension LessonCardsViewModel: VideoCourseRepositoryDelegate {
     func didFailGetVideos() {
         debugPrint("Fail get videos")
         self.isLoadingVideos = false
+        self.hasError = true
     }
     
     func didExpireAuthToken() {

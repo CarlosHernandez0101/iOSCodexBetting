@@ -16,6 +16,7 @@ protocol AuthManagerProtocol {
     func signInWithGoogle(completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func getIDToken(completion: @escaping (Result<String, Error>) -> Void)
     func signOut()
+    func sendPasswordReset(with email: String, completion: @escaping (Result<Bool, Error>) -> Void)
 }
 
 
@@ -134,6 +135,18 @@ final class AuthManager: AuthManagerProtocol {
             
         } catch {
             debugPrint("Sign Out Error", error.localizedDescription)
+        }
+    }
+    
+    func sendPasswordReset(with email: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            completion(.success(true))
         }
     }
 }

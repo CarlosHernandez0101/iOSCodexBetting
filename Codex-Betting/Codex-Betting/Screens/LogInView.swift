@@ -24,7 +24,7 @@ struct LogInView: View {
         NavigationView {
             ZStack {
                 
-                NavigationLink(destination: ForgetPasswordView(viewModel: ForgetPasswordViewModel()),
+                NavigationLink(destination: ForgetPasswordView(viewModel: ForgetPasswordViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork()))),
                                tag: LogInViewModel.Router.forgetPassword,
                                selection: $viewModel.router) {
                     EmptyView()

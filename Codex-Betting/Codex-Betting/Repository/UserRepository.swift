@@ -18,6 +18,8 @@ protocol UserRepositoryDelegate: AnyObject{
     func didFailGetToken(with error: Error)
     func didUpdateUser(with user: UserModel)
     func didFailGetUser(with error: String)
+    func didSendPasswordReset()
+    func didFailPasswordReset(with error: String)
 }
 
 extension UserRepositoryDelegate {
@@ -45,6 +47,12 @@ extension UserRepositoryDelegate {
     func didFailGetUser(with error: String) {
         return
     }
+    func didSendPasswordReset() {
+        return
+    }
+    func didFailPasswordReset(with error: String) {
+        return
+    }
 }
 
 protocol UserRepositoryProtocol {
@@ -59,6 +67,7 @@ protocol UserRepositoryProtocol {
     func getLastUser()
     func signOut()
     func getUser(with id: String)
+    func sendPasswordReset(with email: String)
 }
 
 final class UserRepository: UserRepositoryProtocol {
@@ -183,6 +192,17 @@ final class UserRepository: UserRepositoryProtocol {
             self.delegate?.didUpdateUser(with: user)
         } onError: { error in
             self.delegate?.didFailGetUser(with: error)
+        }
+    }
+    
+    func sendPasswordReset(with email: String) {
+        self.auth.sendPasswordReset(with: email) { (result: Result<Bool,Error>) in
+            switch result {
+            case .success(_):
+                self.delegate?.didSendPasswordReset()
+            case .failure(let error):
+                self.delegate?.didFailPasswordReset(with: error.localizedDescription)
+            }
         }
     }
     

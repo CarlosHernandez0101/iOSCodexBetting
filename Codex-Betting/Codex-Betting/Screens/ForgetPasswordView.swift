@@ -37,6 +37,9 @@ struct ForgetPasswordView: View {
                 viewModel.didTapOnSendLinkButton()
             }, isDisabled: .constant(false))
         }
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text(""), message: Text(viewModel.alertMessage), dismissButton: .default(Text("Aceptar")))
+        })
         .padding(.horizontal)
         .background(Color.codexBlack)
         .navigationBarTitle("")
@@ -46,6 +49,6 @@ struct ForgetPasswordView: View {
 
 struct ForgetPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        ForgetPasswordView(viewModel: ForgetPasswordViewModel())
+        ForgetPasswordView(viewModel: ForgetPasswordViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
     }
 }

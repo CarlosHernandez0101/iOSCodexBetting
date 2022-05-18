@@ -10,9 +10,11 @@ import SwiftUI
 struct LayStakeRequiredView: View {
     
     private let moneyToBet: Double
+    private let copyAction: () -> Void
     
-    init(moneyToBet: Double) {
+    init(moneyToBet: Double, copyAction: @escaping () -> Void) {
         self.moneyToBet = moneyToBet
+        self.copyAction = copyAction
     }
     
     var body: some View {
@@ -41,7 +43,7 @@ struct LayStakeRequiredView: View {
             .foregroundColor(.white)
             .padding(.vertical, 16)
             
-            CopyToClipboardButton()
+            CopyToClipboardButton(copyAction: copyAction)
                 .padding(.horizontal, 16)
             
         }
@@ -52,6 +54,6 @@ struct LayStakeRequiredView: View {
 
 struct LayStakeRequiredView_Previews: PreviewProvider {
     static var previews: some View {
-        LayStakeRequiredView(moneyToBet: 400.5)
+        LayStakeRequiredView(moneyToBet: 400.5, copyAction: {})
     }
 }

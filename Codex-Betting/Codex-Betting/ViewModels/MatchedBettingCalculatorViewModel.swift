@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class MatchedBettingCalculatorViewModel: ObservableObject {
     @Published var backStake: String = ""
@@ -152,5 +153,9 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             self.isPositiveProfit = exchangeTotalResult > 0
                         
         }
+    }
+    
+    func copyToClipboard() {
+        UIPasteboard.general.string = String(moneyToBet)
     }
 }

@@ -123,7 +123,7 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             
             let leftSideSportbook = self.calculator.getLeftSideSportbookForFreebet(backStake: backStake, backOdds: backOdds, backCommision: backCommision)
             
-            self.leftSideSportBook = String(leftSideSportbook)
+            self.leftSideSportBook = String(leftSideSportbook.rounded(digits: 2))
             
             let rightSideSportBookResult = self.calculator.getRightSideSportbookForFreebet(liability: liability)
             

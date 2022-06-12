@@ -14,5 +14,4 @@ final class InformationCardsViewModel: ObservableObject {
     init() {
         informationCards = DataService.instance.getInformationCards()
     }
-    
 }

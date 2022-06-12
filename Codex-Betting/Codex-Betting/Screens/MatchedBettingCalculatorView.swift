@@ -48,7 +48,7 @@ struct MatchedBettingCalculatorView: View {
                 )
                     .padding(.top, 16)
                 
-                LayStakeRequiredView(moneyToBet: viewModel.moneyToBet)
+                LayStakeRequiredView(moneyToBet: viewModel.moneyToBet, copyAction: viewModel.copyToClipboard)
                     .padding(.top, 16)
                 
                 LiabilityView(liability: viewModel.liability)

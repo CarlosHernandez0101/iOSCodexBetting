@@ -15,27 +15,30 @@ struct CodexTextField: View {
     private let keyboardType: UIKeyboardType
     private let disableAutocorrection: Bool
     private let colorScheme: ColorScheme
+    private let onCommit: () -> Void
     
     init(text: Binding<String>,
          placeholder: String,
          keyboardType: UIKeyboardType,
          disableAutocorrection: Bool,
-         colorScheme: ColorScheme
+         colorScheme: ColorScheme,
+         onCommit: @escaping () -> Void = {}
     ) {
         self._text = text
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.disableAutocorrection = disableAutocorrection
         self.colorScheme = colorScheme
+        self.onCommit = onCommit
     }
     
     var body: some View {
         
         TextField(placeholder, text: $text, onEditingChanged: { isEditing in
-            debugPrint("Editing")
+            
         }) {
             UIApplication.shared.endEditing()
-            debugPrint("Action")
+            onCommit()            
         }
         .colorScheme(colorScheme)
         .textFieldStyle(.roundedBorder)
@@ -52,12 +55,17 @@ struct PasswordTextField: View {
     
     private let placeholder: String
     private let colorScheme: ColorScheme
+    private let onCommit: () -> Void
     
-    init(text: Binding<String>, placeholder: String, colorScheme: ColorScheme) {
+    init(text: Binding<String>,
+         placeholder: String,
+         colorScheme: ColorScheme,
+         onCommit: @escaping () -> Void = {}) {
         self._text = text
         
         self.colorScheme = colorScheme
         self.placeholder = placeholder
+        self.onCommit = onCommit
     }
     
     var body: some View {
@@ -66,11 +74,13 @@ struct PasswordTextField: View {
             if showPassword {
                 
                 CodexTextField(
-                    text: $text, placeholder: placeholder, keyboardType: .default, disableAutocorrection: true, colorScheme: colorScheme)
+                    text: $text, placeholder: placeholder, keyboardType: .default, disableAutocorrection: true, colorScheme: colorScheme, onCommit: onCommit)
                 
                 
             } else {
-                SecureField(placeholder, text: $text)
+                SecureField(placeholder, text: $text, onCommit: {
+                    onCommit()
+                })
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                     .keyboardType(.default)

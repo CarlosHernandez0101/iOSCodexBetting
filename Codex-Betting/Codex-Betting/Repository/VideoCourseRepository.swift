@@ -10,47 +10,77 @@ import Foundation
 protocol VideoCourseRepositoryDelegate: AnyObject {
     func didUpdateVideos(_ videos: [CourseVideoModel])
     func didFailGetVideos()
+    func didExpireAuthToken()
 }
 
 protocol VideoCourseRepositoryProtocol {
     var delegate: VideoCourseRepositoryDelegate? { get set }
+    var network: CourseVideosNetworkProtocol { get }
+    var db: VideoDatabaseProtocol { get }
     func getVideos()
+    func getStoredVideos()
 }
 
 final class VideoCourseRepository: VideoCourseRepositoryProtocol {
     weak var delegate: VideoCourseRepositoryDelegate?
+    var network: CourseVideosNetworkProtocol
+    var db: VideoDatabaseProtocol
+    var adapter = VideoModelAdapter()
     
-    let decoder: JSONDecoder = JSONDecoder()
+    
+    init(network: CourseVideosNetworkProtocol, db: VideoDatabaseProtocol) {
+        self.network = network
+        self.db = db
+    }
     
     func getVideos() {
-        do {
+        self.network.getVideos(token: getUserToken() ?? "") { videos in
             
-            guard let data = loadJSON() else {
-                self.delegate?.didFailGetVideos()
-                return
+            videos.forEach { video in
+                self.db.createVideo(
+                    video: VideoDatabaseModel(
+                        id: video.id,
+                        index: video.index,
+                        title: video.title ?? "",
+                        description: video.description ?? "",
+                        url: video.url ?? ""
+                    )
+                )
             }
             
-            let videoCourses = try decoder.decode([CourseVideoModel].self, from: data)
+            self.delegate?.didUpdateVideos(videos)
+        } onError: { error in
             
-            self.delegate?.didUpdateVideos(videoCourses)
+            if error == "UNAUTHORIZED" {
+                self.globalState.userSession.send(
+                    UserSession(
+                        uid: self.globalState.userSession.value?.uid ?? "",
+                        email: self.globalState.userSession.value?.email ?? "",
+                        token: nil,
+                        isCodexBettingMember: self.globalState.userSession.value?.isCodexBettingMember
+                    )
+                )
+                self.delegate?.didExpireAuthToken()
+            }
             
-        } catch {
-            debugPrint("ERROR PARSING JSON", error.localizedDescription)
             self.delegate?.didFailGetVideos()
         }
     }
     
-    private func loadJSON() -> Data? {
-        do {
-            
-            if let bundlePath = Bundle.main.path(forResource: "CourseVideos", ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-            
-        } catch {
-            debugPrint("EROR LOADING JSON", error.localizedDescription)
-        }
+    func getStoredVideos() {
+        let storedVideos = db.readVideos()
         
-        return nil
+        let videos = storedVideos.map({ storedVideo -> CourseVideoModel in
+            self.adapter.toNetworkModel(from: storedVideo)
+        })
+        
+        self.delegate?.didUpdateVideos(videos)
     }
+}
+
+extension VideoCourseRepository: GlobalStateInjector {
+    func getUserToken() -> String? {
+        globalState.userSession.value?.token
+    }
+
 }

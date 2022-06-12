@@ -31,13 +31,6 @@ final class DataService {
             description: TextConstants.InformativeCards.Match.description,
             isEnabledByDefault: false,
             cardType: .match
-        ),
-        InformationCardModel(
-            title: TextConstants.InformativeCards.Questions.title,
-            image: TextConstants.InformativeCards.Questions.image,
-            description: TextConstants.InformativeCards.Questions.description,
-            isEnabledByDefault: true,
-            cardType: .questions
         )
     ]
     
@@ -68,7 +61,7 @@ final class DataService {
     private let verifyBetRequirements: [ String] = [
         "El partido elegido está disponible para la promoción",
         "La cuota de la apuesta es mayor a la cuota miníma",
-        "Le partido está dentro de las fechas de vigencia",
+        "El partido está dentro de las fechas de vigencia",
         "Los partidos coinciden en fecha y en hora",
         "El resultado a favor y en contra es el mismo en ambas casas de apuestas",
         "El monto por apostar está dentro del rango permitido",

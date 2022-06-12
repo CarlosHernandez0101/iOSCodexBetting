@@ -73,6 +73,22 @@ final class CalculatorBrain {
                               backCommision: Double,
                               layOdds: Double,
                               layCommision: Double) -> Double {
+        let result = getMatchedBettingOperation(
+            backStake: backStake,
+            backOdds: backOdds,
+            backCommision: backCommision,
+            layOdds: layOdds,
+            layCommision: layCommision
+        )
+        
+        return result-(result*backCommision/100)
+    }
+    
+    public func getMatchedBettingOperation(backStake: Double,
+                              backOdds: Double,
+                              backCommision: Double,
+                              layOdds: Double,
+                              layCommision: Double) -> Double {
         
         (backOdds*backStake-(0*((backOdds-1)*backStake)/100)-0)/(layOdds-layCommision/100)
     }

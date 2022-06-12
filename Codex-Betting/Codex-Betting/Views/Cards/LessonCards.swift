@@ -16,12 +16,20 @@ struct LessonCards: View {
     
     var body: some View {
         VStack {
-            ForEach(viewModel.courseVideos, id: \.id) { courseVideo in
-                CourseVideoCardView(
-                    lessonTitle: courseVideo.title,
-                    lessonDescription: courseVideo.description,
-                    lessonURL: courseVideo.url
-                )
+            
+            if viewModel.hasError {
+                NetworkErrorView(action: viewModel.getVideos)
+            } else if viewModel.isLoadingVideos {
+                CompleteLoaderView()
+                    .padding(.top, 100)
+            } else {
+                ForEach(viewModel.courseVideos, id: \.id) { courseVideo in
+                    CourseVideoCardView(
+                        lessonTitle: courseVideo.title,
+                        lessonDescription: courseVideo.description,
+                        lessonURL: courseVideo.url
+                    )
+                }
             }
         }
         .background(Color.codexBlack)
@@ -35,7 +43,7 @@ struct LessonCards_Previews: PreviewProvider {
     static var previews: some View {
         LessonCards(
             viewModel: LessonCardsViewModel(
-                repository: VideoCourseRepository()
+                repository: VideoCourseRepository(network: CourseVideosNetwork(), db: VideoDatabase())
             )
         )
     }

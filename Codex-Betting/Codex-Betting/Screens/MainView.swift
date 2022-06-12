@@ -22,7 +22,15 @@ struct MainView: View {
                 
                 Color.codexBlack
                 
-                MenuView()
+                MenuView(
+                    viewModel: MenuViewModel(
+                        repository: UserRepository(
+                            auth: AuthManager(),
+                            db: UserDatabase(),
+                            network: UserNetwork()
+                        )
+                    )
+                )
                     .padding()
                     .zIndex(1)
                 
@@ -34,10 +42,15 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 250, height: 250, alignment: .center)
                     
-                    
-                    InformationCards(
-                        viewModel: InformationCardsViewModel()
-                    )
+                    if viewModel.hasNetworkError {
+                        NetworkErrorView(action: {viewModel.getUserToken() })
+                    } else if viewModel.isLoadingUserInfo {
+                        DotsLoader()
+                    } else {
+                        InformationCards(
+                            viewModel: InformationCardsViewModel()
+                        )
+                    }
                 }
                 .padding(.top, 1)
                 .padding(.bottom, 32)
@@ -46,11 +59,17 @@ struct MainView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
+        .onAppear {
+            debugPrint("MAIN ON APPEAR")
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
+    static let manager = MenuManager()
+    
     static var previews: some View {
-        MainView(viewModel: MainViewModel())
+        MainView(viewModel: MainViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
+            .environmentObject(manager)
     }
 }

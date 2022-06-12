@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class MatchedBettingCalculatorViewModel: ObservableObject {
     @Published var backStake: String = ""
@@ -122,7 +123,7 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             
             let leftSideSportbook = self.calculator.getLeftSideSportbookForFreebet(backStake: backStake, backOdds: backOdds, backCommision: backCommision)
             
-            self.leftSideSportBook = String(leftSideSportbook)
+            self.leftSideSportBook = String(leftSideSportbook.rounded(digits: 2))
             
             let rightSideSportBookResult = self.calculator.getRightSideSportbookForFreebet(liability: liability)
             
@@ -152,5 +153,9 @@ final class MatchedBettingCalculatorViewModel: ObservableObject {
             self.isPositiveProfit = exchangeTotalResult > 0
                         
         }
+    }
+    
+    func copyToClipboard() {
+        UIPasteboard.general.string = String(moneyToBet)
     }
 }

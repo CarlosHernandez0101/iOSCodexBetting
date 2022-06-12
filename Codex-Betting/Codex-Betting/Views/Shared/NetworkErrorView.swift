@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct NetworkErrorView: View {
+    private let action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+    
     var body: some View {
         VStack(spacing: 25) {
             
@@ -19,6 +25,12 @@ struct NetworkErrorView: View {
             
             NormalText(text: "Verifique su conexión a internet o intente más tarde")
                 .multilineTextAlignment(.center)
+            
+            ContinueButton(
+                buttonText: "Reintentar",
+                action: action,
+                isDisabled: .constant(false)
+            )
         }
         .padding()
         .background(Color.codexBlack)
@@ -27,6 +39,6 @@ struct NetworkErrorView: View {
 
 struct NetworkErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        NetworkErrorView()
+        NetworkErrorView(action: {})
     }
 }

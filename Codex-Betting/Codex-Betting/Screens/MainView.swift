@@ -43,7 +43,7 @@ struct MainView: View {
                         .frame(width: 250, height: 250, alignment: .center)
                     
                     if viewModel.hasNetworkError {
-                        NetworkErrorView()
+                        NetworkErrorView(action: {viewModel.getUserToken() })
                     } else if viewModel.isLoadingUserInfo {
                         DotsLoader()
                     } else {

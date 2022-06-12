@@ -20,7 +20,7 @@ final class MainViewModel: ObservableObject {
         self.getUserToken()
     }
     
-    private func getUserToken() {
+    func getUserToken() {
         
         if !tokenExists() {
             self.isLoadingUserInfo = true

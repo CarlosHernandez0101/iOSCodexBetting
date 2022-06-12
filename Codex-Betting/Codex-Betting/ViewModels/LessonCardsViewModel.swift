@@ -11,9 +11,7 @@ final class LessonCardsViewModel: ObservableObject {
     
     @Published var courseVideos: [VideoCourseViewModel] = []
     @Published var isLoadingVideos: Bool = false
-    @Published var hasError: Bool = false
-    
-    private let defaults = UserDefaults.standard
+    @Published var hasError: Bool = false        
     
     private var repository: VideoCourseRepositoryProtocol
     private var userRepository: UserRepository = UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())
@@ -28,10 +26,12 @@ final class LessonCardsViewModel: ObservableObject {
         RefreshManager.shared.loadDataIfNeeded { needsToRefresh  in
             if needsToRefresh {
                 debugPrint("NEEDS")
+                self.hasError = false
                 self.isLoadingVideos = true
                 self.repository.getVideos()
             } else {
                 debugPrint("NO NEEDS")
+                self.hasError = false
                 self.isLoadingVideos = true
                 self.repository.getStoredVideos()
             }
@@ -42,6 +42,7 @@ final class LessonCardsViewModel: ObservableObject {
 extension LessonCardsViewModel: VideoCourseRepositoryDelegate {
     
     func didUpdateVideos(_ videos: [CourseVideoModel]) {
+        self.hasError = false
         self.isLoadingVideos = false
         self.courseVideos = videos.map({ courseVideo -> VideoCourseViewModel in
             VideoCourseViewModel(
@@ -54,8 +55,7 @@ extension LessonCardsViewModel: VideoCourseRepositoryDelegate {
         }).sorted(by: { $0.index < $1.index })
         courseVideos.forEach { video in
             debugPrint("INDEX", video.index)
-        }
-        defaults.set(Date(), forKey: "lastVideosRefresh")
+        }        
     }
     
     func didFailGetVideos() {

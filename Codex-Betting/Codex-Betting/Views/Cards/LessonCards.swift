@@ -18,7 +18,7 @@ struct LessonCards: View {
         VStack {
             
             if viewModel.hasError {
-                NetworkErrorView()
+                NetworkErrorView(action: viewModel.getVideos)
             } else if viewModel.isLoadingVideos {
                 CompleteLoaderView()
                     .padding(.top, 100)

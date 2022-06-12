@@ -18,6 +18,7 @@ protocol CourseVideosNetworkProtocol {
 final class CourseVideosNetwork: CourseVideosNetworkProtocol {
     
     private let decoder = JSONDecoder()
+    private let defaults = UserDefaults.standard
     
     func getVideos(token: String, onSuccess: @escaping onVideosSuccess, onError: @escaping onVideosError) {
         
@@ -56,7 +57,7 @@ final class CourseVideosNetwork: CourseVideosNetworkProtocol {
                     
                     if response.statusCode == 200 {
                         let videos = try self.decoder.decode([CourseVideoModel].self, from: data)
-                        
+                        self.defaults.set(Date(), forKey: "lastVideosRefresh")
                         onSuccess(videos)
                         return
                     }

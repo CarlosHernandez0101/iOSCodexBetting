@@ -99,6 +99,8 @@
 		57803F9A280A7B7000B17EE1 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57803F99280A7B7000B17EE1 /* MenuManager.swift */; };
 		578B104A27ED36560093DA26 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104927ED36560093DA26 /* BackButtonView.swift */; };
 		578B104C27ED377E0093DA26 /* FootnoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B104B27ED377E0093DA26 /* FootnoteView.swift */; };
+		578FC847285E3D230055A5CE /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578FC846285E3D230055A5CE /* DeleteAccountView.swift */; };
+		578FC849285E40E50055A5CE /* DeleteAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578FC848285E40E50055A5CE /* DeleteAccountViewModel.swift */; };
 		579646B1282F25CA0059F828 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646B0282F25CA0059F828 /* UserRepository.swift */; };
 		579646B4282F2ED20059F828 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646B3282F2ED20059F828 /* GlobalState.swift */; };
 		579646B6282F2F040059F828 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579646B5282F2F040059F828 /* UserSession.swift */; };
@@ -271,6 +273,8 @@
 		57803F99280A7B7000B17EE1 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		578B104927ED36560093DA26 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		578B104B27ED377E0093DA26 /* FootnoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootnoteView.swift; sourceTree = "<group>"; };
+		578FC846285E3D230055A5CE /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
+		578FC848285E40E50055A5CE /* DeleteAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewModel.swift; sourceTree = "<group>"; };
 		579646B0282F25CA0059F828 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		579646B3282F2ED20059F828 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 		579646B5282F2F040059F828 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -429,6 +433,7 @@
 				57803F91280A755000B17EE1 /* MenuView.swift */,
 				57803F95280A7AF900B17EE1 /* RootView.swift */,
 				579C6C76282CC4A800C00422 /* LegalView.swift */,
+				578FC846285E3D230055A5CE /* DeleteAccountView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				579C6C72282CBC7B00C00422 /* RegisterViewModel.swift */,
 				579646B7282F32A20059F828 /* RootViewModel.swift */,
 				579646CA2830BCC60059F828 /* MenuViewModel.swift */,
+				578FC848285E40E50055A5CE /* DeleteAccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -886,6 +892,7 @@
 				57803F842809AFDE00B17EE1 /* QuestionDetail.swift in Sources */,
 				572B278C27EDFC1700F8E66C /* VerifyBetSelectorView.swift in Sources */,
 				57EC9C2327B227360083DD83 /* CustomTextField.swift in Sources */,
+				578FC849285E40E50055A5CE /* DeleteAccountViewModel.swift in Sources */,
 				5773654E27B4CD6E00567244 /* InformationCardViewModel.swift in Sources */,
 				579C6C71282CB91A00C00422 /* ForgetPasswordViewModel.swift in Sources */,
 				57268B1027AF80CB0082ECF6 /* Colors.swift in Sources */,
@@ -996,6 +1003,7 @@
 				5773654027B477FC00567244 /* BreakdownRow.swift in Sources */,
 				57EC9C1D27B21FD60083DD83 /* RequirementWithCheckboxView.swift in Sources */,
 				579646DD2831D25E0059F828 /* VideoDatabase.swift in Sources */,
+				578FC847285E3D230055A5CE /* DeleteAccountView.swift in Sources */,
 				5719B5B627F9161E0021237E /* CalculatorBrain.swift in Sources */,
 				57D2FB6A27B4254A0023B359 /* CopyToClipboardButton.swift in Sources */,
 			);

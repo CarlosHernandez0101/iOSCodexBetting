@@ -12,6 +12,7 @@ struct MenuView: View {
     
     @StateObject private var viewModel: MenuViewModel
     @State private var goToTerms: Bool = false
+    @State private var goToDeleteAccount: Bool = false
     
     init(viewModel: MenuViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -24,6 +25,13 @@ struct MenuView: View {
             
             NavigationLink(
                 isActive: $goToTerms) {
+                    LegalView()
+                } label: {
+                    EmptyView()
+                }
+            
+            NavigationLink(
+                isActive: $goToDeleteAccount) {
                     LegalView()
                 } label: {
                     EmptyView()
@@ -78,6 +86,10 @@ struct MenuView: View {
                     self.goToTerms = true
                 })
                 
+                MenuOptionView(title: "Borrar cuenta", action: {
+                    goToDeleteAccount = true
+                })
+                
                 MenuOptionView(title: "Cerrar sesión", action: {
                     withAnimation {
                         viewModel.didTapOnSignOut()
@@ -110,5 +122,8 @@ struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView(viewModel: MenuViewModel(repository: UserRepository(auth: AuthManager(), db: UserDatabase(), network: UserNetwork())))
             .environmentObject(menuManager)
+            .onAppear {
+                menuManager.openMenu()
+            }
     }
 }

@@ -13,12 +13,14 @@ class VideoCourseViewModel: ObservableObject {
     @Published var title: String
     @Published var description: String
     @Published var url: String
+    @Published var duration: String
     
-    init(id: String, index: Int, title: String, description: String, url: String) {
+    init(id: String, index: Int, title: String, description: String, url: String, duration: String) {
         self.id = id
         self.index = index
         self.title = title
         self.description = description
         self.url = url
+        self.duration = duration
     }
 }

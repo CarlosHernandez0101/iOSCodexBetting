@@ -27,7 +27,8 @@ struct LessonCards: View {
                     CourseVideoCardView(
                         lessonTitle: courseVideo.title,
                         lessonDescription: courseVideo.description,
-                        lessonURL: courseVideo.url
+                        lessonURL: courseVideo.url,
+                        duration: courseVideo.duration
                     )
                 }
             }

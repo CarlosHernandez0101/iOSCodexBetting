@@ -15,7 +15,8 @@ final class VideoModelAdapter {
             index: databaseModel.index,
             title: databaseModel.title,
             description: databaseModel.descriptionText,
-            url: databaseModel.url
+            url: databaseModel.url,
+            duration: databaseModel.duration
         )
     }
 }

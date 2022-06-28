@@ -12,12 +12,18 @@ struct CourseVideoCardView: View {
     private let lessonTitle: String
     private let lessonDescription: String
     private let lessonURL: URL?
+    private let duration: String
     @State private var showVideo = false
     
-    init(lessonTitle: String, lessonDescription: String, lessonURL: String) {
+    init(lessonTitle: String,
+         lessonDescription: String,
+         lessonURL: String,
+         duration: String
+    ) {
         self.lessonTitle = lessonTitle
         self.lessonDescription = lessonDescription
         self.lessonURL = URL(string: lessonURL)
+        self.duration = duration
     }
     
     
@@ -59,6 +65,15 @@ struct CourseVideoCardView: View {
                 Spacer()
             }
             
+            HStack {
+                Text(duration)
+                    .foregroundColor(.white)
+                    .padding(.top, 1)
+                .lineLimit(3)
+                
+                Spacer()
+            }
+            
             CustomDivider(dividerColor: .codexGray)
                 .padding(.top, 16)
             
@@ -79,7 +94,8 @@ struct LessonCardView_Previews: PreviewProvider {
         CourseVideoCardView(            
             lessonTitle: "¿Qué es una apuesta?",
             lessonDescription: "Aprende que es una apuesta y como hacerla es una apuesta",
-            lessonURL: ""
+            lessonURL: "",
+            duration: "00:43"
         )
             .previewLayout(.sizeThatFits)
     }

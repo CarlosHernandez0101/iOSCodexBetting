@@ -50,7 +50,8 @@ extension LessonCardsViewModel: VideoCourseRepositoryDelegate {
                 index: courseVideo.index,
                 title: courseVideo.title ?? "",
                 description: courseVideo.description ?? "",
-                url: courseVideo.url ?? ""
+                url: courseVideo.url ?? "",
+                duration: courseVideo.duration ?? ""
             )
         }).sorted(by: { $0.index < $1.index })
         courseVideos.forEach { video in

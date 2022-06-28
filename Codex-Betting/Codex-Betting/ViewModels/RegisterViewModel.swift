@@ -65,7 +65,7 @@ final class RegisterViewModel: ObservableObject {
         
         self.isLoadingRegister = true
         
-        if emailText.isEmail && passwordText.count >= PASSWORD_LENGHT && hasAcceptedTerms {
+        if emailText.isEmail && passwordText.count >= PASSWORD_LENGHT && hasAcceptedTerms && passwordText == passwordConfirmationText  {
             self.repository.createUser(email: emailText, password: passwordText)
         }
     }

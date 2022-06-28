@@ -43,7 +43,8 @@ final class VideoCourseRepository: VideoCourseRepositoryProtocol {
                         index: video.index,
                         title: video.title ?? "",
                         description: video.description ?? "",
-                        url: video.url ?? ""
+                        url: video.url ?? "",
+                        duration: video.duration ?? ""
                     )
                 )
             }
